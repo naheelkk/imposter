@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imposter Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="premium-theme">
+    <div id="bg-glow"></div>
+    <div id="game-container">
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="screen">
+            <div class="hero-section">
+                <h1 class="animate-pop">🕵️ Imposter</h1>
+                <p class="animate-fade">Who among you is the liar?</p>
+            </div>
+
+
+            <div class="setup-card">
+                <div class="setup-section">
+                    <h3>1. Select Categories</h3>
+                    <div id="category-tags" class="tags-grid"></div>
+                </div>
+
+                <div class="setup-section">
+                    <h3>2. Game Settings</h3>
+                    <div class="settings-grid">
+                        <div class="setup-group">
+                            <label for="player-count">Total Players</label>
+                            <input type="number" id="player-count" min="3" max="20" value="3">
+                        </div>
+                        <div class="setup-group">
+                            <label for="imposter-count">Number of Imposters</label>
+                            <input type="number" id="imposter-count" min="1" max="5" value="1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setup-section">
+                    <h3>3. Player Names</h3>
+                    <div id="player-names-container" class="names-grid"></div>
+                </div>
+
+                <div class="setup-section">
+                    <h3>4. Difficulty & Mode</h3>
+                    <div class="toggle-group">
+                        <label class="switch">
+                            <input type="checkbox" id="hint-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="toggle-label">Enable Imposter Hints</span>
+                    </div>
+                    <div class="toggle-group" style="margin-top: 15px;">
+                        <label class="switch">
+                            <input type="checkbox" id="chaos-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="toggle-label">Chaos Mode 🌀</span>
+                    </div>
+                </div>
+
+                <button id="start-game-btn" class="primary-btn">Launch Game</button>
+            </div>
+        </div>
+
+        <!-- Assignment Screen -->
+        <div id="assignment-screen" class="screen hidden">
+            <h2 class="section-title">Identity Assignment</h2>
+            <p>Pass the device around. <strong>Hold the card</strong> to see your role.</p>
+            <div id="assignment-card-container"></div>
+            <div class="assignment-controls">
+                <button id="next-player-btn" class="primary-btn">Next Player ➡️</button>
+                <button id="confirm-assignment-btn" class="primary-btn hidden">Start Game 🚀</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen hidden">
+            <h2 class="section-title">The Trial</h2>
+            <p>Discuss, accuse, and eliminate the Imposter!</p>
+            <div id="active-players-list" class="players-list"></div>
+            <div class="game-controls">
+                <button id="end-game-btn" class="secondary-btn">Imposter Won</button>
+            </div>
+        </div>
+
+        <!-- Reveal Screen -->
+        <div id="reveal-screen" class="screen hidden">
+            <div class="reveal-content">
+                <h2 id="reveal-status">The Verdict...</h2>
+                <div id="reveal-card" class="reveal-card">
+                    <span id="reveal-text">???</span>
+                </div>
+                <div id="reveal-actions" class="hidden">
+                    <button id="continue-btn" class="primary-btn">Continue Game</button>
+                    <button id="quit-btn" class="secondary-btn">Quit Game</button>
+                </div>
+                <button id="trigger-reveal-btn" class="primary-btn">Reveal Identity</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
