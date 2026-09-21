@@ -83,25 +83,80 @@ body {
     margin-bottom: 20px;
 }
 
-.animate-pop {
-    animation: pop 0.6s var(--premium-curve);
+/* Leaderboard */
+.leaderboard-card {
+    background: var(--card-bg);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
-@keyframes pop {
-    0% { transform: scale(0.8); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+.leaderboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
 }
 
-.animate-fade {
-    animation: fadeIn 1s ease-out forwards;
+.leaderboard-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--accent-color);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.text-btn {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
 }
 
-/* Setup Card - Dark Mode Bouncy */
+.text-btn:hover {
+    text-decoration: underline;
+}
+
+.leaderboard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.leaderboard-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+}
+
+.score-badge {
+    background: var(--accent-color);
+    color: #000;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+.score-badge.negative {
+    background: var(--danger-color);
+    color: #fff;
+}
+
+.empty-msg {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Setup Card */
 .setup-card {
     background: var(--card-bg);
     padding: 30px;
@@ -134,7 +189,7 @@ body {
     content: '⚡';
 }
 
-/* Categories Tags */
+/* Tags & Grids */
 .tags-grid {
     display: flex;
     flex-wrap: wrap;
@@ -168,7 +223,6 @@ body {
     box-shadow: 0 4px 15px var(--accent-glow);
 }
 
-/* Player Names Grid */
 .names-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -204,7 +258,6 @@ body {
     box-shadow: 0 0 8px var(--accent-glow);
 }
 
-/* Settings Grid */
 .settings-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -256,10 +309,7 @@ input[type="number"] {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     background-color: #333;
     transition: .4s;
     border-radius: 34px;
@@ -290,6 +340,74 @@ input:checked + .slider:before {
     font-size: 1rem;
     color: var(--text-color);
     font-weight: 600;
+}
+
+/* Custom Checkbox for Reveal Screen */
+.guess-container {
+    background: var(--card-bg);
+    border: 2px solid var(--accent-color);
+    padding: 15px;
+    border-radius: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    gap: 12px;
+    text-align: left;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    height: 24px;
+    width: 24px;
+    background-color: rgba(255,255,255,0.1);
+    border: 2px solid var(--accent-color);
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: rgba(0, 210, 255, 0.2);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--accent-color);
+}
+
+.checkmark:after {
+    content: "";
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    margin-left: 7px;
+    margin-top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label {
+    font-size: 0.95rem;
+    color: var(--text-color);
 }
 
 /* Buttons */
@@ -416,7 +534,7 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .reveal-card {
@@ -437,11 +555,6 @@ input:checked + .slider:before {
 
 .reveal-card.revealed {
     transform: rotateY(360deg) scale(1.1);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes shake {
