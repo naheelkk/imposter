@@ -212,6 +212,7 @@ const PLAYER_COLORS = [
 ];
 
 const SETTINGS_KEY = 'imposter_game_settings';
+const LEADERBOARD_KEY = 'imposter_game_leaderboard';
 
 let gameState = {
     selectedCategories: [],
@@ -257,6 +258,10 @@ const revealActions = document.getElementById('reveal-actions');
 const continueBtn = document.getElementById('continue-btn');
 const quitBtn = document.getElementById('quit-btn');
 const endGameBtn = document.getElementById('end-game-btn');
+const imposterGuessContainer = document.getElementById('imposter-guess-container');
+const imposterGuessCheckbox = document.getElementById('imposter-guess-checkbox');
+const leaderboardList = document.getElementById('leaderboard-list');
+const resetLeaderboardBtn = document.getElementById('reset-leaderboard-btn');
 
 function init() {
     for (let category in gameData) {
@@ -278,10 +283,59 @@ function init() {
     imposterCountInput.addEventListener('change', saveSettings);
     hintToggle.addEventListener('change', saveSettings);
     chaosToggle.addEventListener('change', saveSettings);
+    resetLeaderboardBtn.addEventListener('click', resetLeaderboard);
 
     loadSettings();
+    renderLeaderboard();
     handleRoute();
     window.addEventListener('hashchange', handleRoute);
+}
+
+/* LocalStorage Leaderboard Helpers */
+function getLeaderboard() {
+    const saved = localStorage.getItem(LEADERBOARD_KEY);
+    return saved ? JSON.parse(saved) : {};
+}
+
+function saveLeaderboard(scores) {
+    localStorage.setItem(LEADERBOARD_KEY, JSON.stringify(scores));
+}
+
+function updateScore(playerName, points) {
+    if (!playerName) return;
+    const scores = getLeaderboard();
+    scores[playerName] = (scores[playerName] || 0) + points;
+    saveLeaderboard(scores);
+    renderLeaderboard();
+}
+
+function renderLeaderboard() {
+    const scores = getLeaderboard();
+    const sortedNames = Object.keys(scores).sort((a, b) => scores[b] - scores[a]);
+
+    if (sortedNames.length === 0) {
+        leaderboardList.innerHTML = '<p class="empty-msg">No player scores saved yet.</p>';
+        return;
+    }
+
+    leaderboardList.innerHTML = '';
+    sortedNames.forEach((name, index) => {
+        const row = document.createElement('div');
+        row.className = 'leaderboard-item';
+        const rank = index === 0 ? '👑' : `#${index + 1}`;
+        row.innerHTML = `
+            <span><strong>${rank} ${name}</strong></span>
+            <span class="score-badge ${scores[name] < 0 ? 'negative' : ''}">${scores[name]} pts</span>
+        `;
+        leaderboardList.appendChild(row);
+    });
+}
+
+function resetLeaderboard() {
+    if (confirm("Clear all leaderboard points?")) {
+        localStorage.removeItem(LEADERBOARD_KEY);
+        renderLeaderboard();
+    }
 }
 
 function saveSettings() {
@@ -364,48 +418,32 @@ function startGame() {
     const combinedPool = selectedTags.flatMap(cat => gameData[cat]);
     gameState.secretWordObj = combinedPool[Math.floor(Math.random() * combinedPool.length)];
 
-    if (gameState.chaosMode) {
-        // In Chaos Mode, everyone gets a word, but they are all different and vaguely related
-        // or completely random. To make it interesting: everyone gets a random word from the pool.
-        gameState.players = [];
-        const nameInputs = document.querySelectorAll('.player-name-input');
-        const shuffledIndices = [...Array(count).keys()].sort(() => Math.random() - 0.5);
-        const imposterIndices = new Set(shuffledIndices.slice(0, imposterCount));
+    const nameInputs = document.querySelectorAll('.player-name-input');
+    const shuffledIndices = [...Array(count).keys()].sort(() => Math.random() - 0.5);
+    const imposterIndices = new Set(shuffledIndices.slice(0, imposterCount));
 
-        for (let i = 0; i < count; i++) {
-            const customName = nameInputs[i]?.value.trim();
-            const role = imposterIndices.has(i) ? 'imposter' : 'civilian';
+    gameState.players = [];
+    for (let i = 0; i < count; i++) {
+        const customName = nameInputs[i]?.value.trim() || `Player ${i + 1}`;
+        const isImposter = imposterIndices.has(i);
+        const randomWord = combinedPool[Math.floor(Math.random() * combinedPool.length)];
 
-            // Chaos Logic: Civilians get different random words from the pool
-            // Imposters get a completely different random word (or the same as a random civilian)
-            const randomWord = combinedPool[Math.floor(Math.random() * combinedPool.length)];
+        gameState.players.push({
+            id: i + 1,
+            name: customName,
+            role: isImposter ? 'imposter' : 'civilian',
+            color: PLAYER_COLORS[i % PLAYER_COLORS.length],
+            revealed: false,
+            chaosWord: randomWord
+        });
 
-            gameState.players.push({
-                id: i + 1,
-                name: customName || `Player ${i + 1}`,
-                role: role,
-                color: PLAYER_COLORS[i % PLAYER_COLORS.length],
-                revealed: false,
-                chaosWord: randomWord // Custom word for chaos mode
-            });
-        }
-    } else {
-        const nameInputs = document.querySelectorAll('.player-name-input');
-        const shuffledIndices = [...Array(count).keys()].sort(() => Math.random() - 0.5);
-        const imposterIndices = new Set(shuffledIndices.slice(0, imposterCount));
-
-        gameState.players = [];
-        for (let i = 0; i < count; i++) {
-            const customName = nameInputs[i]?.value.trim();
-            gameState.players.push({
-                id: i + 1,
-                name: customName || `Player ${i + 1}`,
-                role: imposterIndices.has(i) ? 'imposter' : 'civilian',
-                color: PLAYER_COLORS[i % PLAYER_COLORS.length],
-                revealed: false
-            });
+        // Initialize user in leaderboard if not present
+        const currentScores = getLeaderboard();
+        if (currentScores[customName] === undefined) {
+            updateScore(customName, 0);
         }
     }
+
     gameState.activePlayers = [...gameState.players];
 
     setupAssignmentScreen();
@@ -485,7 +523,7 @@ function renderPlayers() {
         item.style.borderLeftColor = player.color;
         item.innerHTML = `
             <span class="player-name">${player.name}</span>
-            <button class="primary-btn" onclick="votePlayer(${player.id})">Vote</button>
+            <button class="primary-btn" onclick="votePlayer(${player.id})">Vote Out</button>
         `;
         playersList.appendChild(item);
     });
@@ -500,14 +538,16 @@ window.votePlayer = function(id) {
     revealCard.style.borderColor = 'var(--accent-color)';
     revealActions.classList.add('hidden');
     triggerRevealBtn.classList.remove('hidden');
+    
+    // Reset guess checkbox on vote view
+    imposterGuessCheckbox.checked = false;
+    imposterGuessContainer.classList.add('hidden');
 
     navigateTo('#reveal');
 };
 
 function triggerReveal() {
     triggerRevealBtn.classList.add('hidden');
-
-    // Animation for reveal
     revealCard.classList.add('revealed');
 
     setTimeout(() => {
@@ -521,28 +561,53 @@ function triggerReveal() {
         revealActions.classList.remove('hidden');
 
         if (isImposter) {
-            // "Caught" animation effect (shake or flash)
+            imposterGuessContainer.classList.remove('hidden');
             revealCard.style.animation = "shake 0.5s ease-in-out";
             setTimeout(() => { revealCard.style.animation = ""; }, 500);
 
             const currentImposters = gameState.activePlayers.filter(p => p.role === 'imposter');
-            if (currentImposters.length <= 1 && gameState.votedPlayer.role === 'imposter') {
+            if (currentImposters.length <= 1) {
                  document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was the last IMPOSTER!`;
                  continueBtn.classList.add('hidden');
             } else {
                  document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was an IMPOSTER!`;
                  continueBtn.classList.remove('hidden');
-                 gameState.activePlayers = gameState.activePlayers.filter(p => p.id !== gameState.votedPlayer.id);
             }
         } else {
             document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was a CIVILIAN...`;
             continueBtn.classList.remove('hidden');
-            gameState.activePlayers = gameState.activePlayers.filter(p => p.id !== gameState.votedPlayer.id);
         }
     }, 600);
 }
 
+function processScoring() {
+    if (!gameState.votedPlayer) return;
+
+    if (gameState.votedPlayer.role === 'imposter') {
+        const guessedCorrectly = imposterGuessCheckbox.checked;
+        if (guessedCorrectly) {
+            // -5 for getting voted out + 5 for correct guess = 0 points net
+            updateScore(gameState.votedPlayer.name, 0);
+        } else {
+            // -5 points for being voted out
+            updateScore(gameState.votedPlayer.name, -5);
+        }
+    }
+
+    // Award +5 points to all surviving imposters
+    const remainingActive = gameState.activePlayers.filter(p => p.id !== gameState.votedPlayer.id);
+    remainingActive.forEach(p => {
+        if (p.role === 'imposter') {
+            updateScore(p.name, 5);
+        }
+    });
+
+    gameState.activePlayers = remainingActive;
+}
+
 function continueGame() {
+    processScoring();
+
     const imposters = gameState.activePlayers.filter(p => p.role === 'imposter').length;
     const civilians = gameState.activePlayers.length - imposters;
 
@@ -557,6 +622,10 @@ function continueGame() {
 }
 
 function resetGame() {
+    if (gameState.votedPlayer) {
+        processScoring();
+    }
+
     gameState = {
         selectedCategories: [],
         secretWordObj: null,
@@ -567,6 +636,7 @@ function resetGame() {
         hintsEnabled: false,
         currentAssignmentIndex: 0
     };
+    renderLeaderboard();
     navigateTo('#setup');
 }
 
@@ -579,6 +649,12 @@ triggerRevealBtn.addEventListener('click', triggerReveal);
 continueBtn.addEventListener('click', continueGame);
 quitBtn.addEventListener('click', resetGame);
 endGameBtn.addEventListener('click', () => {
+    // End game manually: Remaining imposters survived round
+    gameState.activePlayers.forEach(p => {
+        if (p.role === 'imposter') {
+            updateScore(p.name, 5);
+        }
+    });
     alert("Game ended manually!");
     resetGame();
 });
