@@ -16,6 +16,16 @@
                 <p class="animate-fade">Who among you is the liar?</p>
             </div>
 
+            <!-- Leaderboard Banner / Card -->
+            <div class="leaderboard-card">
+                <div class="leaderboard-header">
+                    <h3>🏆 Leaderboard</h3>
+                    <button id="reset-leaderboard-btn" class="text-btn">Reset Points</button>
+                </div>
+                <div id="leaderboard-list" class="leaderboard-list">
+                    <p class="empty-msg">No player scores saved yet.</p>
+                </div>
+            </div>
 
             <div class="setup-card">
                 <div class="setup-section">
@@ -92,6 +102,16 @@
                 <div id="reveal-card" class="reveal-card">
                     <span id="reveal-text">???</span>
                 </div>
+
+                <!-- Imposter Word Guess Option -->
+                <div id="imposter-guess-container" class="guess-container hidden">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="imposter-guess-checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-label">Did the Imposter correctly guess the secret word?</span>
+                    </label>
+                </div>
+
                 <div id="reveal-actions" class="hidden">
                     <button id="continue-btn" class="primary-btn">Continue Game</button>
                     <button id="quit-btn" class="secondary-btn">Quit Game</button>
