@@ -14,7 +14,17 @@ const gameData = {
         { word: "Scissors ✂️", hint: "Cut" },
         { word: "Charger 🔌", hint: "Power" },
         { word: "Towel 🧣", hint: "Dry" },
-        { word: "Toothbrush 🪥", hint: "Fresh" }
+        { word: "Toothbrush 🪥", hint: "Fresh" },
+        { word: "Headphones 🎧", hint: "Sound" },
+        { word: "Laptop 💻", hint: "Screen" },
+        { word: "Notebook 📓", hint: "Pages" },
+        { word: "Pen 🖊️", hint: "Ink" },
+        { word: "Flashlight 🔦", hint: "Beam" },
+        { word: "Lip Balm 💄", hint: "Moist" },
+        { word: "Nail Clipper 💅", hint: "Trim" },
+        { word: "Power Bank 🔋", hint: "Reserve" },
+        { word: "Helmet 🪖", hint: "Protection" },
+        { word: "Sanitizer 🧴", hint: "Clean" }
     ],
     "Household Items": [
         { word: "Pressure Cooker 🍲", hint: "Steam" },
@@ -27,11 +37,21 @@ const gameData = {
         { word: "Diya 🪔", hint: "Flame" },
         { word: "Fan 🌀", hint: "Breeze" },
         { word: "Fridge ❄️", hint: "Chill" },
-        { word: "Curtain カーテン", hint: "Hide" },
+        { word: "Curtain 🪟", hint: "Hide" },
         { word: "Spoon 🥄", hint: "Scoop" },
         { word: "Plate 🍽️", hint: "Serve" },
         { word: "Bed 🛌", hint: "Dream" },
-        { word: "Soap 🧼", hint: "Bubble" }
+        { word: "Soap 🧼", hint: "Bubble" },
+        { word: "Washing Machine 🧺", hint: "Rinse" },
+        { word: "Toaster 🍞", hint: "Warm" },
+        { word: "Microwave 📻", hint: "Heat" },
+        { word: "Dustbin 🗑️", hint: "Waste" },
+        { word: "Clock ⏰", hint: "Tick" },
+        { word: "Pillow 🛌", hint: "Soft" },
+        { word: "Bucket 🪣", hint: "Hold" },
+        { word: "Iron 🧺", hint: "Press" },
+        { word: "Door Lock 🔒", hint: "Secure" },
+        { word: "Calendar 📅", hint: "Date" }
     ],
     "Fun": [
         { word: "Carnival 🎡", hint: "Chaos" },
@@ -48,7 +68,17 @@ const gameData = {
         { word: "Park 🌳", hint: "Green" },
         { word: "Swing 🎡", hint: "Air" },
         { word: "Music 🎶", hint: "Beat" },
-        { word: "Painting 🎨", hint: "Color" }
+        { word: "Painting 🎨", hint: "Color" },
+        { word: "Karaoke 🎤", hint: "Sing" },
+        { word: "Water Park 🏊", hint: "Slide" },
+        { word: "Circus 🎪", hint: "Tent" },
+        { word: "Bowling 🎳", hint: "Strike" },
+        { word: "Arcade 🕹️", hint: "Coins" },
+        { word: "Trampoline 🤸", hint: "Bounce" },
+        { word: "Escape Room 🔑", hint: "Puzzle" },
+        { word: "Camping ⛺", hint: "Tent" },
+        { word: "Picnic 🧺", hint: "Basket" },
+        { word: "Laser Tag 🔫", hint: "Beam" }
     ],
     "Sports": [
         { word: "Cricket 🏏", hint: "Willow" },
@@ -65,7 +95,17 @@ const gameData = {
         { word: "Cycling 🚴", hint: "Pedal" },
         { word: "Volleyball 🏐", hint: "Net" },
         { word: "Basketball 🏀", hint: "Hoop" },
-        { word: "Hockey 🏑", hint: "Stick" }
+        { word: "Hockey 🏑", hint: "Stick" },
+        { word: "Table Tennis 🏓", hint: "Paddle" },
+        { word: "Archery 🏹", hint: "Target" },
+        { word: "Golf ⛳", hint: "Hole" },
+        { word: "Rugby 🏉", hint: "Tackle" },
+        { word: "Surfing 🏄", hint: "Wave" },
+        { word: "Skating 🛼", hint: "Wheels" },
+        { word: "Karate 🥋", hint: "Belt" },
+        { word: "Snooker 🎱", hint: "Cue" },
+        { word: "Carrom 🪵", hint: "Striker" },
+        { word: "Marathon 🏃‍♂️", hint: "Endurance" }
     ],
     "Colors": [
         { word: "Saffron 🟠", hint: "Spirit" },
@@ -82,7 +122,17 @@ const gameData = {
         { word: "Pink 🌸", hint: "Blush" },
         { word: "Orange 🍊", hint: "Bright" },
         { word: "Yellow ☀️", hint: "Sun" },
-        { word: "Brown 🪵", hint: "Earth" }
+        { word: "Brown 🪵", hint: "Earth" },
+        { word: "Teal 🪶", hint: "Ocean" },
+        { word: "Maroon 🍷", hint: "Shade" },
+        { word: "Magenta 🌺", hint: "Vibrant" },
+        { word: "Silver 🥈", hint: "Shine" },
+        { word: "Bronze 🥉", hint: "Metallic" },
+        { word: "Navy Blue ⚓", hint: "Deep" },
+        { word: "Olive Green 🫒", hint: "Leaf" },
+        { word: "Coral 🪸", hint: "Reef" },
+        { word: "Lavender 🪻", hint: "Floral" },
+        { word: "Peach 🍑", hint: "Soft" }
     ],
     "Hobbies": [
         { word: "Photography 📷", hint: "Lens" },
@@ -99,7 +149,17 @@ const gameData = {
         { word: "Collecting 🪙", hint: "Rare" },
         { word: "Writing ✍️", hint: "Ink" },
         { word: "Knitting 🧶", hint: "Wool" },
-        { word: "Meditation 🧘", hint: "Still" }
+        { word: "Meditation 🧘", hint: "Still" },
+        { word: "Baking 🧁", hint: "Oven" },
+        { word: "Origami 📄", hint: "Fold" },
+        { word: "Astronomy 🔭", hint: "Stars" },
+        { word: "Skateboarding 🛹", hint: "Deck" },
+        { word: "Pottery 🏺", hint: "Clay" },
+        { word: "Woodworking 🪵", hint: "Craft" },
+        { word: "Ukulele 🪕", hint: "Strings" },
+        { word: "Bird Watching 🦜", hint: "Feathers" },
+        { word: "Juggling 🤹", hint: "Balance" },
+        { word: "Puzzles 🧩", hint: "Fit" }
     ],
     "Apps": [
         { word: "WhatsApp 🟢", hint: "Chat" },
@@ -116,7 +176,17 @@ const gameData = {
         { word: "Gmail ✉️", hint: "Mail" },
         { word: "Twitter 🐦", hint: "Tweet" },
         { word: "Amazon 📦", hint: "Shop" },
-        { word: "Netflix 📺", hint: "Binge" }
+        { word: "Netflix 📺", hint: "Binge" },
+        { word: "Uber 🚗", hint: "Ride" },
+        { word: "Google Maps 🗺️", hint: "Route" },
+        { word: "Reddit 🤖", hint: "Forum" },
+        { word: "Pinterest 📌", hint: "Board" },
+        { word: "Duolingo 🦉", hint: "Language" },
+        { word: "Discord 👾", hint: "Voice" },
+        { word: "Swiggy 🛵", hint: "Delivery" },
+        { word: "Twitch 💜", hint: "Stream" },
+        { word: "Paytm 💙", hint: "Wallet" },
+        { word: "Notion 📝", hint: "Notes" }
     ],
     "Celebs": [
         { word: "Mammootty 🎭", hint: "Screen" },
@@ -133,7 +203,17 @@ const gameData = {
         { word: "Alia Bhatt 🌸", hint: "Fresh" },
         { word: "Ranbir Kapoor 🤴", hint: "Legacy" },
         { word: "MS Dhoni 🧤", hint: "Captain" },
-        { word: "Rohit Sharma 🏏", hint: "Sixes" }
+        { word: "Rohit Sharma 🏏", hint: "Sixes" },
+        { word: "Fahadh Faasil 👁️", hint: "Eyes" },
+        { word: "Tovino Thomas 🦸", hint: "Hero" },
+        { word: "Kamal Haasan 🎭", hint: "Versatile" },
+        { word: "Rajinikanth 🕶️", hint: "Style" },
+        { word: "Suriya ⚔️", hint: "Focus" },
+        { word: "Vijay 🪙", hint: "Mass" },
+        { word: "Ajith Kumar 🏍️", hint: "Pace" },
+        { word: "Hrithik Roshan 🕺", hint: "Dance" },
+        { word: "Katrina Kaif 💃", hint: "Grace" },
+        { word: "Prabhas 🏹", hint: "Rebel" }
     ],
     "Food and Drink": [
         { word: "Biryani 🥘", hint: "Rice" },
@@ -150,7 +230,17 @@ const gameData = {
         { word: "Paratha 🫓", hint: "Flat" },
         { word: "Mango 🥭", hint: "Summer" },
         { word: "Coconut 🥥", hint: "Coastal" },
-        { word: "Curd 🥛", hint: "Sour" }
+        { word: "Curd 🥛", hint: "Sour" },
+        { word: "Shawarma 🌯", hint: "Roll" },
+        { word: "Pizza 🍕", hint: "Slice" },
+        { word: "Burger 🍔", hint: "Bun" },
+        { word: "Momos 🥟", hint: "Steam" },
+        { word: "Noodles 🍜", hint: "Strands" },
+        { word: "Ice Cream 🍦", hint: "Cold" },
+        { word: "Falooda 🍧", hint: "Layers" },
+        { word: "Pani Puri 🥣", hint: "Crunch" },
+        { word: "Omelette 🍳", hint: "Whisk" },
+        { word: "Lemonade 🍋", hint: "Citrus" }
     ],
     "Gaming": [
         { word: "PUBG 🔫", hint: "Battle" },
@@ -167,7 +257,17 @@ const gameData = {
         { word: "Pokemon GO 🐹", hint: "Catch" },
         { word: "Apex Legends 🏆", hint: "Champion" },
         { word: "League of Legends ⚔️", hint: "Nexus" },
-        { word: "Tencent 🏢", hint: "Giant" }
+        { word: "Clash of Clans 🏰", hint: "Raid" },
+        { word: "Subway Surfers 🏃", hint: "Tracks" },
+        { word: "Temple Run 🏃‍♂️", hint: "Idol" },
+        { word: "Ludo King 🎲", hint: "Token" },
+        { word: "God of War 🪓", hint: "Deity" },
+        { word: "Cyberpunk 🌆", hint: "Neon" },
+        { word: "Counter-Strike 💣", hint: "Defuse" },
+        { word: "Overwatch 🛡️", hint: "Hero" },
+        { word: "Elden Ring 💍", hint: "Tarnished" },
+        { word: "Fall Guys 👑", hint: "Stumble" },
+        { word: "Brawl Stars 🌟", hint: "Arena" }
     ],
     "Animals": [
         { word: "Elephant 🐘", hint: "Giant" },
@@ -184,7 +284,17 @@ const gameData = {
         { word: "Snake 🐍", hint: "Slither" },
         { word: "Eagle 🦅", hint: "Sight" },
         { word: "Deer 🦌", hint: "Grace" },
-        { word: "Monkey 🐒", hint: "Climb" }
+        { word: "Dolphin 🐬", hint: "Smart" },
+        { word: "Bear 🐻", hint: "Paws" },
+        { word: "Panda 🐼", hint: "Bamboo" },
+        { word: "Wolf 🐺", hint: "Pack" },
+        { word: "Giraffe 🦒", hint: "Height" },
+        { word: "Kangaroo 🦘", hint: "Pouch" },
+        { word: "Penguin 🐧", hint: "Waddle" },
+        { word: "Crocodile 🐊", hint: "Jaws" },
+        { word: "Fox 🦊", hint: "Clever" },
+        { word: "Owl 🦉", hint: "Wisdom" },
+        { word: "Camel 🐫", hint: "Hump" }
     ],
     "Countries": [
         { word: "India 🇮🇳", hint: "Tricolor" },
@@ -201,10 +311,19 @@ const gameData = {
         { word: "Germany 🇩🇪", hint: "Auto" },
         { word: "Italy 🇮🇹", hint: "Pasta" },
         { word: "Egypt 🇪🇬", hint: "Pyramid" },
-        { word: "Singapore 🇸🇬", hint: "Merlion" }
+        { word: "Singapore 🇸🇬", hint: "Merlion" },
+        { word: "Argentina 🇦🇷", hint: "Tango" },
+        { word: "Spain 🇪🇸", hint: "Matador" },
+        { word: "South Korea 🇰🇷", hint: "K-Pop" },
+        { word: "Mexico 🇲🇽", hint: "Taco" },
+        { word: "Switzerland 🇨🇭", hint: "Alps" },
+        { word: "Turkey 🇹🇷", hint: "Bazaar" },
+        { word: "South Africa 🇿🇦", hint: "Safari" },
+        { word: "Saudi Arabia 🇸🇦", hint: "Oasis" },
+        { word: "New Zealand 🇳🇿", hint: "Kiwi" },
+        { word: "Thailand 🇹🇭", hint: "Orchid" }
     ]
 };
-
 const PLAYER_COLORS = [
     '#d4af37', '#c0c0c0', '#cd7f32', '#a9a9a9',
     '#b8860b', '#808080', '#daa520', '#708090',
