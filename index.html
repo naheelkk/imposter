@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imposter Game</title>
+    <title>🕵️ Imposter — The Bluffing Party Game</title>
+    <meta name="description" content="A browser-based party game where imposters must bluff while civilians try to expose them. No install needed!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="premium-theme">
-    <div id="bg-glow"></div>
+    <div id="bg-glow">
+        <canvas id="particle-canvas"></canvas>
+        <div class="aurora-blob"></div>
+    </div>
     <div id="game-container">
         <!-- Setup Screen -->
         <div id="setup-screen" class="screen">
@@ -88,10 +95,10 @@
         <!-- Game Screen -->
         <div id="game-screen" class="screen hidden">
             <h2 class="section-title">The Trial</h2>
-            <p>Discuss, accuse, and eliminate the Imposter!</p>
+            <div id="game-hud" class="game-hud"></div>
             <div id="active-players-list" class="players-list"></div>
             <div class="game-controls">
-                <button id="end-game-btn" class="secondary-btn">Imposter Won</button>
+                <button id="end-game-btn" class="secondary-btn">Imposter Won 🏴</button>
             </div>
         </div>
 

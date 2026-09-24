@@ -24,7 +24,17 @@ const gameData = {
         { word: "Nail Clipper 💅", hint: "Trim" },
         { word: "Power Bank 🔋", hint: "Reserve" },
         { word: "Helmet 🪖", hint: "Protection" },
-        { word: "Sanitizer 🧴", hint: "Clean" }
+        { word: "Sanitizer 🧴", hint: "Clean" },
+        { word: "Sunglasses 🕶️", hint: "Shade" },
+        { word: "Earbuds 🎧", hint: "Wireless" },
+        { word: "Perfume 🧴", hint: "Scent" },
+        { word: "Tissue 🧻", hint: "Wipe" },
+        { word: "Calculator 🧮", hint: "Math" },
+        { word: "Coffee Mug ☕", hint: "Sip" },
+        { word: "Hair Band 💇", hint: "Tie" },
+        { word: "Pencil ✏️", hint: "Graphite" },
+        { word: "Stapler 📎", hint: "Fasten" },
+        { word: "Water Filter 🚰", hint: "Purify" }
     ],
     "Household Items": [
         { word: "Pressure Cooker 🍲", hint: "Steam" },
@@ -51,7 +61,17 @@ const gameData = {
         { word: "Bucket 🪣", hint: "Hold" },
         { word: "Iron 🧺", hint: "Press" },
         { word: "Door Lock 🔒", hint: "Secure" },
-        { word: "Calendar 📅", hint: "Date" }
+        { word: "Calendar 📅", hint: "Date" },
+        { word: "Air Conditioner ❄️", hint: "Cool" },
+        { word: "Gas Stove ♨️", hint: "Cook" },
+        { word: "Frying Pan 🍳", hint: "Sizzle" },
+        { word: "Doormat 🚪", hint: "Wipe" },
+        { word: "Ceiling Fan 🌀", hint: "Rotate" },
+        { word: "Vacuum Cleaner 🧹", hint: "Suction" },
+        { word: "Wardrobe 🚪", hint: "Clothes" },
+        { word: "Vase 🏺", hint: "Flowers" },
+        { word: "Water Heater 🚿", hint: "Shower" },
+        { word: "Dining Table 🪑", hint: "Feast" }
     ],
     "Fun": [
         { word: "Carnival 🎡", hint: "Chaos" },
@@ -78,7 +98,12 @@ const gameData = {
         { word: "Escape Room 🔑", hint: "Puzzle" },
         { word: "Camping ⛺", hint: "Tent" },
         { word: "Picnic 🧺", hint: "Basket" },
-        { word: "Laser Tag 🔫", hint: "Beam" }
+        { word: "Laser Tag 🔫", hint: "Beam" },
+        { word: "Concert 🎸", hint: "Stage" },
+        { word: "Festival 🎪", hint: "Crowd" },
+        { word: "Standup Comedy 🎙️", hint: "Punchline" },
+        { word: "Go Karting 🏎️", hint: "Track" },
+        { word: "Treasure Hunt 🗺️", hint: "Clues" }
     ],
     "Sports": [
         { word: "Cricket 🏏", hint: "Willow" },
@@ -105,7 +130,12 @@ const gameData = {
         { word: "Karate 🥋", hint: "Belt" },
         { word: "Snooker 🎱", hint: "Cue" },
         { word: "Carrom 🪵", hint: "Striker" },
-        { word: "Marathon 🏃‍♂️", hint: "Endurance" }
+        { word: "Marathon 🏃‍♂️", hint: "Endurance" },
+        { word: "Fencing 🤺", hint: "Sword" },
+        { word: "Polo 🐎", hint: "Mallet" },
+        { word: "Skiing ⛷️", hint: "Snow" },
+        { word: "Rowing 🚣", hint: "Oars" },
+        { word: "Baseball ⚾", hint: "Home Run" }
     ],
     "Colors": [
         { word: "Saffron 🟠", hint: "Spirit" },
@@ -132,7 +162,12 @@ const gameData = {
         { word: "Olive Green 🫒", hint: "Leaf" },
         { word: "Coral 🪸", hint: "Reef" },
         { word: "Lavender 🪻", hint: "Floral" },
-        { word: "Peach 🍑", hint: "Soft" }
+        { word: "Peach 🍑", hint: "Soft" },
+        { word: "Amber 🍯", hint: "Glow" },
+        { word: "Mint 🌿", hint: "Fresh" },
+        { word: "Charcoal 🖤", hint: "Dark" },
+        { word: "Beige 🪵", hint: "Neutral" },
+        { word: "Ruby 💎", hint: "Gem" }
     ],
     "Hobbies": [
         { word: "Photography 📷", hint: "Lens" },
@@ -159,7 +194,12 @@ const gameData = {
         { word: "Ukulele 🪕", hint: "Strings" },
         { word: "Bird Watching 🦜", hint: "Feathers" },
         { word: "Juggling 🤹", hint: "Balance" },
-        { word: "Puzzles 🧩", hint: "Fit" }
+        { word: "Puzzles 🧩", hint: "Fit" },
+        { word: "Calligraphy 🖋️", hint: "Script" },
+        { word: "Sculpting 🗿", hint: "Shape" },
+        { word: "Archery 🏹", hint: "Bulls Eye" },
+        { word: "Magic Tricks 🃏", hint: "Illusion" },
+        { word: "Podcast 🎙️", hint: "Mic" }
     ],
     "Apps": [
         { word: "WhatsApp 🟢", hint: "Chat" },
@@ -186,7 +226,12 @@ const gameData = {
         { word: "Swiggy 🛵", hint: "Delivery" },
         { word: "Twitch 💜", hint: "Stream" },
         { word: "Paytm 💙", hint: "Wallet" },
-        { word: "Notion 📝", hint: "Notes" }
+        { word: "Notion 📝", hint: "Notes" },
+        { word: "ChatGPT 🤖", hint: "AI" },
+        { word: "Canva 🎨", hint: "Design" },
+        { word: "Zoom 💻", hint: "Meeting" },
+        { word: "Tinder 🔥", hint: "Match" },
+        { word: "Steam 🎮", hint: "Library" }
     ],
     "Celebs": [
         { word: "Mammootty 🎭", hint: "Screen" },
@@ -213,7 +258,12 @@ const gameData = {
         { word: "Ajith Kumar 🏍️", hint: "Pace" },
         { word: "Hrithik Roshan 🕺", hint: "Dance" },
         { word: "Katrina Kaif 💃", hint: "Grace" },
-        { word: "Prabhas 🏹", hint: "Rebel" }
+        { word: "Prabhas 🏹", hint: "Rebel" },
+        { word: "Taylor Swift 🎤", hint: "Eras" },
+        { word: "Lionel Messi ⚽", hint: "GOAT" },
+        { word: "Cristiano Ronaldo 🇵🇹", hint: "CR7" },
+        { word: "Keanu Reeves 🕶️", hint: "Wick" },
+        { word: "Tom Cruise 🛩️", hint: "Stunts" }
     ],
     "Food and Drink": [
         { word: "Biryani 🥘", hint: "Rice" },
@@ -240,7 +290,12 @@ const gameData = {
         { word: "Falooda 🍧", hint: "Layers" },
         { word: "Pani Puri 🥣", hint: "Crunch" },
         { word: "Omelette 🍳", hint: "Whisk" },
-        { word: "Lemonade 🍋", hint: "Citrus" }
+        { word: "Lemonade 🍋", hint: "Citrus" },
+        { word: "Tacos 🌮", hint: "Shell" },
+        { word: "Sushi 🍣", hint: "Roll" },
+        { word: "Pasta 🍝", hint: "Sauce" },
+        { word: "Waffles 🧇", hint: "Syrup" },
+        { word: "Ramen 🍜", hint: "Broth" }
     ],
     "Gaming": [
         { word: "PUBG 🔫", hint: "Battle" },
@@ -267,7 +322,12 @@ const gameData = {
         { word: "Overwatch 🛡️", hint: "Hero" },
         { word: "Elden Ring 💍", hint: "Tarnished" },
         { word: "Fall Guys 👑", hint: "Stumble" },
-        { word: "Brawl Stars 🌟", hint: "Arena" }
+        { word: "Brawl Stars 🌟", hint: "Arena" },
+        { word: "Zelda 🗡️", hint: "Hyrule" },
+        { word: "Super Mario 🍄", hint: "Plumber" },
+        { word: "Rocket League 🏎️", hint: "Boost" },
+        { word: "The Witcher 🐺", hint: "Monster" },
+        { word: "Assassins Creed 🦅", hint: "Stealth" }
     ],
     "Animals": [
         { word: "Elephant 🐘", hint: "Giant" },
@@ -294,7 +354,12 @@ const gameData = {
         { word: "Crocodile 🐊", hint: "Jaws" },
         { word: "Fox 🦊", hint: "Clever" },
         { word: "Owl 🦉", hint: "Wisdom" },
-        { word: "Camel 🐫", hint: "Hump" }
+        { word: "Camel 🐫", hint: "Hump" },
+        { word: "Cheetah 🐆", hint: "Speed" },
+        { word: "Flamingo 🦩", hint: "Pink" },
+        { word: "Koala 🐨", hint: "Sleep" },
+        { word: "Shark 🦈", hint: "Fin" },
+        { word: "Octopus 🐙", hint: "Arms" }
     ],
     "Countries": [
         { word: "India 🇮🇳", hint: "Tricolor" },
@@ -321,13 +386,51 @@ const gameData = {
         { word: "South Africa 🇿🇦", hint: "Safari" },
         { word: "Saudi Arabia 🇸🇦", hint: "Oasis" },
         { word: "New Zealand 🇳🇿", hint: "Kiwi" },
-        { word: "Thailand 🇹🇭", hint: "Orchid" }
+        { word: "Thailand 🇹🇭", hint: "Orchid" },
+        { word: "Greece 🇬🇷", hint: "Islands" },
+        { word: "Netherlands 🇳🇱", hint: "Tulips" },
+        { word: "Norway 🇳🇴", hint: "Fjords" },
+        { word: "Portugal 🇵🇹", hint: "Coast" },
+        { word: "Vietnam 🇻🇳", hint: "Lanterns" }
+    ],
+    "Movies & Shows": [
+        { word: "Inception 🌀", hint: "Dream" },
+        { word: "Avengers 🦸", hint: "Assemble" },
+        { word: "Stranger Things 🚲", hint: "Upside Down" },
+        { word: "Harry Potter 🪄", hint: "Wand" },
+        { word: "Game of Thrones 🐉", hint: "Throne" },
+        { word: "Interstellar 🚀", hint: "Gravity" },
+        { word: "Titanic 🚢", hint: "Iceberg" },
+        { word: "Squid Game 🦑", hint: "Marbles" },
+        { word: "Breaking Bad 🧪", hint: "Blue" },
+        { word: "The Dark Knight 🦇", hint: "Joker" }
+    ],
+    "Tech & Gadgets": [
+        { word: "Drone 🛸", hint: "Propeller" },
+        { word: "Smartwatch ⌚", hint: "Pulse" },
+        { word: "3D Printer 🖨️", hint: "Layer" },
+        { word: "VR Headset 🥽", hint: "Virtual" },
+        { word: "Microphone 🎙️", hint: "Audio" },
+        { word: "Solar Panel ☀️", hint: "Clean Energy" },
+        { word: "Projector 📽️", hint: "Beam" },
+        { word: "SSD Drive 💾", hint: "Speed" }
+    ],
+    "Landmarks": [
+        { word: "Taj Mahal 🕌", hint: "Marble" },
+        { word: "Eiffel Tower 🗼", hint: "Paris" },
+        { word: "Statue of Liberty 🗽", hint: "Torch" },
+        { word: "Great Wall 🧱", hint: "Ancient" },
+        { word: "Colosseum 🏛️", hint: "Gladiator" },
+        { word: "Burj Khalifa 🏙️", hint: "Toughest Peak" },
+        { word: "Pyramids 🏜️", hint: "Pharaoh" },
+        { word: "Big Ben 🗼", hint: "Clock" }
     ]
 };
+
 const PLAYER_COLORS = [
-    '#d4af37', '#c0c0c0', '#cd7f32', '#a9a9a9',
-    '#b8860b', '#808080', '#daa520', '#708090',
-    '#eee8aa', '#bebebe', '#bc8f8f', '#f5f5dc'
+    '#9333ea', '#c026d3', '#db2777', '#ea580c',
+    '#059669', '#2563eb', '#0284c7', '#7c3aed',
+    '#d97706', '#dc2626', '#16a34a', '#4f46e5'
 ];
 
 const SETTINGS_KEY = 'imposter_game_settings';
@@ -382,7 +485,136 @@ const imposterGuessCheckbox = document.getElementById('imposter-guess-checkbox')
 const leaderboardList = document.getElementById('leaderboard-list');
 const resetLeaderboardBtn = document.getElementById('reset-leaderboard-btn');
 
+
+
+/* ── Running Particle Canvas Background ──────────────────────── */
+function initBackgroundParticles() {
+    const canvas = document.getElementById('particle-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    });
+
+    const particles = [];
+    const particleCount = Math.min(Math.floor((width * height) / 18000), 55);
+
+    for (let i = 0; i < particleCount; i++) {
+        particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            radius: Math.random() * 2 + 1,
+            vx: (Math.random() - 0.5) * 0.45,
+            vy: (Math.random() - 0.5) * 0.45,
+            alpha: Math.random() * 0.5 + 0.2,
+            hue: Math.random() > 0.5 ? 270 : 320
+        });
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0) p.x = width;
+            if (p.x > width) p.x = 0;
+            if (p.y < 0) p.y = height;
+            if (p.y > height) p.y = 0;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `hsla(${p.hue}, 80%, 70%, ${p.alpha})`;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = `hsla(${p.hue}, 80%, 70%, 0.8)`;
+            ctx.fill();
+
+            for (let j = i + 1; j < particles.length; j++) {
+                const p2 = particles[j];
+                const dx = p.x - p2.x;
+                const dy = p.y - p2.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                if (dist < 110) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(p2.x, p2.y);
+                    ctx.strokeStyle = `hsla(${p.hue}, 70%, 65%, ${0.14 * (1 - dist / 110)})`;
+                    ctx.lineWidth = 0.75;
+                    ctx.stroke();
+                }
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+    animate();
+}
+
+/* ── Visual Effect Helpers ─────────────────────────────────────── */
+function createParticles(originEl, color, count = 24) {
+    const rect = originEl.getBoundingClientRect();
+    const cx = rect.left + rect.width  / 2;
+    const cy = rect.top  + rect.height / 2;
+    for (let i = 0; i < count; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const angle = (Math.PI * 2 * i) / count + Math.random() * 0.4;
+        const dist  = 65 + Math.random() * 160;
+        const size  = 5  + Math.random() * 12;
+        Object.assign(p.style, {
+            left:      cx + 'px',
+            top:       cy + 'px',
+            width:     size + 'px',
+            height:    size + 'px',
+            background: color,
+            boxShadow: `0 0 ${size * 1.5}px ${color}`,
+        });
+        p.style.setProperty('--dx',  Math.cos(angle) * dist + 'px');
+        p.style.setProperty('--dy',  Math.sin(angle) * dist + 'px');
+        p.style.setProperty('--dur', (0.7 + Math.random() * 0.5) + 's');
+        document.body.appendChild(p);
+        setTimeout(() => p.remove(), 1300);
+    }
+}
+
+function flashScreen(color = 'rgba(255,255,255,0.55)') {
+    const el = document.createElement('div');
+    el.className = 'flash-overlay';
+    el.style.background = color;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 700);
+}
+
+function addRippleEffects() {
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.primary-btn, .secondary-btn, .vote-btn, .tag-label');
+        if (!btn) return;
+
+        const rect = btn.getBoundingClientRect();
+        const ripple = document.createElement('span');
+        ripple.className = 'btn-ripple';
+        const diameter = Math.max(rect.width, rect.height);
+        const radius = diameter / 2;
+
+        ripple.style.width = ripple.style.height = `${diameter}px`;
+        ripple.style.left = `${e.clientX - rect.left - radius}px`;
+        ripple.style.top = `${e.clientY - rect.top - radius}px`;
+
+        btn.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 650);
+    });
+}
+
 function init() {
+    initBackgroundParticles();
+    addRippleEffects();
+
     for (let category in gameData) {
         const tag = document.createElement('div');
         tag.className = 'tag-label';
@@ -556,7 +788,6 @@ function startGame() {
             chaosWord: randomWord
         });
 
-        // Initialize user in leaderboard if not present
         const currentScores = getLeaderboard();
         if (currentScores[customName] === undefined) {
             updateScore(customName, 0);
@@ -581,28 +812,108 @@ function renderCurrentAssignmentCard() {
 
     const card = document.createElement('div');
     card.className = 'single-role-card';
-    card.textContent = player.name;
     card.style.borderColor = player.color;
 
+    const inner = document.createElement('div');
+    inner.className = 'assignment-card-inner';
+
+    const topDeco = document.createElement('div');
+    topDeco.className = 'card-deco-top';
+    topDeco.textContent = '✨';
+
+    const centerArea = document.createElement('div');
+    centerArea.className = 'card-center-area';
+
+    const playerLabel = document.createElement('div');
+    playerLabel.className = 'card-player-label';
+    playerLabel.textContent = `PLAYER ${gameState.currentAssignmentIndex + 1} OF ${gameState.players.length}`;
+
+    const playerName = document.createElement('div');
+    playerName.className = 'card-player-name';
+    playerName.textContent = player.name;
+
+    const lockIcon = document.createElement('div');
+    lockIcon.className = 'card-lock-icon';
+    lockIcon.textContent = '🔒';
+
+    const holdHint = document.createElement('div');
+    holdHint.className = 'hold-hint';
+    holdHint.textContent = '👆 PRESS & HOLD TO REVEAL';
+
+    centerArea.appendChild(playerLabel);
+    centerArea.appendChild(playerName);
+    centerArea.appendChild(lockIcon);
+    centerArea.appendChild(holdHint);
+
+    const bottomDeco = document.createElement('div');
+    bottomDeco.className = 'card-deco-bottom';
+    bottomDeco.textContent = '✨';
+
+    inner.appendChild(topDeco);
+    inner.appendChild(centerArea);
+    inner.appendChild(bottomDeco);
+    card.appendChild(inner);
+
     const reveal = () => {
+        if (card.classList.contains('revealed')) return;
         card.classList.add('revealed');
-        card.style.backgroundColor = player.color;
-        if (player.role === 'imposter') {
-            const hintText = gameState.hintsEnabled
-                ? `IMPOSTER\nHint: ${gameState.secretWordObj.hint}`
-                : 'YOU ARE THE IMPOSTER';
-            card.textContent = hintText;
-            card.style.whiteSpace = "pre-line";
+        card.style.backgroundColor = player.color + '18';
+        card.style.borderColor = player.color;
+
+        centerArea.innerHTML = '';
+
+        const isImposter = player.role === 'imposter';
+
+        const stamp = document.createElement('div');
+        stamp.className = `role-stamp ${isImposter ? 'imposter-stamp' : 'civilian-stamp'}`;
+        stamp.textContent = isImposter ? 'IMPOSTER 🕵️' : 'CIVILIAN 🛡️';
+
+        centerArea.appendChild(playerLabel);
+        centerArea.appendChild(playerName);
+
+        // TOP: Word or Hint
+        if (isImposter) {
+            if (gameState.hintsEnabled) {
+                const hintEl = document.createElement('div');
+                hintEl.className = 'card-hint-reveal';
+                hintEl.textContent = `💡 Hint: ${gameState.secretWordObj.hint}`;
+                centerArea.appendChild(hintEl);
+            } else {
+                const noHintEl = document.createElement('div');
+                noHintEl.className = 'card-hint-reveal';
+                noHintEl.textContent = `❓ Secret Word Hidden`;
+                centerArea.appendChild(noHintEl);
+            }
         } else {
-            const word = gameState.chaosMode ? player.chaosWord.word : gameState.secretWordObj.word;
-            card.textContent = `WORD: ${word}`;
+            const wordEl = document.createElement('div');
+            wordEl.className = 'secret-word';
+            const wordToShow = gameState.chaosMode ? player.chaosWord.word : gameState.secretWordObj.word;
+            wordEl.textContent = `🔑 ${wordToShow}`;
+            centerArea.appendChild(wordEl);
         }
+
+        // UNDER: Role Stamp (Civilian / Imposter)
+        centerArea.appendChild(stamp);
+
+        const releaseHint = document.createElement('div');
+        releaseHint.className = 'release-hint';
+        releaseHint.textContent = 'RELEASE TO HIDE';
+        centerArea.appendChild(releaseHint);
+
+        createParticles(card, player.color, 24);
     };
 
     const hide = () => {
+        if (!card.classList.contains('revealed')) return;
         card.classList.remove('revealed');
         card.style.backgroundColor = '';
-        card.textContent = player.name;
+        card.style.borderColor = player.color;
+
+        centerArea.innerHTML = '';
+        centerArea.appendChild(playerLabel);
+        centerArea.appendChild(playerName);
+        centerArea.appendChild(lockIcon);
+        centerArea.appendChild(holdHint);
     };
 
     card.addEventListener('mousedown', reveal);
@@ -634,15 +945,55 @@ function setupGameScreen() {
     showScreen('game');
 }
 
+function updateGameHUD() {
+    const hud = document.getElementById('game-hud');
+    if (!hud) return;
+
+    const impostersCount = gameState.activePlayers.filter(p => p.role === 'imposter').length;
+    const civiliansCount = gameState.activePlayers.length - impostersCount;
+
+    hud.innerHTML = `
+        <div class="hud-chip civilian-chip">
+            <span class="hud-num">${civiliansCount}</span>
+            <span class="hud-label">Civilians</span>
+        </div>
+        <div class="hud-vs">VS</div>
+        <div class="hud-chip imposter-chip">
+            <span class="hud-num">${impostersCount}</span>
+            <span class="hud-label">Imposters</span>
+        </div>
+    `;
+}
+
 function renderPlayers() {
+    updateGameHUD();
     playersList.innerHTML = '';
-    gameState.activePlayers.forEach(player => {
+
+    gameState.players.forEach(player => {
+        const isActive = gameState.activePlayers.some(p => p.id === player.id);
         const item = document.createElement('div');
-        item.className = 'player-item';
+        item.className = `player-item ${isActive ? '' : 'eliminated-player'}`;
         item.style.borderLeftColor = player.color;
+
+        const initial = player.name.charAt(0).toUpperCase();
+
         item.innerHTML = `
-            <span class="player-name">${player.name}</span>
-            <button class="primary-btn" onclick="votePlayer(${player.id})">Vote Out</button>
+            <div class="player-profile">
+                <div class="player-avatar" style="background: ${player.color}22; border-color: ${player.color}; color: ${player.color};">
+                    ${initial}
+                </div>
+                <div class="player-info">
+                    <span class="player-name">${player.name}</span>
+                    <span class="player-suspect-tag">${isActive ? 'ACTIVE SUSPECT' : 'ELIMINATED 💀'}</span>
+                </div>
+            </div>
+            ${isActive ? `
+                <button class="vote-btn" onclick="votePlayer(${player.id})">
+                    <span>🚨</span> Vote Out
+                </button>
+            ` : `
+                <span class="eliminated-badge">OUT</span>
+            `}
         `;
         playersList.appendChild(item);
     });
@@ -650,15 +1001,24 @@ function renderPlayers() {
 
 window.votePlayer = function(id) {
     const player = gameState.players.find(p => p.id === id);
+    if (!player) return;
     gameState.votedPlayer = player;
 
-    revealText.textContent = "???";
-    revealCard.classList.remove('revealed');
-    revealCard.style.borderColor = 'var(--accent-color)';
+    revealText.textContent = '???';
+    revealText.style.color = '';
+    revealText.classList.remove('bounce-in');
+
+    revealCard.style.transition = 'none';
+    revealCard.classList.remove('revealed', 'suspense-pulse');
+    revealCard.style.borderColor = '';
+    revealCard.style.backgroundColor = '';
+    revealCard.style.boxShadow = '';
+    revealCard.style.animation = '';
+    requestAnimationFrame(() => { revealCard.style.transition = ''; });
+
     revealActions.classList.add('hidden');
     triggerRevealBtn.classList.remove('hidden');
-    
-    // Reset guess checkbox on vote view
+
     imposterGuessCheckbox.checked = false;
     imposterGuessContainer.classList.add('hidden');
 
@@ -667,35 +1027,50 @@ window.votePlayer = function(id) {
 
 function triggerReveal() {
     triggerRevealBtn.classList.add('hidden');
-    revealCard.classList.add('revealed');
+
+    flashScreen('rgba(255,255,255,0.48)');
+    revealCard.classList.add('suspense-pulse');
 
     setTimeout(() => {
+        revealCard.classList.remove('suspense-pulse');
+        revealCard.classList.add('revealed');
         revealCard.style.borderColor = gameState.votedPlayer.color;
-        revealCard.style.backgroundColor = gameState.votedPlayer.color;
+        revealCard.style.backgroundColor = gameState.votedPlayer.color + '22';
 
         const isImposter = gameState.votedPlayer.role === 'imposter';
-        revealText.textContent = isImposter ? "IMPOSTER" : "CIVILIAN";
-        revealText.style.color = isImposter ? "var(--danger-color)" : "var(--success-color)";
+        revealText.textContent = isImposter ? 'IMPOSTER 🕵️' : 'CIVILIAN 🛡️';
+        revealText.style.color = isImposter ? 'var(--danger)' : 'var(--success)';
+        revealText.classList.add('bounce-in');
 
         revealActions.classList.remove('hidden');
 
         if (isImposter) {
             imposterGuessContainer.classList.remove('hidden');
-            revealCard.style.animation = "shake 0.5s ease-in-out";
-            setTimeout(() => { revealCard.style.animation = ""; }, 500);
-
             const currentImposters = gameState.activePlayers.filter(p => p.role === 'imposter');
             if (currentImposters.length <= 1) {
-                 document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was the last IMPOSTER!`;
-                 continueBtn.classList.add('hidden');
+                document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was the last IMPOSTER! 🎉`;
+                continueBtn.classList.add('hidden');
             } else {
-                 document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was an IMPOSTER!`;
-                 continueBtn.classList.remove('hidden');
+                document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was an IMPOSTER! 🕵️`;
+                continueBtn.classList.remove('hidden');
             }
         } else {
-            document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was a CIVILIAN...`;
+            document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was a Civilian... 😔`;
             continueBtn.classList.remove('hidden');
         }
+
+        setTimeout(() => {
+            const col = isImposter ? '#f43f5e' : '#10d98d';
+            flashScreen(isImposter ? 'rgba(244,63,94,0.40)' : 'rgba(16,217,141,0.32)');
+            revealCard.style.boxShadow =
+                `0 0 65px ${col}cc, 0 0 140px ${col}44, 0 22px 55px rgba(0,0,0,.65)`;
+            createParticles(revealCard, col, 35);
+            if (isImposter) {
+                revealCard.style.animation = 'shake 0.5s ease-in-out';
+                setTimeout(() => { revealCard.style.animation = ''; }, 500);
+            }
+        }, 750);
+
     }, 600);
 }
 
@@ -705,15 +1080,12 @@ function processScoring() {
     if (gameState.votedPlayer.role === 'imposter') {
         const guessedCorrectly = imposterGuessCheckbox.checked;
         if (guessedCorrectly) {
-            // -5 for getting voted out + 5 for correct guess = 0 points net
             updateScore(gameState.votedPlayer.name, 0);
         } else {
-            // -5 points for being voted out
             updateScore(gameState.votedPlayer.name, -5);
         }
     }
 
-    // Award +5 points to all surviving imposters
     const remainingActive = gameState.activePlayers.filter(p => p.id !== gameState.votedPlayer.id);
     remainingActive.forEach(p => {
         if (p.role === 'imposter') {
@@ -730,12 +1102,17 @@ function continueGame() {
     const imposters = gameState.activePlayers.filter(p => p.role === 'imposter').length;
     const civilians = gameState.activePlayers.length - imposters;
 
-    if (imposters >= civilians) {
-        alert("Game Over! The Imposters have taken over.");
+    if (imposters >= civilians || imposters === 0) {
+        if (imposters === 0) {
+            alert("Victory! All Imposters have been eliminated! 🎉");
+        } else {
+            alert("Game Over! The Imposters have taken over.");
+        }
         resetGame();
         return;
     }
 
+    renderPlayers();
     document.getElementById('reveal-status').textContent = "The Trial Continues";
     navigateTo('#game');
 }
@@ -753,6 +1130,7 @@ function resetGame() {
         phase: "setup",
         votedPlayer: null,
         hintsEnabled: false,
+        chaosMode: false,
         currentAssignmentIndex: 0
     };
     renderLeaderboard();
@@ -768,13 +1146,12 @@ triggerRevealBtn.addEventListener('click', triggerReveal);
 continueBtn.addEventListener('click', continueGame);
 quitBtn.addEventListener('click', resetGame);
 endGameBtn.addEventListener('click', () => {
-    // End game manually: Remaining imposters survived round
-    gameState.activePlayers.forEach(p => {
-        if (p.role === 'imposter') {
-            updateScore(p.name, 5);
-        }
+    const activeImposters = gameState.activePlayers.filter(p => p.role === 'imposter');
+    activeImposters.forEach(p => {
+        updateScore(p.name, 5);
     });
-    alert("Game ended manually!");
+    gameState.votedPlayer = null; // Prevent double scoring in resetGame
+    alert("Game ended manually! Imposters awarded +5 pts.");
     resetGame();
 });
 
