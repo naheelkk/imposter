@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🕵️ Imposter — The Bluffing Party Game</title>
-    <meta name="description" content="A browser-based party game where imposters must bluff while civilians try to expose them. No install needed!">
+    <title>🕵️ Impostor — The Bluffing Party Game</title>
+    <meta name="description" content="A browser-based party game where impostors must bluff while civilians try to expose them. No install needed!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
         <!-- Setup Screen -->
         <div id="setup-screen" class="screen">
             <div class="hero-section">
-                <h1 class="animate-pop">🕵️ Imposter</h1>
+                <h1 class="animate-pop">🕵️ Impostor</h1>
                 <p class="animate-fade">Who among you is the liar?</p>
             </div>
 
@@ -48,8 +48,8 @@
                             <input type="number" id="player-count" min="3" max="20" value="3">
                         </div>
                         <div class="setup-group">
-                            <label for="imposter-count">Number of Imposters</label>
-                            <input type="number" id="imposter-count" min="1" max="5" value="1">
+                            <label for="impostor-count">Number of Impostors</label>
+                            <input type="number" id="impostor-count" min="1" max="5" value="1">
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                             <input type="checkbox" id="hint-toggle">
                             <span class="slider round"></span>
                         </label>
-                        <span class="toggle-label">Enable Imposter Hints</span>
+                        <span class="toggle-label">Enable Impostor Hints</span>
                     </div>
                     <div class="toggle-group" style="margin-top: 15px;">
                         <label class="switch">
@@ -98,7 +98,7 @@
             <div id="game-hud" class="game-hud"></div>
             <div id="active-players-list" class="players-list"></div>
             <div class="game-controls">
-                <button id="end-game-btn" class="secondary-btn">Imposter Won 🏴</button>
+                <button id="end-game-btn" class="secondary-btn">Impostor Won 🏴</button>
             </div>
         </div>
 
@@ -110,12 +110,12 @@
                     <span id="reveal-text">???</span>
                 </div>
 
-                <!-- Imposter Word Guess Option -->
-                <div id="imposter-guess-container" class="guess-container hidden">
+                <!-- Impostor Word Guess Option -->
+                <div id="impostor-guess-container" class="guess-container hidden">
                     <label class="checkbox-container">
-                        <input type="checkbox" id="imposter-guess-checkbox">
+                        <input type="checkbox" id="impostor-guess-checkbox">
                         <span class="checkmark"></span>
-                        <span class="checkbox-label">Did the Imposter correctly guess the secret word?</span>
+                        <span class="checkbox-label">Did the Impostor correctly guess the secret word?</span>
                     </label>
                 </div>
 

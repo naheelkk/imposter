@@ -1,29 +1,29 @@
-# 🕵️ Imposter
+# 🕵️ Impostor
 
-A browser-based party game (like Spyfall / Among Us in card form) where one or more players are secretly the **Imposter** and must bluff their way through a round while everyone else tries to figure out who doesn't actually know the secret word.
+A browser-based party game (like Spyfall / Among Us in card form) where one or more players are secretly the **Impostor** and must bluff their way through a round while everyone else tries to figure out who doesn't actually know the secret word.
 
 Play it locally by opening `index.html` in a browser — no build step, no server, no dependencies.
 
 ## How to Play
 
 1. **Select Categories** — choose one or more word categories (Animals, Sports, Food and Drink, Celebs, Gaming, etc.). The secret word is drawn from the combined pool of selected categories.
-2. **Set Player Count & Imposter Count** — 3–20 players, 1–5 imposters (must be fewer imposters than players).
+2. **Set Player Count & Impostor Count** — 3–20 players, 1–5 impostors (must be fewer impostors than players).
 3. **Enter Player Names** — optional; defaults to "Player 1", "Player 2", etc.
 4. **Choose Difficulty & Mode**:
-   - **Imposter Hints** — gives imposters a one-word clue instead of leaving them totally in the dark.
+   - **Impostor Hints** — gives impostors a one-word clue instead of leaving them totally in the dark.
    - **Chaos Mode 🌀** — every civilian gets their *own* random word instead of sharing one, making the round much harder to reason about.
 5. **Pass-and-Play Assignment** — the device is passed around; each player presses and holds their card to privately reveal their role/word, then releases to hide it again before passing to the next player.
-6. **Discuss & Vote** — players discuss out loud, then vote to eliminate a suspected imposter. Tap **Vote** next to a player's name, then **Reveal Identity** to dramatically flip the card and show whether they were an Imposter or a Civilian.
-7. **Continue or End** — the game continues (eliminated players are removed) until either all imposters are caught or the imposters equal/outnumber the remaining civilians, at which point the imposters win.
+6. **Discuss & Vote** — players discuss out loud, then vote to eliminate a suspected impostor. Tap **Vote** next to a player's name, then **Reveal Identity** to dramatically flip the card and show whether they were an Impostor or a Civilian.
+7. **Continue or End** — the game continues (eliminated players are removed) until either all impostors are caught or the impostors equal/outnumber the remaining civilians, at which point the impostors win.
 
 ## Features
 
 - 12 built-in word categories (Daily Objects, Household Items, Fun, Sports, Colors, Hobbies, Apps, Celebs, Food and Drink, Gaming, Animals, Countries), each with emoji-tagged words and one-word hints.
-- Configurable player count (3–20) and imposter count (1–5).
-- Optional **hints** for imposters and an optional **Chaos Mode** where civilians don't share a common word.
+- Configurable player count (3–20) and impostor count (1–5).
+- Optional **hints** for impostors and an optional **Chaos Mode** where civilians don't share a common word.
 - Hash-based screen routing (`#setup`, `#assignment`, `#game`, `#reveal`) with animated screen transitions.
 - Press-and-hold "physical card" reveal interaction (mouse + touch support).
-- Settings (categories, player/imposter count, toggles) are saved to `localStorage` and restored on reload.
+- Settings (categories, player/impostor count, toggles) are saved to `localStorage` and restored on reload.
 - Dark, neon "premium" visual theme with glow effects, bouncy easing animations, and a responsive mobile layout.
 
 ## Project Structure

@@ -433,8 +433,8 @@ const PLAYER_COLORS = [
     '#d97706', '#dc2626', '#16a34a', '#4f46e5'
 ];
 
-const SETTINGS_KEY = 'imposter_game_settings';
-const LEADERBOARD_KEY = 'imposter_game_leaderboard';
+const SETTINGS_KEY = 'impostor_game_settings';
+const LEADERBOARD_KEY = 'impostor_game_leaderboard';
 
 let gameState = {
     selectedCategories: [],
@@ -464,7 +464,7 @@ const screens = {
 
 const categoryTagsContainer = document.getElementById('category-tags');
 const playerCountInput = document.getElementById('player-count');
-const imposterCountInput = document.getElementById('imposter-count');
+const impostorCountInput = document.getElementById('impostor-count');
 const hintToggle = document.getElementById('hint-toggle');
 const chaosToggle = document.getElementById('chaos-toggle');
 const startBtn = document.getElementById('start-game-btn');
@@ -480,12 +480,237 @@ const revealActions = document.getElementById('reveal-actions');
 const continueBtn = document.getElementById('continue-btn');
 const quitBtn = document.getElementById('quit-btn');
 const endGameBtn = document.getElementById('end-game-btn');
-const imposterGuessContainer = document.getElementById('imposter-guess-container');
-const imposterGuessCheckbox = document.getElementById('imposter-guess-checkbox');
+const impostorGuessContainer = document.getElementById('impostor-guess-container');
+const impostorGuessCheckbox = document.getElementById('impostor-guess-checkbox');
 const leaderboardList = document.getElementById('leaderboard-list');
 const resetLeaderboardBtn = document.getElementById('reset-leaderboard-btn');
 
+/* ── Sound Effects Synthesizer (Web Audio API) ─────────────────────── */
+let audioCtx = null;
 
+function getAudioContext() {
+    if (!audioCtx) {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (AudioContextClass) {
+            audioCtx = new AudioContextClass();
+        }
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume();
+    }
+    return audioCtx;
+}
+
+// 1. Suspense sound played when "Reveal Identity" is clicked
+function playSuspenseSound() {
+    const ctx = getAudioContext();
+    if (!ctx) return;
+
+    try {
+        const now = ctx.currentTime;
+        
+        // Rising synth swell
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        const filter = ctx.createBiquadFilter();
+
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(110, now);
+        osc.frequency.exponentialRampToValueAtTime(320, now + 0.55);
+
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(250, now);
+        filter.frequency.exponentialRampToValueAtTime(1400, now + 0.55);
+
+        gain.gain.setValueAtTime(0.01, now);
+        gain.gain.linearRampToValueAtTime(0.18, now + 0.35);
+        gain.gain.linearRampToValueAtTime(0.001, now + 0.58);
+
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + 0.6);
+
+        // Rapid suspense tension ticks
+        for (let i = 0; i < 7; i++) {
+            const tickTime = now + (i * 0.075);
+            const tickOsc = ctx.createOscillator();
+            const tickGain = ctx.createGain();
+            tickOsc.type = 'sine';
+            tickOsc.frequency.setValueAtTime(180 + i * 25, tickTime);
+            tickGain.gain.setValueAtTime(0.08, tickTime);
+            tickGain.gain.exponentialRampToValueAtTime(0.001, tickTime + 0.04);
+            tickOsc.connect(tickGain);
+            tickGain.connect(ctx.destination);
+            tickOsc.start(tickTime);
+            tickOsc.stop(tickTime + 0.04);
+        }
+    } catch (e) {
+        console.warn("Audio playback error:", e);
+    }
+}
+
+// 2. Sound effect when voted player is revealed to be an Impostor (Victory Fanfare)
+function playImpostorRevealedSound() {
+    const ctx = getAudioContext();
+    if (!ctx) return;
+
+    try {
+        const now = ctx.currentTime;
+
+        // Upbeat victory fanfare notes: G4 -> C5 -> E5 -> G5
+        const notes = [
+            { freq: 392.00, time: 0.0,  dur: 0.12, gain: 0.20 },
+            { freq: 523.25, time: 0.10, dur: 0.12, gain: 0.22 },
+            { freq: 659.25, time: 0.20, dur: 0.15, gain: 0.25 },
+            { freq: 783.99, time: 0.35, dur: 0.65, gain: 0.30 }
+        ];
+
+        notes.forEach(n => {
+            const t = now + n.time;
+            const osc1 = ctx.createOscillator();
+            const osc2 = ctx.createOscillator();
+            const gainNode = ctx.createGain();
+            const filterNode = ctx.createBiquadFilter();
+
+            osc1.type = 'triangle';
+            osc2.type = 'sawtooth';
+            
+            osc1.frequency.setValueAtTime(n.freq, t);
+            osc2.frequency.setValueAtTime(n.freq * 1.004, t);
+
+            filterNode.type = 'lowpass';
+            filterNode.frequency.setValueAtTime(2200, t);
+
+            gainNode.gain.setValueAtTime(0.01, t);
+            gainNode.gain.linearRampToValueAtTime(n.gain, t + 0.02);
+            gainNode.gain.exponentialRampToValueAtTime(0.001, t + n.dur);
+
+            osc1.connect(filterNode);
+            osc2.connect(filterNode);
+            filterNode.connect(gainNode);
+            gainNode.connect(ctx.destination);
+
+            osc1.start(t);
+            osc2.start(t);
+            osc1.stop(t + n.dur);
+            osc2.stop(t + n.dur);
+        });
+
+        // Deep sub-bass hit on final note
+        const subOsc = ctx.createOscillator();
+        const subGain = ctx.createGain();
+        const subTime = now + 0.35;
+        subOsc.type = 'sine';
+        subOsc.frequency.setValueAtTime(130.81, subTime);
+        subOsc.frequency.exponentialRampToValueAtTime(65.41, subTime + 0.5);
+        subGain.gain.setValueAtTime(0.35, subTime);
+        subGain.gain.exponentialRampToValueAtTime(0.001, subTime + 0.5);
+        subOsc.connect(subGain);
+        subGain.connect(ctx.destination);
+        subOsc.start(subTime);
+        subOsc.stop(subTime + 0.5);
+    } catch (e) {
+        console.warn("Audio playback error:", e);
+    }
+}
+
+// 3. Sound effect when voted player is revealed to be a Civilian (Dramatic Sad / Wrong Sting)
+function playCivilianRevealedSound() {
+    const ctx = getAudioContext();
+    if (!ctx) return;
+
+    try {
+        const now = ctx.currentTime;
+
+        // Descending minor failure notes: A4 -> F4 -> D4 -> Bb2
+        const notes = [
+            { freq: 440.00, time: 0.0,  dur: 0.18, gain: 0.22 },
+            { freq: 349.23, time: 0.15, dur: 0.18, gain: 0.22 },
+            { freq: 293.66, time: 0.30, dur: 0.22, gain: 0.25 },
+            { freq: 116.54, time: 0.48, dur: 0.70, gain: 0.30 }
+        ];
+
+        notes.forEach(n => {
+            const t = now + n.time;
+            const osc = ctx.createOscillator();
+            const gainNode = ctx.createGain();
+            const filterNode = ctx.createBiquadFilter();
+
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(n.freq, t);
+
+            filterNode.type = 'lowpass';
+            filterNode.frequency.setValueAtTime(900, t);
+            filterNode.frequency.linearRampToValueAtTime(300, t + n.dur);
+
+            gainNode.gain.setValueAtTime(0.01, t);
+            gainNode.gain.linearRampToValueAtTime(n.gain, t + 0.02);
+            gainNode.gain.exponentialRampToValueAtTime(0.001, t + n.dur);
+
+            osc.connect(filterNode);
+            filterNode.connect(gainNode);
+            gainNode.connect(ctx.destination);
+
+            osc.start(t);
+            osc.stop(t + n.dur);
+        });
+
+        // Dramatic low boom thud at the end
+        const thudOsc = ctx.createOscillator();
+        const thudGain = ctx.createGain();
+        const thudTime = now + 0.48;
+        thudOsc.type = 'sine';
+        thudOsc.frequency.setValueAtTime(80, thudTime);
+        thudOsc.frequency.exponentialRampToValueAtTime(25, thudTime + 0.65);
+        thudGain.gain.setValueAtTime(0.38, thudTime);
+        thudGain.gain.exponentialRampToValueAtTime(0.001, thudTime + 0.65);
+        thudOsc.connect(thudGain);
+        thudGain.connect(ctx.destination);
+        thudOsc.start(thudTime);
+        thudOsc.stop(thudTime + 0.65);
+    } catch (e) {
+        console.warn("Audio playback error:", e);
+    }
+}
+
+// 4. Sound effect for screen route transition
+function playScreenTransitionSound() {
+    const ctx = getAudioContext();
+    if (!ctx) return;
+
+    try {
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(260, now);
+        osc.frequency.exponentialRampToValueAtTime(620, now + 0.12);
+
+        gain.gain.setValueAtTime(0.01, now);
+        gain.gain.linearRampToValueAtTime(0.08, now + 0.03);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + 0.15);
+    } catch (e) {
+        console.warn("Audio playback error:", e);
+    }
+}
+
+function triggerCosmicWarpEffect() {
+    document.querySelectorAll('.cosmic-warp-ring').forEach(el => el.remove());
+    const ring = document.createElement('div');
+    ring.className = 'cosmic-warp-ring';
+    document.body.appendChild(ring);
+    setTimeout(() => ring.remove(), 500);
+}
 
 /* ── Running Particle Canvas Background ──────────────────────── */
 function initBackgroundParticles() {
@@ -615,6 +840,10 @@ function init() {
     initBackgroundParticles();
     addRippleEffects();
 
+    document.addEventListener('click', () => {
+        getAudioContext();
+    }, { passive: true });
+
     for (let category in gameData) {
         const tag = document.createElement('div');
         tag.className = 'tag-label';
@@ -631,7 +860,7 @@ function init() {
         updatePlayerInputs();
         saveSettings();
     });
-    imposterCountInput.addEventListener('change', saveSettings);
+    impostorCountInput.addEventListener('change', saveSettings);
     hintToggle.addEventListener('change', saveSettings);
     chaosToggle.addEventListener('change', saveSettings);
     resetLeaderboardBtn.addEventListener('click', resetLeaderboard);
@@ -644,7 +873,7 @@ function init() {
 
 /* LocalStorage Leaderboard Helpers */
 function getLeaderboard() {
-    const saved = localStorage.getItem(LEADERBOARD_KEY);
+    const saved = localStorage.getItem(LEADERBOARD_KEY) || localStorage.getItem('imposter_game_leaderboard');
     return saved ? JSON.parse(saved) : {};
 }
 
@@ -685,6 +914,7 @@ function renderLeaderboard() {
 function resetLeaderboard() {
     if (confirm("Clear all leaderboard points?")) {
         localStorage.removeItem(LEADERBOARD_KEY);
+        localStorage.removeItem('imposter_game_leaderboard');
         renderLeaderboard();
     }
 }
@@ -695,7 +925,7 @@ function saveSettings() {
     const settings = {
         categories: selectedTags,
         playerCount: playerCountInput.value,
-        imposterCount: imposterCountInput.value,
+        impostorCount: impostorCountInput.value,
         hintsEnabled: hintToggle.checked,
         chaosMode: chaosToggle.checked
     };
@@ -703,7 +933,7 @@ function saveSettings() {
 }
 
 function loadSettings() {
-    const saved = localStorage.getItem(SETTINGS_KEY);
+    const saved = localStorage.getItem(SETTINGS_KEY) || localStorage.getItem('imposter_game_settings');
     if (!saved) return;
 
     const settings = JSON.parse(saved);
@@ -715,7 +945,7 @@ function loadSettings() {
     });
 
     playerCountInput.value = settings.playerCount || 3;
-    imposterCountInput.value = settings.imposterCount || 1;
+    impostorCountInput.value = settings.impostorCount || settings.imposterCount || 1;
     hintToggle.checked = settings.hintsEnabled || false;
     chaosToggle.checked = settings.chaosMode || false;
 
@@ -728,9 +958,29 @@ function handleRoute() {
     showScreen(screenKey);
 }
 
+let currentActiveScreenKey = null;
+
 function showScreen(screenKey) {
-    Object.values(screens).forEach(s => s.classList.add('hidden'));
-    screens[screenKey].classList.remove('hidden');
+    const targetScreen = screens[screenKey];
+    if (!targetScreen) return;
+
+    if (currentActiveScreenKey && currentActiveScreenKey !== screenKey) {
+        playScreenTransitionSound();
+        triggerCosmicWarpEffect();
+    }
+    currentActiveScreenKey = screenKey;
+
+    Object.values(screens).forEach(s => {
+        s.classList.add('hidden');
+        s.classList.remove('screen-enter');
+    });
+
+    targetScreen.classList.remove('hidden');
+    targetScreen.classList.add('screen-enter');
+
+    setTimeout(() => {
+        targetScreen.classList.remove('screen-enter');
+    }, 550);
 
     const currentHash = Object.keys(routes).find(key => routes[key] === screenKey);
     if (currentHash && window.location.hash !== currentHash) {
@@ -746,7 +996,7 @@ function startGame() {
     const selectedTags = Array.from(document.querySelectorAll('.tag-label.selected'))
                                .map(tag => tag.textContent);
     const count = parseInt(playerCountInput.value);
-    const imposterCount = parseInt(imposterCountInput.value);
+    const impostorCount = parseInt(impostorCountInput.value);
 
     if (selectedTags.length === 0) {
         alert("Please select at least one category!");
@@ -756,8 +1006,8 @@ function startGame() {
         alert("Minimum 3 players required!");
         return;
     }
-    if (imposterCount < 1 || imposterCount >= count) {
-        alert("Imposter count must be between 1 and " + (count - 1));
+    if (impostorCount < 1 || impostorCount >= count) {
+        alert("Impostor count must be between 1 and " + (count - 1));
         return;
     }
 
@@ -771,18 +1021,18 @@ function startGame() {
 
     const nameInputs = document.querySelectorAll('.player-name-input');
     const shuffledIndices = [...Array(count).keys()].sort(() => Math.random() - 0.5);
-    const imposterIndices = new Set(shuffledIndices.slice(0, imposterCount));
+    const impostorIndices = new Set(shuffledIndices.slice(0, impostorCount));
 
     gameState.players = [];
     for (let i = 0; i < count; i++) {
         const customName = nameInputs[i]?.value.trim() || `Player ${i + 1}`;
-        const isImposter = imposterIndices.has(i);
+        const isImpostor = impostorIndices.has(i);
         const randomWord = combinedPool[Math.floor(Math.random() * combinedPool.length)];
 
         gameState.players.push({
             id: i + 1,
             name: customName,
-            role: isImposter ? 'imposter' : 'civilian',
+            role: isImpostor ? 'impostor' : 'civilian',
             color: PLAYER_COLORS[i % PLAYER_COLORS.length],
             revealed: false,
             chaosWord: randomWord
@@ -862,17 +1112,17 @@ function renderCurrentAssignmentCard() {
 
         centerArea.innerHTML = '';
 
-        const isImposter = player.role === 'imposter';
+        const isImpostor = player.role === 'impostor';
 
         const stamp = document.createElement('div');
-        stamp.className = `role-stamp ${isImposter ? 'imposter-stamp' : 'civilian-stamp'}`;
-        stamp.textContent = isImposter ? 'IMPOSTER 🕵️' : 'CIVILIAN 🛡️';
+        stamp.className = `role-stamp ${isImpostor ? 'impostor-stamp' : 'civilian-stamp'}`;
+        stamp.textContent = isImpostor ? 'IMPOSTOR 🕵️' : 'CIVILIAN 🛡️';
 
         centerArea.appendChild(playerLabel);
         centerArea.appendChild(playerName);
 
         // TOP: Word or Hint
-        if (isImposter) {
+        if (isImpostor) {
             if (gameState.hintsEnabled) {
                 const hintEl = document.createElement('div');
                 hintEl.className = 'card-hint-reveal';
@@ -892,7 +1142,7 @@ function renderCurrentAssignmentCard() {
             centerArea.appendChild(wordEl);
         }
 
-        // UNDER: Role Stamp (Civilian / Imposter)
+        // UNDER: Role Stamp (Civilian / Impostor)
         centerArea.appendChild(stamp);
 
         const releaseHint = document.createElement('div');
@@ -949,8 +1199,8 @@ function updateGameHUD() {
     const hud = document.getElementById('game-hud');
     if (!hud) return;
 
-    const impostersCount = gameState.activePlayers.filter(p => p.role === 'imposter').length;
-    const civiliansCount = gameState.activePlayers.length - impostersCount;
+    const impostorsCount = gameState.activePlayers.filter(p => p.role === 'impostor').length;
+    const civiliansCount = gameState.activePlayers.length - impostorsCount;
 
     hud.innerHTML = `
         <div class="hud-chip civilian-chip">
@@ -958,9 +1208,9 @@ function updateGameHUD() {
             <span class="hud-label">Civilians</span>
         </div>
         <div class="hud-vs">VS</div>
-        <div class="hud-chip imposter-chip">
-            <span class="hud-num">${impostersCount}</span>
-            <span class="hud-label">Imposters</span>
+        <div class="hud-chip impostor-chip">
+            <span class="hud-num">${impostorsCount}</span>
+            <span class="hud-label">Impostors</span>
         </div>
     `;
 }
@@ -1019,14 +1269,16 @@ window.votePlayer = function(id) {
     revealActions.classList.add('hidden');
     triggerRevealBtn.classList.remove('hidden');
 
-    imposterGuessCheckbox.checked = false;
-    imposterGuessContainer.classList.add('hidden');
+    impostorGuessCheckbox.checked = false;
+    impostorGuessContainer.classList.add('hidden');
 
     navigateTo('#reveal');
 };
 
 function triggerReveal() {
     triggerRevealBtn.classList.add('hidden');
+
+    playSuspenseSound();
 
     flashScreen('rgba(255,255,255,0.48)');
     revealCard.classList.add('suspense-pulse');
@@ -1037,21 +1289,27 @@ function triggerReveal() {
         revealCard.style.borderColor = gameState.votedPlayer.color;
         revealCard.style.backgroundColor = gameState.votedPlayer.color + '22';
 
-        const isImposter = gameState.votedPlayer.role === 'imposter';
-        revealText.textContent = isImposter ? 'IMPOSTER 🕵️' : 'CIVILIAN 🛡️';
-        revealText.style.color = isImposter ? 'var(--danger)' : 'var(--success)';
+        const isImpostor = gameState.votedPlayer.role === 'impostor';
+        revealText.textContent = isImpostor ? 'IMPOSTOR 🕵️' : 'CIVILIAN 🛡️';
+        revealText.style.color = isImpostor ? 'var(--danger)' : 'var(--success)';
         revealText.classList.add('bounce-in');
+
+        if (isImpostor) {
+            playImpostorRevealedSound();
+        } else {
+            playCivilianRevealedSound();
+        }
 
         revealActions.classList.remove('hidden');
 
-        if (isImposter) {
-            imposterGuessContainer.classList.remove('hidden');
-            const currentImposters = gameState.activePlayers.filter(p => p.role === 'imposter');
-            if (currentImposters.length <= 1) {
-                document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was the last IMPOSTER! 🎉`;
+        if (isImpostor) {
+            impostorGuessContainer.classList.remove('hidden');
+            const currentImpostors = gameState.activePlayers.filter(p => p.role === 'impostor');
+            if (currentImpostors.length <= 1) {
+                document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was the last IMPOSTOR! 🎉`;
                 continueBtn.classList.add('hidden');
             } else {
-                document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was an IMPOSTER! 🕵️`;
+                document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was an IMPOSTOR! 🕵️`;
                 continueBtn.classList.remove('hidden');
             }
         } else {
@@ -1060,12 +1318,12 @@ function triggerReveal() {
         }
 
         setTimeout(() => {
-            const col = isImposter ? '#f43f5e' : '#10d98d';
-            flashScreen(isImposter ? 'rgba(244,63,94,0.40)' : 'rgba(16,217,141,0.32)');
+            const col = isImpostor ? '#f43f5e' : '#10d98d';
+            flashScreen(isImpostor ? 'rgba(244,63,94,0.40)' : 'rgba(16,217,141,0.32)');
             revealCard.style.boxShadow =
                 `0 0 65px ${col}cc, 0 0 140px ${col}44, 0 22px 55px rgba(0,0,0,.65)`;
             createParticles(revealCard, col, 35);
-            if (isImposter) {
+            if (isImpostor) {
                 revealCard.style.animation = 'shake 0.5s ease-in-out';
                 setTimeout(() => { revealCard.style.animation = ''; }, 500);
             }
@@ -1077,8 +1335,8 @@ function triggerReveal() {
 function processScoring() {
     if (!gameState.votedPlayer) return;
 
-    if (gameState.votedPlayer.role === 'imposter') {
-        const guessedCorrectly = imposterGuessCheckbox.checked;
+    if (gameState.votedPlayer.role === 'impostor') {
+        const guessedCorrectly = impostorGuessCheckbox.checked;
         if (guessedCorrectly) {
             updateScore(gameState.votedPlayer.name, 0);
         } else {
@@ -1088,7 +1346,7 @@ function processScoring() {
 
     const remainingActive = gameState.activePlayers.filter(p => p.id !== gameState.votedPlayer.id);
     remainingActive.forEach(p => {
-        if (p.role === 'imposter') {
+        if (p.role === 'impostor') {
             updateScore(p.name, 5);
         }
     });
@@ -1099,14 +1357,14 @@ function processScoring() {
 function continueGame() {
     processScoring();
 
-    const imposters = gameState.activePlayers.filter(p => p.role === 'imposter').length;
-    const civilians = gameState.activePlayers.length - imposters;
+    const impostors = gameState.activePlayers.filter(p => p.role === 'impostor').length;
+    const civilians = gameState.activePlayers.length - impostors;
 
-    if (imposters >= civilians || imposters === 0) {
-        if (imposters === 0) {
-            alert("Victory! All Imposters have been eliminated! 🎉");
+    if (impostors >= civilians || impostors === 0) {
+        if (impostors === 0) {
+            alert("Victory! All Impostors have been eliminated! 🎉");
         } else {
-            alert("Game Over! The Imposters have taken over.");
+            alert("Game Over! The Impostors have taken over.");
         }
         resetGame();
         return;
@@ -1146,12 +1404,12 @@ triggerRevealBtn.addEventListener('click', triggerReveal);
 continueBtn.addEventListener('click', continueGame);
 quitBtn.addEventListener('click', resetGame);
 endGameBtn.addEventListener('click', () => {
-    const activeImposters = gameState.activePlayers.filter(p => p.role === 'imposter');
-    activeImposters.forEach(p => {
+    const activeImpostors = gameState.activePlayers.filter(p => p.role === 'impostor');
+    activeImpostors.forEach(p => {
         updateScore(p.name, 5);
     });
     gameState.votedPlayer = null; // Prevent double scoring in resetGame
-    alert("Game ended manually! Imposters awarded +5 pts.");
+    alert("Game ended manually! Impostors awarded +5 pts.");
     resetGame();
 });
 
