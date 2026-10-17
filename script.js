@@ -2,2257 +2,2257 @@ const gameData = {
     "Daily Objects": [
         {
             "word": "Umbrella ☂️",
-            "hint": "Shields from rain above"
+            "hint": "Forecast"
         },
         {
             "word": "Slippers 🩴",
-            "hint": "Indoor footwear"
+            "hint": "Comfort"
         },
         {
             "word": "Water Bottle 🍼",
-            "hint": "Carry your drink"
+            "hint": "Thirst"
         },
         {
             "word": "Key Chain 🔑",
-            "hint": "Hangs near your keys"
+            "hint": "Bundle"
         },
         {
             "word": "Wallet 👛",
-            "hint": "Holds cash and cards"
+            "hint": "Pocket"
         },
         {
             "word": "Handkerchief ⬜",
-            "hint": "Cloth to wipe your face"
+            "hint": "Fold"
         },
         {
             "word": "Spectacles 👓",
-            "hint": "Worn to see clearly"
+            "hint": "Focus"
         },
         {
             "word": "Watch ⌚",
-            "hint": "Strapped to your wrist"
+            "hint": "Routine"
         },
         {
             "word": "Comb 🪮",
-            "hint": "Runs through your hair"
+            "hint": "Mirror"
         },
         {
             "word": "Mirror 🪞",
-            "hint": "Shows your reflection"
+            "hint": "Surface"
         },
         {
             "word": "Backpack 🎒",
-            "hint": "Worn on your back"
+            "hint": "Commute"
         },
         {
             "word": "Scissors ✂️",
-            "hint": "Two blades that cross"
+            "hint": "Divide"
         },
         {
             "word": "Charger 🔌",
-            "hint": "Refills your device"
+            "hint": "Outlet"
         },
         {
             "word": "Towel 🧣",
-            "hint": "Dries you after a bath"
+            "hint": "Morning"
         },
         {
             "word": "Toothbrush 🪥",
-            "hint": "Cleans your teeth"
+            "hint": "Routine"
         },
         {
             "word": "Headphones 🎧",
-            "hint": "Worn over your ears"
+            "hint": "Commute"
         },
         {
             "word": "Laptop 💻",
-            "hint": "Portable computer"
+            "hint": "Desk"
         },
         {
             "word": "Notebook 📓",
-            "hint": "Write your notes here"
+            "hint": "Thoughts"
         },
         {
             "word": "Pen 🖊️",
-            "hint": "Leaves ink on paper"
+            "hint": "Signature"
         },
         {
             "word": "Flashlight 🔦",
-            "hint": "Handheld beam of light"
+            "hint": "Darkness"
         },
         {
             "word": "Lip Balm 💄",
-            "hint": "Soothes chapped lips"
+            "hint": "Weather"
         },
         {
             "word": "Nail Clipper 💅",
-            "hint": "Trims your nails"
+            "hint": "Care"
         },
         {
             "word": "Power Bank 🔋",
-            "hint": "Charges phone on the go"
+            "hint": "Emergency"
         },
         {
             "word": "Helmet 🪖",
-            "hint": "Protects your head"
+            "hint": "Traffic"
         },
         {
             "word": "Sanitizer 🧴",
-            "hint": "Kills germs on hands"
+            "hint": "Clean"
         },
         {
             "word": "Sunglasses 🕶️",
-            "hint": "Shields eyes from sun"
+            "hint": "Glare"
         },
         {
             "word": "Earbuds 🎧",
-            "hint": "Tiny in-ear music"
+            "hint": "Pocket"
         },
         {
             "word": "Perfume 🧴",
-            "hint": "Sprayed to smell good"
+            "hint": "Scent"
         },
         {
             "word": "Tissue 🧻",
-            "hint": "Soft paper to wipe"
+            "hint": "Spill"
         },
         {
             "word": "Calculator 🧮",
-            "hint": "Solves math quickly"
+            "hint": "Number"
         },
         {
             "word": "Coffee Mug ☕",
-            "hint": "Morning hot drink cup"
+            "hint": "Break"
         },
         {
             "word": "Hair Band 💇",
-            "hint": "Ties your hair back"
+            "hint": "Tied"
         },
         {
             "word": "Pencil ✏️",
-            "hint": "Writes and erases"
+            "hint": "Sketch"
         },
         {
             "word": "Stapler 📎",
-            "hint": "Pins papers together"
+            "hint": "Desk"
         },
         {
             "word": "Water Filter 🚰",
-            "hint": "Cleans drinking water"
+            "hint": "Tap"
         },
         {
             "word": "Bookmark 🔖",
-            "hint": "Marks your page in a book"
+            "hint": "Chapter"
         },
         {
             "word": "Passport 📕",
-            "hint": "Needed to cross borders"
+            "hint": "Border"
         },
         {
             "word": "Thermos 🧪",
-            "hint": "Keeps drinks hot or cold"
+            "hint": "Temperature"
         },
         {
             "word": "Safety Pin 🧷",
-            "hint": "Fastens fabric safely"
+            "hint": "Fix"
         },
         {
             "word": "Wristband 🎗️",
-            "hint": "Worn around the wrist"
+            "hint": "Event"
         },
         {
             "word": "Shoe Polish 👞",
-            "hint": "Restores shine to leather"
+            "hint": "Leather"
         },
         {
             "word": "Coin Pouch 🪙",
-            "hint": "Holds loose change"
+            "hint": "Jingle"
         },
         {
             "word": "Pocket Knife 🔪",
-            "hint": "Foldable utility blade"
+            "hint": "Tool"
         },
         {
             "word": "Tape Measure 📏",
-            "hint": "Flexible strip for sizing"
+            "hint": "Fit"
         },
         {
             "word": "Sticky Notes 🗒️",
-            "hint": "Adhesive reminder slips"
+            "hint": "Reminder"
         },
         {
             "word": "Dental Floss 🧵",
-            "hint": "Cleans between your teeth"
+            "hint": "Night"
         },
         {
             "word": "Comb Case 🪮",
-            "hint": "Pocket sleeve for teeth"
+            "hint": "Travel"
         },
         {
             "word": "Hand Fan 🪭",
-            "hint": "Manual folding breeze"
+            "hint": "Warmth"
         }
     ],
     "Household Items": [
         {
             "word": "Pressure Cooker 🍲",
-            "hint": "Cooks fast with steam"
+            "hint": "Steam"
         },
         {
             "word": "Mixie 🌪️",
-            "hint": "Blends food at speed"
+            "hint": "Grind"
         },
         {
             "word": "Steel Glass 🥛",
-            "hint": "Metal cup for drinks"
+            "hint": "Metal"
         },
         {
             "word": "Tiffin Box 🍱",
-            "hint": "Carries lunch sections"
+            "hint": "Noon"
         },
         {
             "word": "Broom 🧹",
-            "hint": "Sweeps the floor"
+            "hint": "Corner"
         },
         {
             "word": "Saree 👘",
-            "hint": "Draped traditional wear"
+            "hint": "Fabric"
         },
         {
             "word": "Mat 🧶",
-            "hint": "Flat floor covering"
+            "hint": "Weave"
         },
         {
             "word": "Diya 🪔",
-            "hint": "Small oil lamp"
+            "hint": "Evening"
         },
         {
             "word": "Fan 🌀",
-            "hint": "Circulates air around"
+            "hint": "Current"
         },
         {
             "word": "Fridge ❄️",
-            "hint": "Keeps food cold"
+            "hint": "Storage"
         },
         {
             "word": "Curtain 🪟",
-            "hint": "Hangs over windows"
+            "hint": "Privacy"
         },
         {
             "word": "Spoon 🥄",
-            "hint": "Curved eating utensil"
+            "hint": "Stir"
         },
         {
             "word": "Plate 🍽️",
-            "hint": "Flat dish for food"
+            "hint": "Serve"
         },
         {
             "word": "Bed 🛌",
-            "hint": "Sleep on it at night"
+            "hint": "Rest"
         },
         {
             "word": "Soap 🧼",
-            "hint": "Cleans with lather"
+            "hint": "Wash"
         },
         {
             "word": "Washing Machine 🧺",
-            "hint": "Spins clothes clean"
+            "hint": "Cycle"
         },
         {
             "word": "Toaster 🍞",
-            "hint": "Browns bread with heat"
+            "hint": "Crisp"
         },
         {
             "word": "Microwave 📻",
-            "hint": "Heats food quickly"
+            "hint": "Timer"
         },
         {
             "word": "Dustbin 🗑️",
-            "hint": "Collects household trash"
+            "hint": "Discard"
         },
         {
             "word": "Clock ⏰",
-            "hint": "Shows time on the wall"
+            "hint": "Seconds"
         },
         {
             "word": "Pillow 🛌",
-            "hint": "Soft rest for your head"
+            "hint": "Soft"
         },
         {
             "word": "Bucket 🪣",
-            "hint": "Carries water by handle"
+            "hint": "Capacity"
         },
         {
             "word": "Iron 🧺",
-            "hint": "Removes wrinkles from clothes"
+            "hint": "Press"
         },
         {
             "word": "Door Lock 🔒",
-            "hint": "Secured with a key"
+            "hint": "Security"
         },
         {
             "word": "Calendar 📅",
-            "hint": "Shows dates and months"
+            "hint": "Schedule"
         },
         {
             "word": "Air Conditioner ❄️",
-            "hint": "Cools the room down"
+            "hint": "Climate"
         },
         {
             "word": "Gas Stove ♨️",
-            "hint": "Cooks with open flame"
+            "hint": "Heat"
         },
         {
             "word": "Frying Pan 🍳",
-            "hint": "Flat cooking surface"
+            "hint": "Sizzle"
         },
         {
             "word": "Doormat 🚪",
-            "hint": "Wipe shoes at entry"
+            "hint": "Threshold"
         },
         {
             "word": "Ceiling Fan 🌀",
-            "hint": "Mounted up top, spins"
+            "hint": "Overhead"
         },
         {
             "word": "Vacuum Cleaner 🧹",
-            "hint": "Sucks up floor dust"
+            "hint": "Cord"
         },
         {
             "word": "Wardrobe 🚪",
-            "hint": "Stores clothes inside"
+            "hint": "Hanger"
         },
         {
             "word": "Vase 🏺",
-            "hint": "Holds flowers on display"
+            "hint": "Centerpiece"
         },
         {
             "word": "Water Heater 🚿",
-            "hint": "Heats up shower water"
+            "hint": "Warm"
         },
         {
             "word": "Dining Table 🪑",
-            "hint": "Where you eat meals"
+            "hint": "Gather"
         },
         {
             "word": "Dustpan 🧹",
-            "hint": "Scoops swept dust"
+            "hint": "Pile"
         },
         {
             "word": "Mop 🧽",
-            "hint": "Cleans wet spills on floors"
+            "hint": "Tile"
         },
         {
             "word": "Kettle 🫖",
-            "hint": "Boils water on counter"
+            "hint": "Whistle"
         },
         {
             "word": "Blanket 🛋️",
-            "hint": "Keeps you warm in bed"
+            "hint": "Winter"
         },
         {
             "word": "Hanger 🧥",
-            "hint": "Keeps shirts wrinkle-free"
+            "hint": "Neat"
         },
         {
             "word": "Shoe Rack 👠",
-            "hint": "Organizes pairs by the door"
+            "hint": "Entry"
         },
         {
             "word": "Cutting Board 🪵",
-            "hint": "Chop food safely on it"
+            "hint": "Prep"
         },
         {
             "word": "Torch 🔦",
-            "hint": "Emergency light during power cut"
+            "hint": "Outage"
         },
         {
             "word": "Clothespin 📎",
-            "hint": "Clips wet clothes to drying line"
+            "hint": "Breeze"
         },
         {
             "word": "Rug 🧶",
-            "hint": "Decorative soft floor piece"
+            "hint": "Living"
         }
     ],
     "Fun & Games": [
         {
             "word": "Carnival 🎡",
-            "hint": "Rides and colourful stalls"
+            "hint": "Crowd"
         },
         {
             "word": "Magic Show 🪄",
-            "hint": "Tricks and illusions"
+            "hint": "Mystery"
         },
         {
             "word": "Roller Coaster 🎢",
-            "hint": "Fast drops on a track"
+            "hint": "Drop"
         },
         {
             "word": "Puppet Show 🎭",
-            "hint": "Dolls acting on strings"
+            "hint": "Curtain"
         },
         {
             "word": "Fireworks 🎆",
-            "hint": "Bursts of light in the sky"
+            "hint": "Festival"
         },
         {
             "word": "Joke 😂",
-            "hint": "Ends with a punchline"
+            "hint": "Laughter"
         },
         {
             "word": "Game Night 🎲",
-            "hint": "Board games with friends"
+            "hint": "Turn"
         },
         {
             "word": "Party 🥳",
-            "hint": "Balloons and celebration"
+            "hint": "Weekend"
         },
         {
             "word": "Cinema 🎬",
-            "hint": "Watch films on big screen"
+            "hint": "Dark"
         },
         {
             "word": "Zoo 🦁",
-            "hint": "Animals in enclosures"
+            "hint": "Visit"
         },
         {
             "word": "Beach 🏖️",
-            "hint": "Sand, sun and waves"
+            "hint": "Horizon"
         },
         {
             "word": "Park 🌳",
-            "hint": "Outdoor grass and trees"
+            "hint": "Stroll"
         },
         {
             "word": "Swing 🎡",
-            "hint": "Back and forth on chains"
+            "hint": "Motion"
         },
         {
             "word": "Music 🎶",
-            "hint": "Rhythm and melody"
+            "hint": "Tempo"
         },
         {
             "word": "Painting 🎨",
-            "hint": "Brush strokes and colour"
+            "hint": "Stroke"
         },
         {
             "word": "Karaoke 🎤",
-            "hint": "Sing along to lyrics"
+            "hint": "Screen"
         },
         {
             "word": "Water Park 🏊",
-            "hint": "Slides and splashing"
+            "hint": "Splash"
         },
         {
             "word": "Circus 🎪",
-            "hint": "Acrobats under a big tent"
+            "hint": "Ring"
         },
         {
             "word": "Bowling 🎳",
-            "hint": "Roll ball, knock pins"
+            "hint": "Strike"
         },
         {
             "word": "Arcade 🕹️",
-            "hint": "Coin games with prizes"
+            "hint": "Score"
         },
         {
             "word": "Trampoline 🤸",
-            "hint": "Bounce high in the air"
+            "hint": "Airborne"
         },
         {
             "word": "Escape Room 🔑",
-            "hint": "Solve puzzles to get out"
+            "hint": "Lock"
         },
         {
             "word": "Camping ⛺",
-            "hint": "Sleep in a tent outdoors"
+            "hint": "Outdoors"
         },
         {
             "word": "Picnic 🧺",
-            "hint": "Eat outside on a blanket"
+            "hint": "Blanket"
         },
         {
             "word": "Ferris Wheel 🎡",
-            "hint": "Giant rotating observation wheel"
+            "hint": "View"
         },
         {
             "word": "Haunted House 👻",
-            "hint": "Spooky walkthrough thrill"
+            "hint": "Corridor"
         },
         {
             "word": "Laser Tag 🔫",
-            "hint": "Tag opponents with light beams"
+            "hint": "Vest"
         },
         {
             "word": "Treasure Hunt 🗺️",
-            "hint": "Follow clues to hidden prize"
+            "hint": "Search"
         },
         {
             "word": "Bumper Cars 🚗",
-            "hint": "Electric cars crashing safely"
+            "hint": "Arena"
         },
         {
             "word": "Bonfire 🔥",
-            "hint": "Gathering around open flames"
+            "hint": "Night"
         },
         {
             "word": "Piñata 🪅",
-            "hint": "Hit to release candy"
+            "hint": "Blindfold"
         },
         {
             "word": "Talent Show 🌟",
-            "hint": "Showcase skills on stage"
+            "hint": "Applause"
         },
         {
             "word": "Go-Karting 🏎️",
-            "hint": "Racing tiny open-wheel carts"
+            "hint": "Lap"
         },
         {
             "word": "Costume Party 🎭",
-            "hint": "Dress up as characters"
+            "hint": "Theme"
         }
     ],
     "Sports": [
         {
             "word": "Cricket 🏏",
-            "hint": "Bat, ball and wickets"
+            "hint": "Pitch"
         },
         {
             "word": "Football ⚽",
-            "hint": "Kick ball into a goal"
+            "hint": "Field"
         },
         {
             "word": "Kabaddi 🤼",
-            "hint": "Tag and hold breath"
+            "hint": "Line"
         },
         {
             "word": "Badminton 🏸",
-            "hint": "Shuttlecock over a net"
+            "hint": "Court"
         },
         {
             "word": "Chess ♟️",
-            "hint": "Protect your king"
+            "hint": "Board"
         },
         {
             "word": "Wrestling 🤼",
-            "hint": "Grip and pin opponent"
+            "hint": "Mat"
         },
         {
             "word": "Tennis 🎾",
-            "hint": "Racket and baseline"
+            "hint": "Serve"
         },
         {
             "word": "Boxing 🥊",
-            "hint": "Gloves and punches"
+            "hint": "Round"
         },
         {
             "word": "Yoga 🧘",
-            "hint": "Stretch and breathe"
+            "hint": "Balance"
         },
         {
             "word": "Swimming 🏊",
-            "hint": "Laps in the pool"
+            "hint": "Lap"
         },
         {
             "word": "Running 🏃",
-            "hint": "Race on a track"
+            "hint": "Finish"
         },
         {
             "word": "Cycling 🚴",
-            "hint": "Pedal on two wheels"
+            "hint": "Distance"
         },
         {
             "word": "Volleyball 🏐",
-            "hint": "Spike over the net"
+            "hint": "Net"
         },
         {
             "word": "Basketball 🏀",
-            "hint": "Dribble and shoot hoops"
+            "hint": "Bounce"
         },
         {
             "word": "Hockey 🏑",
-            "hint": "Stick and a puck"
+            "hint": "Turf"
         },
         {
             "word": "Table Tennis 🏓",
-            "hint": "Ping pong on a table"
+            "hint": "Rally"
         },
         {
             "word": "Archery 🏹",
-            "hint": "Aim at the bullseye"
+            "hint": "Aim"
         },
         {
             "word": "Golf ⛳",
-            "hint": "Hit ball into a hole"
+            "hint": "Swing"
         },
         {
             "word": "Rugby 🏉",
-            "hint": "Oval ball, scrums"
+            "hint": "Tackle"
         },
         {
             "word": "Surfing 🏄",
-            "hint": "Ride the waves"
+            "hint": "Tide"
         },
         {
             "word": "Baseball ⚾",
-            "hint": "Home runs and bases"
+            "hint": "Diamond"
         },
         {
             "word": "Skiing 🎿",
-            "hint": "Gliding down snow slopes"
+            "hint": "Slope"
         },
         {
             "word": "Skateboarding 🛹",
-            "hint": "Flips and grinds on board"
+            "hint": "Pavement"
         },
         {
             "word": "Rock Climbing 🧗",
-            "hint": "Scaling steep rock faces"
+            "hint": "Grip"
         },
         {
             "word": "Rowing 🚣",
-            "hint": "Pulling oars in the water"
+            "hint": "Rhythm"
         },
         {
             "word": "Gymnastics 🤸",
-            "hint": "Flips and balance on beams"
+            "hint": "Routine"
         },
         {
             "word": "Karate 🥋",
-            "hint": "Martial arts with chops and kicks"
+            "hint": "Belt"
         },
         {
             "word": "Snooker 🎱",
-            "hint": "Cue stick and colored balls"
+            "hint": "Felt"
         },
         {
             "word": "Fencing 🤺",
-            "hint": "Sword dueling with foils"
+            "hint": "Duel"
         },
         {
             "word": "Polo 🐎",
-            "hint": "Mallet on horseback"
+            "hint": "Turf"
         }
     ],
     "Food & Drink": [
         {
             "word": "Biryani 🥘",
-            "hint": "Spiced rice with meat"
+            "hint": "Fragrant"
         },
         {
             "word": "Samosa 🥟",
-            "hint": "Crispy triangle snack"
+            "hint": "Snack"
         },
         {
             "word": "Masala Chai ☕",
-            "hint": "Spiced milk tea"
+            "hint": "Brew"
         },
         {
             "word": "Dosa 🥞",
-            "hint": "Crispy South Indian crepe"
+            "hint": "Tawa"
         },
         {
             "word": "Idli ⚪",
-            "hint": "Soft steamed rice cake"
+            "hint": "Morning"
         },
         {
             "word": "Payasam 🥣",
-            "hint": "Sweet milky dessert"
+            "hint": "Feast"
         },
         {
             "word": "Puttu 🎋",
-            "hint": "Steamed rice cylinders"
+            "hint": "Steam"
         },
         {
             "word": "Lassi 🥛",
-            "hint": "Blended yogurt drink"
+            "hint": "Thick"
         },
         {
             "word": "Paneer 🧀",
-            "hint": "Indian cottage cheese"
+            "hint": "Dairy"
         },
         {
             "word": "Vada 🍩",
-            "hint": "Deep fried lentil snack"
+            "hint": "Crisp"
         },
         {
             "word": "Gulab Jamun 🍬",
-            "hint": "Syrup-dipped dough balls"
+            "hint": "Warm"
         },
         {
             "word": "Paratha 🫓",
-            "hint": "Stuffed Indian flatbread"
+            "hint": "Layered"
         },
         {
             "word": "Mango 🥭",
-            "hint": "Tropical yellow fruit"
+            "hint": "Summer"
         },
         {
             "word": "Coconut 🥥",
-            "hint": "Hard shell with white flesh"
+            "hint": "Shell"
         },
         {
             "word": "Curd 🥛",
-            "hint": "Thick set yogurt"
+            "hint": "Pot"
         },
         {
             "word": "Shawarma 🌯",
-            "hint": "Wrapped grilled meat"
+            "hint": "Spit"
         },
         {
             "word": "Pizza 🍕",
-            "hint": "Cheese on flat bread"
+            "hint": "Slice"
         },
         {
             "word": "Burger 🍔",
-            "hint": "Patty inside a bun"
+            "hint": "Layer"
         },
         {
             "word": "Momos 🥟",
-            "hint": "Steamed dumplings"
+            "hint": "Steamer"
         },
         {
             "word": "Noodles 🍜",
-            "hint": "Long thin wheat strips"
+            "hint": "Strands"
         },
         {
             "word": "Ice Cream 🍦",
-            "hint": "Frozen sweet scoop"
+            "hint": "Melt"
         },
         {
             "word": "Falooda 🍧",
-            "hint": "Rose milk dessert drink"
+            "hint": "Layered"
         },
         {
             "word": "Pani Puri 🥣",
-            "hint": "Crispy ball with tangy water"
+            "hint": "Street"
         },
         {
             "word": "Omelette 🍳",
-            "hint": "Folded egg dish"
+            "hint": "Fold"
         },
         {
             "word": "Lemonade 🍋",
-            "hint": "Cold sour yellow drink"
+            "hint": "Sour"
         },
         {
             "word": "Tacos 🌮",
-            "hint": "Folded tortilla filling"
+            "hint": "Shell"
         },
         {
             "word": "Sushi 🍣",
-            "hint": "Fish on seasoned rice"
+            "hint": "Roll"
         },
         {
             "word": "Pasta 🍝",
-            "hint": "Italian wheat shapes in sauce"
+            "hint": "Plate"
         },
         {
             "word": "Waffles 🧇",
-            "hint": "Grid-patterned breakfast"
+            "hint": "Grid"
         },
         {
             "word": "Ramen 🍜",
-            "hint": "Japanese noodle soup"
+            "hint": "Bowl"
         },
         {
             "word": "Cheesecake 🍰",
-            "hint": "Rich baked cream cheese dessert"
+            "hint": "Slice"
         },
         {
             "word": "Hot Dog 🌭",
-            "hint": "Sausage in a sliced bun"
+            "hint": "Vendor"
         },
         {
             "word": "French Fries 🍟",
-            "hint": "Deep-fried potato fingers"
+            "hint": "Side"
         },
         {
             "word": "Pancakes 🥞",
-            "hint": "Stack of fluffy griddle cakes"
+            "hint": "Stack"
         },
         {
             "word": "Croissant 🥐",
-            "hint": "Buttery flaky crescent pastry"
+            "hint": "Flaky"
         },
         {
             "word": "Milkshake 🥤",
-            "hint": "Thick ice cream blend"
+            "hint": "Thick"
         },
         {
             "word": "Popcorn 🍿",
-            "hint": "Puffed corn snack at movies"
+            "hint": "Kernels"
         },
         {
             "word": "Donut 🍩",
-            "hint": "Glazed ring with a hole"
+            "hint": "Ring"
         },
         {
             "word": "Chowmein 🥢",
-            "hint": "Stir-fried wok noodles"
+            "hint": "Stir"
         },
         {
             "word": "Kebab 🍢",
-            "hint": "Skewered grilled seasoned meat"
+            "hint": "Charcoal"
         }
     ],
     "Animals": [
         {
             "word": "Elephant 🐘",
-            "hint": "Largest land animal, trunk"
+            "hint": "Herd"
         },
         {
             "word": "Tiger 🐅",
-            "hint": "Striped jungle hunter"
+            "hint": "Prowl"
         },
         {
             "word": "Cow 🐄",
-            "hint": "Gives milk, grazes fields"
+            "hint": "Pasture"
         },
         {
             "word": "Monkey 🐒",
-            "hint": "Swings on branches"
+            "hint": "Branch"
         },
         {
             "word": "Peacock 🦚",
-            "hint": "Spreads colourful tail feathers"
+            "hint": "Dance"
         },
         {
             "word": "Dog 🐕",
-            "hint": "Loyal pet, barks"
+            "hint": "Leash"
         },
         {
             "word": "Cat 🐈",
-            "hint": "Purrs and meows"
+            "hint": "Stalk"
         },
         {
             "word": "Goat 🐐",
-            "hint": "Hooves and a beard"
+            "hint": "Graze"
         },
         {
             "word": "Lion 🦁",
-            "hint": "King with a mane"
+            "hint": "Pride"
         },
         {
             "word": "Horse 🐎",
-            "hint": "Gallops and neighs"
+            "hint": "Saddle"
         },
         {
             "word": "Rabbit 🐰",
-            "hint": "Long ears, hops fast"
+            "hint": "Meadow"
         },
         {
             "word": "Snake 🐍",
-            "hint": "Slithers without legs"
+            "hint": "Coil"
         },
         {
             "word": "Eagle 🦅",
-            "hint": "Sharp claws, soars high"
+            "hint": "Soar"
         },
         {
             "word": "Deer 🦌",
-            "hint": "Branched antlers on head"
+            "hint": "Forest"
         },
         {
             "word": "Dolphin 🐬",
-            "hint": "Smart, playful sea mammal"
+            "hint": "Echo"
         },
         {
             "word": "Bear 🐻",
-            "hint": "Sleeps through winter"
+            "hint": "Den"
         },
         {
             "word": "Panda 🐼",
-            "hint": "Black and white, eats bamboo"
+            "hint": "Forest"
         },
         {
             "word": "Wolf 🐺",
-            "hint": "Howls at the moon"
+            "hint": "Howl"
         },
         {
             "word": "Giraffe 🦒",
-            "hint": "Tallest animal, long neck"
+            "hint": "Tall"
         },
         {
             "word": "Kangaroo 🦘",
-            "hint": "Carries baby in a pouch"
+            "hint": "Hop"
         },
         {
             "word": "Penguin 🐧",
-            "hint": "Black and white, waddles"
+            "hint": "Colony"
         },
         {
             "word": "Crocodile 🐊",
-            "hint": "Strong jaws, water reptile"
+            "hint": "Bank"
         },
         {
             "word": "Fox 🦊",
-            "hint": "Clever with a bushy tail"
+            "hint": "Burrow"
         },
         {
             "word": "Owl 🦉",
-            "hint": "Wise night hunter, hoots"
+            "hint": "Silent"
         },
         {
             "word": "Camel 🐫",
-            "hint": "Desert animal with humps"
+            "hint": "Dune"
         },
         {
             "word": "Cheetah 🐆",
-            "hint": "Fastest land animal"
+            "hint": "Chase"
         },
         {
             "word": "Flamingo 🦩",
-            "hint": "Pink, stands on one leg"
+            "hint": "Shallow"
         },
         {
             "word": "Koala 🐨",
-            "hint": "Clings to eucalyptus trees"
+            "hint": "Sleep"
         },
         {
             "word": "Shark 🦈",
-            "hint": "Fins and sharp teeth"
+            "hint": "Deep"
         },
         {
             "word": "Octopus 🐙",
-            "hint": "Eight arms, squirts ink"
+            "hint": "Camouflage"
         },
         {
             "word": "Gorilla 🦍",
-            "hint": "Large strong silverback primate"
+            "hint": "Troop"
         },
         {
             "word": "Zebra 🦓",
-            "hint": "Black and white striped horse"
+            "hint": "Savanna"
         },
         {
             "word": "Hippo 🦛",
-            "hint": "Massive river beast with big jaws"
+            "hint": "Mud"
         },
         {
             "word": "Rhinoceros 🦏",
-            "hint": "Thick armor skin, horned snout"
+            "hint": "Armor"
         },
         {
             "word": "Chameleon 🦎",
-            "hint": "Changes color to blend in"
+            "hint": "Blend"
         },
         {
             "word": "Sloth 🦥",
-            "hint": "Moves extremely slowly in trees"
+            "hint": "Canopy"
         },
         {
             "word": "Hedgehog 🦔",
-            "hint": "Rolls into a spiky ball"
+            "hint": "Spines"
         },
         {
             "word": "Otter 🦦",
-            "hint": "Playful river swimmer with fur"
+            "hint": "Play"
         },
         {
             "word": "Platypus 🦆",
-            "hint": "Duck-billed egg-laying mammal"
+            "hint": "Unique"
         },
         {
             "word": "Walrus 🦭",
-            "hint": "Arctic mammal with long tusks"
+            "hint": "Ice"
         }
     ],
     "Countries": [
         {
             "word": "India 🇮🇳",
-            "hint": "Taj Mahal and spices"
+            "hint": "Monsoon"
         },
         {
             "word": "USA 🇺🇸",
-            "hint": "Statue of Liberty"
+            "hint": "Coast"
         },
         {
             "word": "Japan 🇯🇵",
-            "hint": "Cherry blossoms and sushi"
+            "hint": "Island"
         },
         {
             "word": "UAE 🇦🇪",
-            "hint": "Desert skyscrapers"
+            "hint": "Dune"
         },
         {
             "word": "UK 🇬🇧",
-            "hint": "Big Ben and tea"
+            "hint": "Crown"
         },
         {
             "word": "France 🇫🇷",
-            "hint": "Eiffel Tower and wine"
+            "hint": "Boutique"
         },
         {
             "word": "Canada 🇨🇦",
-            "hint": "Maple leaf and snow"
+            "hint": "Tundra"
         },
         {
             "word": "Australia 🇦🇺",
-            "hint": "Kangaroos and coral reef"
+            "hint": "Reef"
         },
         {
             "word": "Russia 🇷🇺",
-            "hint": "Vast cold forests"
+            "hint": "Taiga"
         },
         {
             "word": "Brazil 🇧🇷",
-            "hint": "Carnival and Amazon"
+            "hint": "Tropics"
         },
         {
             "word": "China 🇨🇳",
-            "hint": "Great Wall and panda"
+            "hint": "Wall"
         },
         {
             "word": "Germany 🇩🇪",
-            "hint": "Beer and fast highways"
+            "hint": "Autobahn"
         },
         {
             "word": "Italy 🇮🇹",
-            "hint": "Pizza and the Colosseum"
+            "hint": "Ruins"
         },
         {
             "word": "Egypt 🇪🇬",
-            "hint": "Pyramids and the Nile"
+            "hint": "Delta"
         },
         {
             "word": "Singapore 🇸🇬",
-            "hint": "City-state with Merlion"
+            "hint": "Port"
         },
         {
             "word": "Argentina 🇦🇷",
-            "hint": "Tango and Messi"
+            "hint": "Pampa"
         },
         {
             "word": "Spain 🇪🇸",
-            "hint": "Flamenco and football"
+            "hint": "Coast"
         },
         {
             "word": "South Korea 🇰🇷",
-            "hint": "K-pop and kimchi"
+            "hint": "Peninsula"
         },
         {
             "word": "Mexico 🇲🇽",
-            "hint": "Tacos and ancient ruins"
+            "hint": "Plateau"
         },
         {
             "word": "Switzerland 🇨🇭",
-            "hint": "Snowy mountains and watches"
+            "hint": "Alpine"
         },
         {
             "word": "Turkey 🇹🇷",
-            "hint": "Two continents, kebabs"
+            "hint": "Strait"
         },
         {
             "word": "South Africa 🇿🇦",
-            "hint": "Savanna and safaris"
+            "hint": "Savanna"
         },
         {
             "word": "Saudi Arabia 🇸🇦",
-            "hint": "Oil and desert mosques"
+            "hint": "Dunes"
         },
         {
             "word": "New Zealand 🇳🇿",
-            "hint": "Kiwi birds and geysers"
+            "hint": "Island"
         },
         {
             "word": "Thailand 🇹🇭",
-            "hint": "Temples and street food"
+            "hint": "Monsoon"
         },
         {
             "word": "Greece 🇬🇷",
-            "hint": "Ancient ruins and islands"
+            "hint": "Aegean"
         },
         {
             "word": "Netherlands 🇳🇱",
-            "hint": "Tulips and windmills"
+            "hint": "Canal"
         },
         {
             "word": "Norway 🇳🇴",
-            "hint": "Northern lights and fjords"
+            "hint": "Fjord"
         },
         {
             "word": "Portugal 🇵🇹",
-            "hint": "Fado music, seafarers"
+            "hint": "Coast"
         },
         {
             "word": "Vietnam 🇻🇳",
-            "hint": "Pho and rice paddies"
+            "hint": "Delta"
         },
         {
             "word": "Ireland 🇮🇪",
-            "hint": "Shamrocks and emerald hills"
+            "hint": "Coast"
         },
         {
             "word": "Sweden 🇸🇪",
-            "hint": "IKEA and northern forests"
+            "hint": "Baltic"
         },
         {
             "word": "Kenya 🇰🇪",
-            "hint": "Wild safaris and marathoners"
+            "hint": "Savanna"
         },
         {
             "word": "Morocco 🇲🇦",
-            "hint": "Bazaars and desert dunes"
+            "hint": "Bazaar"
         },
         {
             "word": "Iceland 🇮🇸",
-            "hint": "Land of fire and ice"
+            "hint": "Volcanic"
         },
         {
             "word": "Peru 🇵🇪",
-            "hint": "Machu Picchu and llamas"
+            "hint": "Highland"
         },
         {
             "word": "Colombia 🇨🇴",
-            "hint": "Fine coffee and salsa"
+            "hint": "Valley"
         },
         {
             "word": "Sri Lanka 🇱🇰",
-            "hint": "Island pearl with Ceylon tea"
+            "hint": "Island"
         },
         {
             "word": "Malaysia 🇲🇾",
-            "hint": "Petronas Twin Towers"
+            "hint": "Rainforest"
         },
         {
             "word": "Finland 🇫🇮",
-            "hint": "Saunas and midnight sun"
+            "hint": "Lakes"
         }
     ],
     "Colors": [
         {
             "word": "Saffron 🟠",
-            "hint": "Sacred orange spice shade"
+            "hint": "Spiritual"
         },
         {
             "word": "Turquoise 💎",
-            "hint": "Blue-green like shallow sea"
+            "hint": "Lagoon"
         },
         {
             "word": "Crimson 🔴",
-            "hint": "Rich deep red"
+            "hint": "Rich"
         },
         {
             "word": "Emerald 🟢",
-            "hint": "Vivid jewel green"
+            "hint": "Canopy"
         },
         {
             "word": "Indigo 🔵",
-            "hint": "Between blue and violet"
+            "hint": "Twilight"
         },
         {
             "word": "Ivory ⚪",
-            "hint": "Pale creamy white"
+            "hint": "Classic"
         },
         {
             "word": "Golden 🟡",
-            "hint": "Shiny yellow like metal"
+            "hint": "Glow"
         },
         {
             "word": "Violet 🟣",
-            "hint": "Purple flower shade"
+            "hint": "Spectrum"
         },
         {
             "word": "Black ⚫",
-            "hint": "Darkest shade of all"
+            "hint": "Shadow"
         },
         {
             "word": "White ⚪",
-            "hint": "Purest lightest colour"
+            "hint": "Blank"
         },
         {
             "word": "Grey 🔘",
-            "hint": "Between black and white"
+            "hint": "Overcast"
         },
         {
             "word": "Pink 🌸",
-            "hint": "Light rosy shade"
+            "hint": "Blush"
         },
         {
             "word": "Orange 🍊",
-            "hint": "Colour of the citrus fruit"
+            "hint": "Warm"
         },
         {
             "word": "Yellow ☀️",
-            "hint": "Colour of sunshine"
+            "hint": "Daylight"
         },
         {
             "word": "Brown 🪵",
-            "hint": "Colour of tree bark"
+            "hint": "Bark"
         },
         {
             "word": "Teal 🪶",
-            "hint": "Dark blue-green tone"
+            "hint": "Depth"
         },
         {
             "word": "Maroon 🍷",
-            "hint": "Dark wine-like red"
+            "hint": "Deep"
         },
         {
             "word": "Magenta 🌺",
-            "hint": "Bright pink-purple"
+            "hint": "Vivid"
         },
         {
             "word": "Silver 🥈",
-            "hint": "Shiny grey metallic"
+            "hint": "Polished"
         },
         {
             "word": "Bronze 🥉",
-            "hint": "Third-place metal colour"
+            "hint": "Metal"
         },
         {
             "word": "Navy Blue ⚓",
-            "hint": "Deep ocean blue"
+            "hint": "Abyss"
         },
         {
             "word": "Olive Green 🫒",
-            "hint": "Dull earthy green"
+            "hint": "Earth"
         },
         {
             "word": "Coral 🪸",
-            "hint": "Warm pinkish-orange"
+            "hint": "Marine"
         },
         {
             "word": "Lavender 🪻",
-            "hint": "Soft pale purple"
+            "hint": "Gentle"
         },
         {
             "word": "Peach 🍑",
-            "hint": "Warm soft fruit tone"
+            "hint": "Soft"
         },
         {
             "word": "Amber 🍯",
-            "hint": "Honey golden glow"
+            "hint": "Glow"
         },
         {
             "word": "Mint 🌿",
-            "hint": "Cool light green"
+            "hint": "Cool"
         },
         {
             "word": "Charcoal 🖤",
-            "hint": "Dark smoky grey"
+            "hint": "Smoky"
         },
         {
             "word": "Beige 🪵",
-            "hint": "Sandy neutral tone"
+            "hint": "Neutral"
         },
         {
             "word": "Ruby 💎",
-            "hint": "Bright red gemstone"
+            "hint": "Precious"
         },
         {
             "word": "Cyan 🩵",
-            "hint": "Electric bright greenish-blue"
+            "hint": "Vibrant"
         },
         {
             "word": "Lime Green 🍈",
-            "hint": "Zesty bright citrus shade"
+            "hint": "Sharp"
         },
         {
             "word": "Burgundy 🍷",
-            "hint": "Deep reddish-purple wine"
+            "hint": "Vintage"
         },
         {
             "word": "Copper 🪙",
-            "hint": "Reddish-brown shiny metal"
+            "hint": "Sheen"
         },
         {
             "word": "Khaki 🟤",
-            "hint": "Dusty military tan cloth"
+            "hint": "Dusty"
         }
     ],
     "Hobbies": [
         {
             "word": "Photography 📷",
-            "hint": "Capture moments with a lens"
+            "hint": "Capture"
         },
         {
             "word": "Gardening 🪴",
-            "hint": "Grow plants in soil"
+            "hint": "Growth"
         },
         {
             "word": "Reading 📚",
-            "hint": "Flip through pages"
+            "hint": "Pages"
         },
         {
             "word": "Cooking 🍳",
-            "hint": "Chop, heat and taste"
+            "hint": "Flavor"
         },
         {
             "word": "Dancing 💃",
-            "hint": "Move to the beat"
+            "hint": "Movement"
         },
         {
             "word": "Singing 🎤",
-            "hint": "Voice and melody"
+            "hint": "Voice"
         },
         {
             "word": "Painting 🎨",
-            "hint": "Brush strokes on canvas"
+            "hint": "Color"
         },
         {
             "word": "Travel ✈️",
-            "hint": "Explore new places"
+            "hint": "Journey"
         },
         {
             "word": "Fishing 🎣",
-            "hint": "Rod, line and patience"
+            "hint": "Patience"
         },
         {
             "word": "Gaming 🎮",
-            "hint": "Play on screen with controls"
+            "hint": "Virtual"
         },
         {
             "word": "Hiking 🥾",
-            "hint": "Walk trails with a backpack"
+            "hint": "Elevation"
         },
         {
             "word": "Collecting 🪙",
-            "hint": "Gather rare items over time"
+            "hint": "Archive"
         },
         {
             "word": "Writing ✍️",
-            "hint": "Put words on paper"
+            "hint": "Draft"
         },
         {
             "word": "Knitting 🧶",
-            "hint": "Create with needles and yarn"
+            "hint": "Pattern"
         },
         {
             "word": "Meditation 🧘",
-            "hint": "Quiet mind, deep breath"
+            "hint": "Silence"
         },
         {
             "word": "Baking 🧁",
-            "hint": "Oven, dough and frosting"
+            "hint": "Dough"
         },
         {
             "word": "Origami 📄",
-            "hint": "Art of folding paper"
+            "hint": "Crease"
         },
         {
             "word": "Astronomy 🔭",
-            "hint": "Study stars through telescope"
+            "hint": "Cosmos"
         },
         {
             "word": "Skateboarding 🛹",
-            "hint": "Tricks on a wheeled board"
+            "hint": "Momentum"
         },
         {
             "word": "Pottery 🏺",
-            "hint": "Shape clay on a wheel"
+            "hint": "Wheel"
         },
         {
             "word": "Woodworking 🪵",
-            "hint": "Carve and shape timber"
+            "hint": "Grain"
         },
         {
             "word": "Ukulele 🪕",
-            "hint": "Small four-string instrument"
+            "hint": "Acoustic"
         },
         {
             "word": "Bird Watching 🦜",
-            "hint": "Spot birds with binoculars"
+            "hint": "Canopy"
         },
         {
             "word": "Juggling 🤹",
-            "hint": "Keep multiple balls in the air"
+            "hint": "Rhythm"
         },
         {
             "word": "Puzzles 🧩",
-            "hint": "Fit the pieces together"
+            "hint": "Pieces"
         },
         {
             "word": "Calligraphy 🖋️",
-            "hint": "Decorative ink lettering"
+            "hint": "Ink"
         },
         {
             "word": "Sculpting 🗿",
-            "hint": "Carve or mold a form"
+            "hint": "Form"
         },
         {
             "word": "Archery 🏹",
-            "hint": "Aim, pull and release"
+            "hint": "Trajectory"
         },
         {
             "word": "Magic Tricks 🃏",
-            "hint": "Sleight of hand illusions"
+            "hint": "Deception"
         },
         {
             "word": "Podcast 🎙️",
-            "hint": "Recorded audio show"
+            "hint": "Talk"
         },
         {
             "word": "Scrapbooking 📒",
-            "hint": "Pasting memories into a book"
+            "hint": "Album"
         },
         {
             "word": "DJing 🎧",
-            "hint": "Mixing tracks behind turntables"
+            "hint": "Beat"
         },
         {
             "word": "Candle Making 🕯️",
-            "hint": "Melting wax and setting wicks"
+            "hint": "Melt"
         },
         {
             "word": "Chess Playing ♟️",
-            "hint": "Outthinking rivals on 64 squares"
+            "hint": "Tactic"
         },
         {
             "word": "Leathercraft 👞",
-            "hint": "Stitching hide into wallets"
+            "hint": "Hide"
         }
     ],
     "Apps": [
         {
             "word": "WhatsApp 🟢",
-            "hint": "Message and voice call friends"
+            "hint": "Contact"
         },
         {
             "word": "Instagram 📸",
-            "hint": "Share photos and reels"
+            "hint": "Feed"
         },
         {
             "word": "YouTube 🔴",
-            "hint": "Watch videos online"
+            "hint": "Buffer"
         },
         {
             "word": "Zomato 🍕",
-            "hint": "Order food to your door"
+            "hint": "Delivery"
         },
         {
             "word": "PhonePe 💜",
-            "hint": "Pay using your phone"
+            "hint": "Transfer"
         },
         {
             "word": "Facebook 🔵",
-            "hint": "Social posts and friends"
+            "hint": "Network"
         },
         {
             "word": "Snapchat 👻",
-            "hint": "Photos that disappear"
+            "hint": "Timer"
         },
         {
             "word": "Telegram ✈️",
-            "hint": "Channels and fast messaging"
+            "hint": "Broadcasting"
         },
         {
             "word": "TikTok 🎵",
-            "hint": "Short entertaining video clips"
+            "hint": "Loop"
         },
         {
             "word": "LinkedIn 💼",
-            "hint": "Professional work network"
+            "hint": "Resume"
         },
         {
             "word": "Spotify 🎧",
-            "hint": "Stream music and podcasts"
+            "hint": "Stream"
         },
         {
             "word": "Gmail ✉️",
-            "hint": "Google email service"
+            "hint": "Inbox"
         },
         {
             "word": "Twitter 🐦",
-            "hint": "Short posts and trending topics"
+            "hint": "Trending"
         },
         {
             "word": "Amazon 📦",
-            "hint": "Shop and get it delivered"
+            "hint": "Cart"
         },
         {
             "word": "Netflix 📺",
-            "hint": "Stream series and movies"
+            "hint": "Binge"
         },
         {
             "word": "Uber 🚗",
-            "hint": "Book a cab to your location"
+            "hint": "Fare"
         },
         {
             "word": "Google Maps 🗺️",
-            "hint": "Navigate using GPS"
+            "hint": "Route"
         },
         {
             "word": "Reddit 🤖",
-            "hint": "Community threads and upvotes"
+            "hint": "Threads"
         },
         {
             "word": "Pinterest 📌",
-            "hint": "Save visual ideas and boards"
+            "hint": "Board"
         },
         {
             "word": "Duolingo 🦉",
-            "hint": "Learn a language daily"
+            "hint": "Streak"
         },
         {
             "word": "Discord 👾",
-            "hint": "Voice chat for gamers"
+            "hint": "Community"
         },
         {
             "word": "Swiggy 🛵",
-            "hint": "Bike-delivered food app"
+            "hint": "Courier"
         },
         {
             "word": "Twitch 💜",
-            "hint": "Watch live gaming streams"
+            "hint": "Live"
         },
         {
             "word": "Paytm 💙",
-            "hint": "Scan QR and pay"
+            "hint": "Scan"
         },
         {
             "word": "Notion 📝",
-            "hint": "All-in-one notes and workspace"
+            "hint": "Workspace"
         },
         {
             "word": "ChatGPT 🤖",
-            "hint": "AI that answers questions"
+            "hint": "Query"
         },
         {
             "word": "Canva 🎨",
-            "hint": "Design graphics easily"
+            "hint": "Layout"
         },
         {
             "word": "Zoom 💻",
-            "hint": "Video meetings and calls"
+            "hint": "Meeting"
         },
         {
             "word": "Tinder 🔥",
-            "hint": "Swipe right to match"
+            "hint": "Profile"
         },
         {
             "word": "Steam 🎮",
-            "hint": "PC gaming store"
+            "hint": "Library"
         },
         {
             "word": "Shazam 🎵",
-            "hint": "Identifies music playing nearby"
+            "hint": "Identify"
         },
         {
             "word": "Google Drive 📁",
-            "hint": "Cloud storage for all files"
+            "hint": "Sync"
         },
         {
             "word": "Slack 💼",
-            "hint": "Team channels for workplace chat"
+            "hint": "Channel"
         },
         {
             "word": "SoundCloud ☁️",
-            "hint": "Discover indie music tracks"
+            "hint": "Upload"
         },
         {
             "word": "Airbnb 🏡",
-            "hint": "Book vacation homes worldwide"
+            "hint": "Host"
         }
     ],
     "Celebs": [
         {
             "word": "Mammootty 🎭",
-            "hint": "Malayalam cinema legend"
+            "hint": "Thespian"
         },
         {
             "word": "Mohanlal 🎬",
-            "hint": "The complete performer"
+            "hint": "Screen"
         },
         {
             "word": "Shah Rukh Khan 🌟",
-            "hint": "Bollywood king of romance"
+            "hint": "Bollywood"
         },
         {
             "word": "Virat Kohli 🏏",
-            "hint": "India aggressive batter"
+            "hint": "Jersey"
         },
         {
             "word": "Deepika Padukone ✨",
-            "hint": "Bollywood global star"
+            "hint": "Spotlight"
         },
         {
             "word": "Prithviraj 🎥",
-            "hint": "Kerala actor who also directs"
+            "hint": "Behind"
         },
         {
             "word": "Amitabh Bachchan 🎙️",
-            "hint": "Big B of Bollywood"
+            "hint": "Baritone"
         },
         {
             "word": "Dulquer Salmaan 🕶️",
-            "hint": "Charming son of Mammootty"
+            "hint": "Youth"
         },
         {
             "word": "Salman Khan 💥",
-            "hint": "Dabangg Bollywood superstar"
+            "hint": "Blockbuster"
         },
         {
             "word": "Akshay Kumar 🏃",
-            "hint": "Khiladi of action comedy"
+            "hint": "Discipline"
         },
         {
             "word": "Priyanka Chopra 🌎",
-            "hint": "Miss World turned global actress"
+            "hint": "Global"
         },
         {
             "word": "Alia Bhatt 🌸",
-            "hint": "Rising Bollywood talent"
+            "hint": "Roles"
         },
         {
             "word": "Ranbir Kapoor 🤴",
-            "hint": "From the Kapoor film dynasty"
+            "hint": "Dynasty"
         },
         {
             "word": "MS Dhoni 🧤",
-            "hint": "Captain Cool, finishes matches"
+            "hint": "Cool"
         },
         {
             "word": "Rohit Sharma 🏏",
-            "hint": "Mumbai Indians captain"
+            "hint": "Opener"
         },
         {
             "word": "Fahadh Faasil 👁️",
-            "hint": "Intense Malayalam screen actor"
+            "hint": "Gaze"
         },
         {
             "word": "Tovino Thomas 🦸",
-            "hint": "Kerala superhero actor"
+            "hint": "Cape"
         },
         {
             "word": "Kamal Haasan 🎭",
-            "hint": "Tamil legendary performer"
+            "hint": "Method"
         },
         {
             "word": "Rajinikanth 🕶️",
-            "hint": "Style king of Tamil cinema"
+            "hint": "Style"
         },
         {
             "word": "Suriya ⚔️",
-            "hint": "Tamil action film hero"
+            "hint": "Vigor"
         },
         {
             "word": "Vijay 🪙",
-            "hint": "Thalapathy of Tamil fans"
+            "hint": "Mass"
         },
         {
             "word": "Ajith Kumar 🏍️",
-            "hint": "Thala who loves racing"
+            "hint": "Speed"
         },
         {
             "word": "Hrithik Roshan 🕺",
-            "hint": "Bollywood best dancer"
+            "hint": "Step"
         },
         {
             "word": "Katrina Kaif 💃",
-            "hint": "Dance and Bollywood fame"
+            "hint": "Choreography"
         },
         {
             "word": "Prabhas 🏹",
-            "hint": "Bahubali epic hero"
+            "hint": "Epic"
         },
         {
             "word": "Taylor Swift 🎤",
-            "hint": "Pop queen with many albums"
+            "hint": "Tour"
         },
         {
             "word": "Lionel Messi ⚽",
-            "hint": "World Cup winning striker"
+            "hint": "Trophy"
         },
         {
             "word": "Cristiano Ronaldo 🇵🇹",
-            "hint": "Portugal football star"
+            "hint": "Athlete"
         },
         {
             "word": "Keanu Reeves 🕶️",
-            "hint": "Played Neo in The Matrix"
+            "hint": "Humble"
         },
         {
             "word": "Tom Cruise 🛩️",
-            "hint": "Mission Impossible star"
+            "hint": "Adrenaline"
         },
         {
             "word": "Robert Downey Jr 🦾",
-            "hint": "Suit of armor, Marvel leader"
+            "hint": "Charisma"
         },
         {
             "word": "Dwayne Johnson 🪨",
-            "hint": "The Rock, wrestling to action"
+            "hint": "Biceps"
         },
         {
             "word": "Zendaya 🕷️",
-            "hint": "Young Emmy-winning fashion icon"
+            "hint": "Runway"
         },
         {
             "word": "Cillian Murphy 🎩",
-            "hint": "Peaky Blinders and Oppenheimer"
+            "hint": "Intense"
         },
         {
             "word": "Leonardo DiCaprio 🚢",
-            "hint": "Titanic star with Oscar acclaim"
+            "hint": "Lead"
         }
     ],
     "Gaming": [
         {
             "word": "PUBG 🔫",
-            "hint": "Battle royale, chicken dinner"
+            "hint": "Loot"
         },
         {
             "word": "Free Fire 🔥",
-            "hint": "Mobile battle royale"
+            "hint": "Survival"
         },
         {
             "word": "Minecraft 🧊",
-            "hint": "Build blocks and survive"
+            "hint": "Craft"
         },
         {
             "word": "GTA 🚗",
-            "hint": "Drive, steal and do missions"
+            "hint": "City"
         },
         {
             "word": "Among Us 🚀",
-            "hint": "Find the killer in the crew"
+            "hint": "Crew"
         },
         {
             "word": "FIFA ⚽",
-            "hint": "Virtual football matches"
+            "hint": "Match"
         },
         {
             "word": "Candy Crush 🍭",
-            "hint": "Match sweet colours in rows"
+            "hint": "Cascade"
         },
         {
             "word": "Valorant 🎯",
-            "hint": "Tactical shooter with agents"
+            "hint": "Round"
         },
         {
             "word": "Roblox 🧱",
-            "hint": "User-created game worlds"
+            "hint": "Sandbox"
         },
         {
             "word": "Fortnite 💃",
-            "hint": "Build and be last standing"
+            "hint": "Storm"
         },
         {
             "word": "Call of Duty 🎖️",
-            "hint": "Military first-person shooter"
+            "hint": "Deploy"
         },
         {
             "word": "Pokemon GO 🐹",
-            "hint": "Catch creatures in real world"
+            "hint": "Explore"
         },
         {
             "word": "Apex Legends 🏆",
-            "hint": "Squad battle royale"
+            "hint": "Squad"
         },
         {
             "word": "League of Legends ⚔️",
-            "hint": "Champions fight on a map"
+            "hint": "Nexus"
         },
         {
             "word": "Clash of Clans 🏰",
-            "hint": "Build village, raid others"
+            "hint": "Raid"
         },
         {
             "word": "Subway Surfers 🏃",
-            "hint": "Run from the inspector"
+            "hint": "Tracks"
         },
         {
             "word": "Temple Run 🏃‍♂️",
-            "hint": "Escape with the idol"
+            "hint": "Relic"
         },
         {
             "word": "Ludo King 🎲",
-            "hint": "Classic board, four tokens"
+            "hint": "Turn"
         },
         {
             "word": "God of War 🪓",
-            "hint": "Greek god slayer with axe"
+            "hint": "Pantheon"
         },
         {
             "word": "Cyberpunk 🌆",
-            "hint": "Neon futuristic city"
+            "hint": "Future"
         },
         {
             "word": "Counter-Strike 💣",
-            "hint": "Terrorists vs counter-terrorists"
+            "hint": "Defusal"
         },
         {
             "word": "Overwatch 🛡️",
-            "hint": "Team of hero characters"
+            "hint": "Roster"
         },
         {
             "word": "Elden Ring 💍",
-            "hint": "Open world with tough bosses"
+            "hint": "Grace"
         },
         {
             "word": "Fall Guys 👑",
-            "hint": "Jellybean obstacle race"
+            "hint": "Hurdle"
         },
         {
             "word": "Brawl Stars 🌟",
-            "hint": "Mobile top-down brawler"
+            "hint": "Arena"
         },
         {
             "word": "Zelda 🗡️",
-            "hint": "Link quest and dungeons"
+            "hint": "Quest"
         },
         {
             "word": "Super Mario 🍄",
-            "hint": "Jump on mushrooms, save princess"
+            "hint": "Kingdom"
         },
         {
             "word": "Rocket League 🏎️",
-            "hint": "Cars playing football"
+            "hint": "Arena"
         },
         {
             "word": "The Witcher 🐺",
-            "hint": "Monster hunter Geralt"
+            "hint": "Beast"
         },
         {
             "word": "Assassins Creed 🦅",
-            "hint": "Leap of faith, hidden blade"
+            "hint": "History"
         },
         {
             "word": "Red Dead Redemption 🤠",
-            "hint": "Wild West outlaws on horseback"
+            "hint": "Frontier"
         },
         {
             "word": "Terraria 🌳",
-            "hint": "2D sandbox digging and crafting"
+            "hint": "Depths"
         },
         {
             "word": "Genshin Impact ✨",
-            "hint": "Anime adventure with elements"
+            "hint": "Wander"
         },
         {
             "word": "Resident Evil 🧟",
-            "hint": "Survival horror against zombies"
+            "hint": "Mansion"
         },
         {
             "word": "Hollow Knight 🪲",
-            "hint": "Bug warrior exploring ruined kingdom"
+            "hint": "Depths"
         }
     ],
     "Movies & Shows": [
         {
             "word": "Inception 🌀",
-            "hint": "Dreams nested inside dreams"
+            "hint": "Totem"
         },
         {
             "word": "Avengers 🦸",
-            "hint": "Marvel superheroes team up"
+            "hint": "Assemble"
         },
         {
             "word": "Stranger Things 🚲",
-            "hint": "Kids fight monsters in small town"
+            "hint": "Upside"
         },
         {
             "word": "Harry Potter 🪄",
-            "hint": "Boy wizard and magic school"
+            "hint": "Castle"
         },
         {
             "word": "Game of Thrones 🐉",
-            "hint": "Kings battle for the iron throne"
+            "hint": "Throne"
         },
         {
             "word": "Interstellar 🚀",
-            "hint": "Astronaut travels through black hole"
+            "hint": "Relativity"
         },
         {
             "word": "Titanic 🚢",
-            "hint": "Ship hits iceberg, love story"
+            "hint": "Voyage"
         },
         {
             "word": "Squid Game 🦑",
-            "hint": "Korean deadly game survival"
+            "hint": "Wager"
         },
         {
             "word": "Breaking Bad 🧪",
-            "hint": "Chemistry teacher turns criminal"
+            "hint": "RV"
         },
         {
             "word": "The Dark Knight 🦇",
-            "hint": "Batman battles the Joker"
+            "hint": "Vigilante"
         },
         {
             "word": "The Matrix 🕶️",
-            "hint": "Red pill or blue pill reality"
+            "hint": "Pill"
         },
         {
             "word": "Lord of the Rings 💍",
-            "hint": "Destroy the one ring of power"
+            "hint": "Journey"
         },
         {
             "word": "Money Heist 🎭",
-            "hint": "Masked robbers hit the mint"
+            "hint": "Mask"
         },
         {
             "word": "Sherlock 🔍",
-            "hint": "Greatest detective at 221B"
+            "hint": "Deduction"
         },
         {
             "word": "Gladiator ⚔️",
-            "hint": "Roman fighter in the arena"
+            "hint": "Arena"
         },
         {
             "word": "Jurassic Park 🦖",
-            "hint": "Dinosaurs escape the island"
+            "hint": "Island"
         },
         {
             "word": "Fight Club 🧼",
-            "hint": "Underground brawls and alter egos"
+            "hint": "Basement"
         },
         {
             "word": "Avatar 🌿",
-            "hint": "Blue aliens defending Pandora"
+            "hint": "Tribe"
         },
         {
             "word": "Peaky Blinders 🧢",
-            "hint": "Birmingham razor gangsters"
+            "hint": "Flatcap"
         },
         {
             "word": "The Godfather 🎩",
-            "hint": "Italian-American mafia dynasty"
+            "hint": "Family"
         },
         {
             "word": "Wednesday 🕷️",
-            "hint": "Gothic school girl solving murders"
+            "hint": "Daughter"
         },
         {
             "word": "Oppenheimer 💣",
-            "hint": "Father of the atomic bomb"
+            "hint": "Trinity"
         },
         {
             "word": "Black Mirror 📱",
-            "hint": "Dark tales of future technology"
+            "hint": "Screen"
         },
         {
             "word": "The Boys 🦸‍♂️",
-            "hint": "Corrupt superheroes gone wild"
+            "hint": "Corporate"
         },
         {
             "word": "Spider-Man 🕸️",
-            "hint": "Bitten by radioactive spider"
+            "hint": "Rooftop"
         },
         {
             "word": "Star Wars ⚔️",
-            "hint": "Jedi, lightsabers and the Force"
+            "hint": "Force"
         },
         {
             "word": "Shrek 🧅",
-            "hint": "Green ogre and a talking donkey"
+            "hint": "Fairytale"
         },
         {
             "word": "Toy Story 🤠",
-            "hint": "Toys come alive when humans leave"
+            "hint": "Childhood"
         },
         {
             "word": "John Wick 🐕",
-            "hint": "Retired assassin avenging his dog"
+            "hint": "Suit"
         },
         {
             "word": "Narcos 💵",
-            "hint": "DEA hunting cartel drug lords"
+            "hint": "Smuggle"
         }
     ],
     "Tech & Gadgets": [
         {
             "word": "Drone 🛸",
-            "hint": "Remote-controlled flying camera"
+            "hint": "Telemetry"
         },
         {
             "word": "Smartwatch ⌚",
-            "hint": "Wear it to track health"
+            "hint": "Vibration"
         },
         {
             "word": "3D Printer 🖨️",
-            "hint": "Builds objects layer by layer"
+            "hint": "Nozzle"
         },
         {
             "word": "VR Headset 🥽",
-            "hint": "Wear it, enter virtual world"
+            "hint": "Vision"
         },
         {
             "word": "Microphone 🎙️",
-            "hint": "Captures and records voice"
+            "hint": "Diaphragm"
         },
         {
             "word": "Solar Panel ☀️",
-            "hint": "Converts sunlight to power"
+            "hint": "Roof"
         },
         {
             "word": "Projector 📽️",
-            "hint": "Beams image onto a wall"
+            "hint": "Lens"
         },
         {
             "word": "SSD Drive 💾",
-            "hint": "Fast storage with no moving parts"
+            "hint": "Memory"
         },
         {
             "word": "Robot Vacuum 🤖",
-            "hint": "Self-cleaning disc on your floor"
+            "hint": "Sensor"
         },
         {
             "word": "Keyboard ⌨️",
-            "hint": "Type using many keys"
+            "hint": "Tactile"
         },
         {
             "word": "Router 📡",
-            "hint": "Sends WiFi to your home"
+            "hint": "Signal"
         },
         {
             "word": "Action Camera 📷",
-            "hint": "Worn on helmet for filming"
+            "hint": "Mount"
         },
         {
             "word": "Satellite Dish 🛰️",
-            "hint": "Receives signals from space"
+            "hint": "Orbit"
         },
         {
             "word": "Graphics Card 🎮",
-            "hint": "Powers the game visuals"
+            "hint": "Silicon"
         },
         {
             "word": "Smart Speaker 🔊",
-            "hint": "Voice assistant playing audio"
+            "hint": "Command"
         },
         {
             "word": "E-Reader 📖",
-            "hint": "Digital paper screen for books"
+            "hint": "Glare-free"
         },
         {
             "word": "Walkie-Talkie 📻",
-            "hint": "Two-way short-range radio"
+            "hint": "Frequency"
         },
         {
             "word": "Webcam 📹",
-            "hint": "Video camera for online calls"
+            "hint": "Monitor"
         },
         {
             "word": "Wireless Mouse 🖱️",
-            "hint": "Click and point without cables"
+            "hint": "Optical"
         },
         {
             "word": "Gimbal Stabilizer 🎥",
-            "hint": "Keeps phone video super smooth"
+            "hint": "Balance"
         },
         {
             "word": "Smart Lightbulb 💡",
-            "hint": "Changes colors via phone app"
+            "hint": "Socket"
         },
         {
             "word": "Stylus Pen 🖊️",
-            "hint": "Draws digitally on touchscreen"
+            "hint": "Pressure"
         },
         {
             "word": "Laser Pointer 🔴",
-            "hint": "Beams small red dot across room"
+            "hint": "Dot"
         },
         {
             "word": "Smart Doorbell 🔔",
-            "hint": "Video camera outside front door"
+            "hint": "Porch"
         },
         {
             "word": "Hard Drive 💽",
-            "hint": "Spinning magnetic storage disk"
+            "hint": "Spindle"
         },
         {
             "word": "Electric Toothbrush 🪥",
-            "hint": "Vibrating motor cleans teeth"
+            "hint": "Motor"
         }
     ],
     "Landmarks": [
         {
             "word": "Taj Mahal 🕌",
-            "hint": "White marble tomb in India"
+            "hint": "Monument"
         },
         {
             "word": "Eiffel Tower 🗼",
-            "hint": "Iron structure in Paris"
+            "hint": "Lattice"
         },
         {
             "word": "Statue of Liberty 🗽",
-            "hint": "Green lady holding a torch"
+            "hint": "Harbor"
         },
         {
             "word": "Great Wall 🧱",
-            "hint": "Ancient wall across China"
+            "hint": "Ridge"
         },
         {
             "word": "Colosseum 🏛️",
-            "hint": "Ancient Roman fighting arena"
+            "hint": "Arches"
         },
         {
             "word": "Burj Khalifa 🏙️",
-            "hint": "World tallest tower in Dubai"
+            "hint": "Spire"
         },
         {
             "word": "Pyramids 🏜️",
-            "hint": "Ancient Egyptian royal tombs"
+            "hint": "Limestone"
         },
         {
             "word": "Big Ben 🗼",
-            "hint": "Famous London clock tower"
+            "hint": "Dial"
         },
         {
             "word": "Machu Picchu ⛰️",
-            "hint": "Inca ruins on a mountain"
+            "hint": "Terrace"
         },
         {
             "word": "Sydney Opera House ⛵",
-            "hint": "Sail-shaped concert hall"
+            "hint": "Sails"
         },
         {
             "word": "Christ the Redeemer 🗿",
-            "hint": "Arms-spread statue in Brazil"
+            "hint": "Peak"
         },
         {
             "word": "Golden Gate Bridge 🌉",
-            "hint": "Red bridge in San Francisco"
+            "hint": "Span"
         },
         {
             "word": "Mount Fuji 🗻",
-            "hint": "Japan snowy volcano peak"
+            "hint": "Crater"
         },
         {
             "word": "Stonehenge 🪨",
-            "hint": "Ancient stone circle in England"
+            "hint": "Solstice"
         },
         {
             "word": "Leaning Tower of Pisa 🏛️",
-            "hint": "Tilted white bell tower in Italy"
+            "hint": "Foundation"
         },
         {
             "word": "Mount Everest 🏔️",
-            "hint": "Highest mountain peak in the world"
+            "hint": "Ridge"
         },
         {
             "word": "Niagara Falls 🌊",
-            "hint": "Massive roaring waterfall on border"
+            "hint": "Mist"
         },
         {
             "word": "Grand Canyon 🏜️",
-            "hint": "Huge carved red rock valley"
+            "hint": "Strata"
         },
         {
             "word": "Petra 🏛️",
-            "hint": "Ancient city carved into pink sandstone"
+            "hint": "Canyon"
         },
         {
             "word": "Acropolis 🏛️",
-            "hint": "Ancient hilltop citadel in Athens"
+            "hint": "Pillars"
         },
         {
             "word": "Times Square 🏙️",
-            "hint": "Bright neon billboards in New York"
+            "hint": "Intersection"
         },
         {
             "word": "Louvre Museum 🏛️",
-            "hint": "Glass pyramid holding Mona Lisa"
+            "hint": "Pyramid"
         },
         {
             "word": "Angkor Wat 🛕",
-            "hint": "Massive jungle temple complex"
+            "hint": "Moat"
         },
         {
             "word": "Hollywood Sign 🎬",
-            "hint": "Giant white letters on California hill"
+            "hint": "Letters"
         }
     ],
     "Mythical & Space": [
         {
             "word": "Dragon 🐉",
-            "hint": "Fire-breathing winged creature"
+            "hint": "Lair"
         },
         {
             "word": "Unicorn 🦄",
-            "hint": "Horse with a single horn"
+            "hint": "Purity"
         },
         {
             "word": "Phoenix 🦅",
-            "hint": "Bird that rises from ash"
+            "hint": "Rebirth"
         },
         {
             "word": "Black Hole 🕳️",
-            "hint": "Space where light cannot escape"
+            "hint": "Singularity"
         },
         {
             "word": "Supernova 💥",
-            "hint": "A dying star final explosion"
+            "hint": "Stellar"
         },
         {
             "word": "Astronaut 👨‍🚀",
-            "hint": "Trained to travel in space"
+            "hint": "Orbit"
         },
         {
             "word": "Mars 🔴",
-            "hint": "The red planet near Earth"
+            "hint": "Rust"
         },
         {
             "word": "Alien 👽",
-            "hint": "Life from beyond our world"
+            "hint": "Signal"
         },
         {
             "word": "Pegasus 🪽",
-            "hint": "Winged horse of myths"
+            "hint": "Steed"
         },
         {
             "word": "Kraken 🐙",
-            "hint": "Giant legendary sea monster"
+            "hint": "Depths"
         },
         {
             "word": "Nebula 🌌",
-            "hint": "Colourful gas cloud in space"
+            "hint": "Cloud"
         },
         {
             "word": "Comet ☄️",
-            "hint": "Icy rock with a glowing tail"
+            "hint": "Trajectory"
         },
         {
             "word": "Asteroid 🪨",
-            "hint": "Rocky debris floating in space"
+            "hint": "Crater"
         },
         {
             "word": "Eclipse 🌘",
-            "hint": "Moon passes in front of sun"
+            "hint": "Alignment"
         },
         {
             "word": "Centaur 🏹",
-            "hint": "Half human, half horse creature"
+            "hint": "Wild"
         },
         {
             "word": "Mermaid 🧜‍♀️",
-            "hint": "Woman with a fish tail in ocean"
+            "hint": "Reef"
         },
         {
             "word": "Minotaur 🐂",
-            "hint": "Bull-headed monster in labyrinth"
+            "hint": "Corridor"
         },
         {
             "word": "Saturn 🪐",
-            "hint": "Gas giant with spectacular rings"
+            "hint": "System"
         },
         {
             "word": "Milky Way 🌌",
-            "hint": "Our spiral home galaxy"
+            "hint": "Spiral"
         },
         {
             "word": "Vampire 🧛",
-            "hint": "Fanged creature fearing sunlight"
+            "hint": "Nocturnal"
         },
         {
             "word": "Werewolf 🐺",
-            "hint": "Transforms during full moon"
+            "hint": "Lunar"
         },
         {
             "word": "Yeti ❄️",
-            "hint": "Abominable snowman of high peaks"
+            "hint": "Summit"
         },
         {
             "word": "Solar Flare ☀️",
-            "hint": "Sudden explosive burst from sun"
+            "hint": "Eruption"
         },
         {
             "word": "Constellation ✨",
-            "hint": "Pattern of stars forming pictures"
+            "hint": "Guide"
         }
     ]
 };
