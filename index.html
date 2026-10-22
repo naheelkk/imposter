@@ -2,66 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🕵️ Impostor & Mafia — The Bluffing Party Parlor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#06000e">
+    <title>🕵️ Impostor &amp; Mafia — The Bluffing Party Parlor</title>
     <meta name="description" content="A browser-based party parlor featuring Impostor and Classic Mafia game modes. No install needed!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Word data first, then logic. Both are plain deferred scripts, so the
+         game still runs straight from file:// with no server or build step. -->
+    <script src="words.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
-<body class="premium-theme">
-    <div id="bg-glow">
+<body class="premium-theme" data-mode="impostor">
+    <div id="bg-glow" aria-hidden="true">
         <canvas id="particle-canvas"></canvas>
         <div class="aurora-blob"></div>
     </div>
 
     <!-- Top Persistent Navigation Header -->
     <header class="top-nav">
-        <button class="nav-brand-btn" onclick="navigateTo('#home')">
-            <span>🎭</span> Bluff & Betrayal
+        <button class="nav-brand-btn" type="button" onclick="navigateTo('#home')">
+            <span aria-hidden="true">🎭</span> Bluff &amp; Betrayal
         </button>
-        <div class="nav-actions">
-            <button class="nav-btn" onclick="navigateTo('#home')">🏠 Home</button>
-            <button class="nav-btn gold-nav-btn" onclick="openLeaderboardModal()">🏆 Scores</button>
-        </div>
+        <nav class="nav-actions" aria-label="Main">
+            <button class="nav-btn" type="button" onclick="navigateTo('#home')">🏠 Home</button>
+            <button class="nav-btn gold-nav-btn" type="button" onclick="openLeaderboardModal()">🏆 Scores</button>
+        </nav>
     </header>
 
-    <div id="game-container">
+    <main id="game-container">
 
         <!-- Home Screen -->
-        <div id="home-screen" class="screen">
+        <section id="home-screen" class="screen" aria-labelledby="home-title">
             <div class="hero-section">
-                <h1 class="animate-pop">🎭 Party Parlor</h1>
+                <h1 class="animate-pop" id="home-title">🎭 Party Parlor</h1>
                 <p class="animate-fade">Choose your game mode to begin the deception!</p>
+            </div>
+
+            <div class="home-stats" aria-label="Game statistics">
+                <div><b id="stat-categories">—</b><span>Categories</span></div>
+                <div><b id="stat-words">—</b><span>Secret words</span></div>
+                <div><b>2</b><span>Game modes</span></div>
             </div>
 
             <div class="home-cards-grid">
                 <!-- Impostor Mode Card -->
-                <div class="home-mode-card imposter-mode-card" onclick="navigateTo('#setup')">
+                <article class="home-mode-card imposter-mode-card" tabindex="0" role="button"
+                         aria-label="Play Impostor mode" onclick="navigateTo('#setup')"
+                         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();navigateTo('#setup');}">
                     <div class="mode-card-badge">SECRET WORD</div>
-                    <div class="mode-card-icon">🕵️</div>
+                    <div class="mode-card-icon" aria-hidden="true">🕵️</div>
                     <h2 class="mode-card-title">Impostor</h2>
                     <p class="mode-card-desc">Civilians share a secret word. Impostors know nothing and must bluff to blend in without getting caught!</p>
                     <div class="mode-card-tags">
-                        <span>3-20 Players</span>
-                        <span>Hints & Chaos</span>
+                        <span>3–20 Players</span>
+                        <span>Hints &amp; Chaos</span>
                     </div>
-                    <button class="primary-btn mode-action-btn">Play Impostor 🚀</button>
-                </div>
+                    <span class="primary-btn mode-action-btn" aria-hidden="true">Play Impostor 🚀</span>
+                </article>
 
                 <!-- Classic Mafia Mode Card -->
-                <div class="home-mode-card mafia-mode-card" onclick="startMafiaFlow()">
+                <article class="home-mode-card mafia-mode-card" tabindex="0" role="button"
+                         aria-label="Play Classic Mafia mode" onclick="startMafiaFlow()"
+                         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();startMafiaFlow();}">
                     <div class="mode-card-badge mafia-badge">MURDER MYSTERY</div>
-                    <div class="mode-card-icon">🕵️‍♂️</div>
+                    <div class="mode-card-icon" aria-hidden="true">🕵️‍♂️</div>
                     <h2 class="mode-card-title">Classic Mafia</h2>
                     <p class="mode-card-desc">Night strikes! Mafia kills, Doctor saves, Detective investigates suspects, and Villagers vote out the guilty by day.</p>
                     <div class="mode-card-tags">
-                        <span>4-20 Players</span>
-                        <span>Cop & Doctor</span>
+                        <span>4–20 Players</span>
+                        <span>Cop &amp; Doctor</span>
                     </div>
-                    <button class="primary-btn mode-action-btn mafia-theme-btn">Play Mafia 🌙</button>
-                </div>
+                    <span class="primary-btn mode-action-btn mafia-theme-btn" aria-hidden="true">Play Mafia 🌙</span>
+                </article>
             </div>
 
             <!-- Quick Leaderboard Banner -->
@@ -69,21 +84,21 @@
                 <div class="leaderboard-header">
                     <h3>🏆 Hall of Fame Leaderboard</h3>
                     <div class="leaderboard-btn-group">
-                        <button class="text-btn export-btn" onclick="openLeaderboardModal()">📸 Screenshot View</button>
-                        <button id="reset-leaderboard-btn-home" class="text-btn" onclick="resetLeaderboard()">Reset</button>
+                        <button class="text-btn export-btn" type="button" onclick="openLeaderboardModal()">📸 Screenshot View</button>
+                        <button id="reset-leaderboard-btn-home" class="text-btn" type="button" onclick="resetLeaderboard()">Reset</button>
                     </div>
                 </div>
                 <div id="leaderboard-list-home" class="leaderboard-list">
                     <p class="empty-msg">No player scores saved yet.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Impostor Setup Screen -->
-        <div id="setup-screen" class="screen hidden">
+        <section id="setup-screen" class="screen hidden" aria-labelledby="setup-title">
             <div class="hero-section">
-                <h1 class="animate-pop">🕵️ Impostor Setup</h1>
-                <p class="animate-fade">Configure word pool & player settings</p>
+                <h1 class="animate-pop" id="setup-title">🕵️ Impostor Setup</h1>
+                <p class="animate-fade">Configure word pool &amp; player settings</p>
             </div>
 
             <!-- Leaderboard Card -->
@@ -91,8 +106,8 @@
                 <div class="leaderboard-header">
                     <h3>🏆 Leaderboard</h3>
                     <div class="leaderboard-btn-group">
-                        <button class="text-btn export-btn" onclick="openLeaderboardModal()">📸 Screenshot View</button>
-                        <button id="reset-leaderboard-btn" class="text-btn">Reset Points</button>
+                        <button class="text-btn export-btn" type="button" onclick="openLeaderboardModal()">📸 Screenshot View</button>
+                        <button id="reset-leaderboard-btn" class="text-btn" type="button">Reset Points</button>
                     </div>
                 </div>
                 <div id="leaderboard-list" class="leaderboard-list">
@@ -102,83 +117,98 @@
 
             <div class="setup-card">
                 <div class="setup-section">
-                    <h3>1. Select Categories</h3>
-                    <div id="category-tags" class="tags-grid"></div>
+                    <h3>Select Categories</h3>
+                    <div id="category-tags" class="tags-grid" role="group" aria-label="Word categories"></div>
+                    <p class="pool-counter" id="pool-counter">🎲 <b id="word-pool-count">0</b> secret words in the pool</p>
                 </div>
 
                 <div class="setup-section">
-                    <h3>2. Game Settings</h3>
+                    <h3>Game Settings</h3>
                     <div class="settings-grid">
                         <div class="setup-group">
                             <label for="player-count">Total Players</label>
-                            <input type="number" id="player-count" min="3" max="20" value="3">
+                            <div class="stepper">
+                                <button type="button" class="stepper-btn" data-stepper="player-count" data-dir="-1" aria-label="Fewer players">−</button>
+                                <input type="number" id="player-count" min="3" max="20" value="3" inputmode="numeric">
+                                <button type="button" class="stepper-btn" data-stepper="player-count" data-dir="1" aria-label="More players">+</button>
+                            </div>
                         </div>
                         <div class="setup-group">
                             <label for="impostor-count">Number of Impostors</label>
-                            <input type="number" id="impostor-count" min="1" max="5" value="1">
+                            <div class="stepper">
+                                <button type="button" class="stepper-btn" data-stepper="impostor-count" data-dir="-1" aria-label="Fewer impostors">−</button>
+                                <input type="number" id="impostor-count" min="1" max="5" value="1" inputmode="numeric">
+                                <button type="button" class="stepper-btn" data-stepper="impostor-count" data-dir="1" aria-label="More impostors">+</button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="setup-section">
-                    <h3>3. Player Names</h3>
+                    <h3>Player Names</h3>
                     <div id="player-names-container" class="names-grid"></div>
                 </div>
 
                 <div class="setup-section">
-                    <h3>4. Difficulty & Mode</h3>
-                    <div class="toggle-group">
-                        <label class="switch">
-                            <input type="checkbox" id="hint-toggle">
-                            <span class="slider round"></span>
-                        </label>
+                    <h3>Difficulty &amp; Mode</h3>
+                    <label class="toggle-group">
+                        <input type="checkbox" id="hint-toggle" class="switch-input" checked>
+                        <span class="switch"><span class="slider round"></span></span>
                         <span class="toggle-label">Enable Impostor Hints</span>
-                    </div>
-                    <div class="toggle-group" style="margin-top: 15px;">
-                        <label class="switch">
-                            <input type="checkbox" id="chaos-toggle">
-                            <span class="slider round"></span>
-                        </label>
+                    </label>
+                    <p class="toggle-hint">Gives every impostor a short clue about the secret word. You can also flip it on the assignment screen while handing the device around.</p>
+                    <label class="toggle-group">
+                        <input type="checkbox" id="chaos-toggle" class="switch-input">
+                        <span class="switch"><span class="slider round"></span></span>
                         <span class="toggle-label">Chaos Mode 🌀</span>
-                    </div>
+                    </label>
                 </div>
 
-                <button id="start-game-btn" class="primary-btn">Launch Game</button>
+                <button id="start-game-btn" class="primary-btn" type="button">Launch Game</button>
             </div>
-        </div>
+        </section>
 
         <!-- Impostor Assignment Screen -->
-        <div id="assignment-screen" class="screen hidden">
-            <h2 class="section-title">Identity Assignment</h2>
+        <section id="assignment-screen" class="screen hidden" aria-labelledby="assignment-title">
+            <h2 class="section-title" id="assignment-title">Identity Assignment</h2>
             <p>Pass the device around. <strong>Hold the card</strong> to see your role.</p>
-            <div id="assignment-card-container"></div>
-            <div class="assignment-controls">
-                <button id="next-player-btn" class="primary-btn">Next Player ➡️</button>
-                <button id="confirm-assignment-btn" class="primary-btn hidden">Start Game 🚀</button>
+            <div class="assignment-tools">
+                <label class="toggle-group compact-toggle">
+                    <input type="checkbox" id="assignment-hint-toggle" class="switch-input">
+                    <span class="switch"><span class="slider round"></span></span>
+                    <span class="toggle-label">💡 Impostor Hints</span>
+                </label>
+                <p class="assignment-tool-note">Impostors get a clue about the secret word instead of the word itself. Civilians always see the full word.</p>
             </div>
-        </div>
+            <div id="assignment-card-container"></div>
+            <div class="assignment-progress" id="assignment-progress" aria-hidden="true"></div>
+            <div class="assignment-controls">
+                <button id="next-player-btn" class="primary-btn" type="button">Next Player ➡️</button>
+                <button id="confirm-assignment-btn" class="primary-btn hidden" type="button">Start Game 🚀</button>
+            </div>
+        </section>
 
         <!-- Impostor Game Screen -->
-        <div id="game-screen" class="screen hidden">
-            <h2 class="section-title">The Trial</h2>
-            
+        <section id="game-screen" class="screen hidden" aria-labelledby="game-title">
+            <h2 class="section-title" id="game-title">The Trial</h2>
+
             <!-- Starter Player Announcement Banner -->
             <div id="starter-player-banner" class="starter-banner">
-                <span id="starter-player-text">🎙️ Speaker: Player 1 starts!</span>
-                <button class="reroll-btn" onclick="rerollStarterPlayer()">🎲 Re-roll</button>
+                <span id="starter-player-text" aria-live="polite">🎙️ Speaker: Player 1 starts!</span>
+                <button class="reroll-btn" type="button" onclick="rerollStarterPlayer()">🎲 Re-roll</button>
             </div>
 
-            <div id="game-hud" class="game-hud"></div>
+            <div id="game-hud" class="game-hud" aria-live="polite"></div>
             <div id="active-players-list" class="players-list"></div>
             <div class="game-controls">
-                <button id="end-game-btn" class="secondary-btn">Impostor Won 🏴</button>
+                <button id="end-game-btn" class="secondary-btn" type="button">Impostor Won 🏴</button>
             </div>
-        </div>
+        </section>
 
         <!-- Impostor Reveal Screen -->
-        <div id="reveal-screen" class="screen hidden">
+        <section id="reveal-screen" class="screen hidden" aria-labelledby="reveal-status">
             <div class="reveal-content">
-                <h2 id="reveal-status">The Verdict...</h2>
+                <h2 id="reveal-status" aria-live="assertive">The Verdict...</h2>
                 <div id="reveal-card" class="reveal-card">
                     <span id="reveal-text">???</span>
                 </div>
@@ -193,139 +223,163 @@
                 </div>
 
                 <div id="reveal-actions" class="hidden">
-                    <button id="continue-btn" class="primary-btn">Continue Game</button>
-                    <button id="quit-btn" class="secondary-btn">Quit Game</button>
+                    <button id="continue-btn" class="primary-btn" type="button">Continue Game</button>
+                    <button id="play-again-btn" class="primary-btn hidden" type="button">🔁 Play Again</button>
+                    <button id="quit-btn" class="secondary-btn" type="button">Quit Game</button>
                 </div>
-                <button id="trigger-reveal-btn" class="primary-btn">Reveal Identity</button>
+                <button id="trigger-reveal-btn" class="primary-btn" type="button">Reveal Identity</button>
             </div>
-        </div>
+        </section>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
         <!-- MAFIA GAME SCREENS -->
         <!-- ═══════════════════════════════════════════════════════════ -->
 
         <!-- Mafia Setup Screen -->
-        <div id="mafia-setup-screen" class="screen hidden">
+        <section id="mafia-setup-screen" class="screen hidden" aria-labelledby="mafia-setup-title">
             <div class="hero-section">
-                <h1 class="animate-pop">🕵️‍♂️ Classic Mafia</h1>
+                <h1 class="animate-pop" id="mafia-setup-title">🕵️‍♂️ Classic Mafia</h1>
                 <p class="animate-fade">Night kills, Doctor saves, Detective investigations</p>
             </div>
 
             <div class="setup-card mafia-card-theme">
                 <div class="setup-section">
-                    <h3>1. Game Settings</h3>
+                    <h3>Game Settings</h3>
                     <div class="settings-grid">
                         <div class="setup-group">
                             <label for="mafia-player-count">Total Players</label>
-                            <input type="number" id="mafia-player-count" min="4" max="20" value="6">
+                            <div class="stepper">
+                                <button type="button" class="stepper-btn" data-stepper="mafia-player-count" data-dir="-1" aria-label="Fewer players">−</button>
+                                <input type="number" id="mafia-player-count" min="4" max="20" value="6" inputmode="numeric">
+                                <button type="button" class="stepper-btn" data-stepper="mafia-player-count" data-dir="1" aria-label="More players">+</button>
+                            </div>
                         </div>
                         <div class="setup-group">
                             <label for="mafia-count">Mafia Members</label>
-                            <input type="number" id="mafia-count" min="1" max="5" value="1">
+                            <div class="stepper">
+                                <button type="button" class="stepper-btn" data-stepper="mafia-count" data-dir="-1" aria-label="Fewer mafia members">−</button>
+                                <input type="number" id="mafia-count" min="1" max="5" value="1" inputmode="numeric">
+                                <button type="button" class="stepper-btn" data-stepper="mafia-count" data-dir="1" aria-label="More mafia members">+</button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="setup-section">
-                    <h3>2. Special Roles</h3>
-                    <div class="toggle-group">
-                        <label class="switch">
-                            <input type="checkbox" id="doctor-toggle" checked>
-                            <span class="slider round"></span>
-                        </label>
+                    <h3>Special Roles</h3>
+                    <label class="toggle-group">
+                        <input type="checkbox" id="doctor-toggle" class="switch-input" checked>
+                        <span class="switch"><span class="slider round"></span></span>
                         <span class="toggle-label">Doctor 🩺 (Heals target player)</span>
-                    </div>
-                    <div class="toggle-group" style="margin-top: 15px;">
-                        <label class="switch">
-                            <input type="checkbox" id="detective-toggle" checked>
-                            <span class="slider round"></span>
-                        </label>
+                    </label>
+                    <label class="toggle-group">
+                        <input type="checkbox" id="detective-toggle" class="switch-input" checked>
+                        <span class="switch"><span class="slider round"></span></span>
                         <span class="toggle-label">Detective 🔍 (Inspects suspect)</span>
-                    </div>
+                    </label>
                 </div>
 
                 <div class="setup-section">
-                    <h3>3. Player Names</h3>
+                    <h3>Player Names</h3>
                     <div id="mafia-player-names-container" class="names-grid"></div>
                 </div>
 
-                <button id="start-mafia-btn" class="primary-btn mafia-theme-btn">Start Mafia Game 🚀</button>
+                <button id="start-mafia-btn" class="primary-btn mafia-theme-btn" type="button">Start Mafia Game 🚀</button>
             </div>
-        </div>
+        </section>
 
         <!-- Mafia Assignment Screen -->
-        <div id="mafia-assignment-screen" class="screen hidden">
-            <h2 class="section-title">Mafia Identity Assignment</h2>
+        <section id="mafia-assignment-screen" class="screen hidden" aria-labelledby="mafia-assignment-title">
+            <h2 class="section-title" id="mafia-assignment-title">Mafia Identity Assignment</h2>
             <p>Pass the device around. <strong>Hold the card</strong> to see your secret role.</p>
             <div id="mafia-assignment-card-container"></div>
+            <div class="assignment-progress" id="mafia-assignment-progress" aria-hidden="true"></div>
             <div class="assignment-controls">
-                <button id="mafia-next-player-btn" class="primary-btn">Next Player ➡️</button>
-                <button id="mafia-start-night-btn" class="primary-btn mafia-theme-btn hidden">Begin Night 1 🌙</button>
+                <button id="mafia-next-player-btn" class="primary-btn" type="button">Next Player ➡️</button>
+                <button id="mafia-start-night-btn" class="primary-btn mafia-theme-btn hidden" type="button">Begin Night 1 🌙</button>
             </div>
-        </div>
+        </section>
 
         <!-- Mafia Night Screen -->
-        <div id="mafia-night-screen" class="screen hidden">
+        <section id="mafia-night-screen" class="screen hidden" aria-labelledby="mafia-night-title">
             <h2 class="section-title" id="mafia-night-title">Night Phase 🌙</h2>
             <div class="night-step-card">
-                <div id="night-step-icon" class="night-step-icon">🦉</div>
+                <div id="night-step-icon" class="night-step-icon" aria-hidden="true">🦉</div>
                 <h3 id="night-step-heading">Night Instructions</h3>
                 <p id="night-step-desc">Pass the device to the requested player/role.</p>
                 <div id="night-action-controls" class="night-action-controls"></div>
             </div>
-        </div>
+        </section>
 
         <!-- Mafia Day Screen -->
-        <div id="mafia-day-screen" class="screen hidden">
+        <section id="mafia-day-screen" class="screen hidden" aria-labelledby="mafia-day-title">
             <h2 class="section-title" id="mafia-day-title">Day Phase ☀️</h2>
-            
+
             <div id="mafia-night-report-card" class="night-report-card">
-                <h3 id="night-report-status">Night Outcome</h3>
+                <h3 id="night-report-status" aria-live="polite">Night Outcome</h3>
             </div>
 
             <!-- Starter Player Announcement Banner for Mafia -->
             <div id="mafia-starter-banner" class="starter-banner">
-                <span id="mafia-starter-text">🎙️ Speaker: Player 1 starts!</span>
-                <button class="reroll-btn" onclick="rerollMafiaStarterPlayer()">🎲 Re-roll</button>
+                <span id="mafia-starter-text" aria-live="polite">🎙️ Speaker: Player 1 starts!</span>
+                <button class="reroll-btn" type="button" onclick="rerollMafiaStarterPlayer()">🎲 Re-roll</button>
             </div>
 
-            <div id="mafia-hud" class="game-hud"></div>
+            <div id="mafia-hud" class="game-hud" aria-live="polite"></div>
             <div id="mafia-active-players-list" class="players-list"></div>
             <div class="game-controls">
-                <button id="mafia-end-game-btn" class="secondary-btn">End Game Manually 🏴</button>
+                <button id="mafia-end-game-btn" class="secondary-btn" type="button">End Game Manually 🏴</button>
             </div>
-        </div>
+        </section>
 
         <!-- Mafia Reveal Screen -->
-        <div id="mafia-reveal-screen" class="screen hidden">
+        <section id="mafia-reveal-screen" class="screen hidden" aria-labelledby="mafia-reveal-status">
             <div class="reveal-content">
-                <h2 id="mafia-reveal-status">Day Trial Verdict...</h2>
+                <h2 id="mafia-reveal-status" aria-live="assertive">Day Trial Verdict...</h2>
                 <div id="mafia-reveal-card" class="reveal-card">
                     <span id="mafia-reveal-text">???</span>
                 </div>
                 <div id="mafia-reveal-actions">
-                    <button id="mafia-continue-btn" class="primary-btn mafia-theme-btn">Begin Next Night 🌙</button>
-                    <button id="mafia-quit-btn" class="secondary-btn">Quit Game</button>
+                    <button id="mafia-continue-btn" class="primary-btn mafia-theme-btn" type="button">Begin Next Night 🌙</button>
+                    <button id="mafia-quit-btn" class="secondary-btn" type="button">Quit Game</button>
                 </div>
             </div>
-        </div>
+        </section>
 
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- IN-APP MESSAGE LAYER -->
+    <!-- Native alert()/confirm() are suppressed inside embedded   -->
+    <!-- webviews, so confirmations and round results are rendered   -->
+    <!-- in-page instead.                                          -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div id="app-dialog" class="app-dialog hidden" role="dialog" aria-modal="true"
+         aria-labelledby="app-dialog-title" aria-describedby="app-dialog-message">
+        <div class="app-dialog-card">
+            <div id="app-dialog-icon" class="app-dialog-icon" aria-hidden="true">🎉</div>
+            <h2 id="app-dialog-title" class="app-dialog-title">Title</h2>
+            <p id="app-dialog-message" class="app-dialog-message">Message</p>
+            <div id="app-dialog-actions" class="app-dialog-actions"></div>
+        </div>
     </div>
+
+    <div id="toast-stack" class="toast-stack" aria-live="polite" aria-atomic="false"></div>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
     <!-- LEADERBOARD SCREENSHOT MODAL (12-14+ Players Export) -->
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <div id="leaderboard-modal" class="modal-overlay hidden">
+    <div id="leaderboard-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="leaderboard-modal-title">
         <div class="modal-content leaderboard-modal-content">
             <div class="modal-header">
-                <h2>🏆 Hall of Fame Leaderboard</h2>
-                <button class="close-modal-btn" onclick="closeLeaderboardModal()">✖</button>
+                <h2 id="leaderboard-modal-title">🏆 Hall of Fame Leaderboard</h2>
+                <button class="close-modal-btn" type="button" onclick="closeLeaderboardModal()" aria-label="Close leaderboard">✖</button>
             </div>
-            
+
             <!-- Snapshot Container for Screenshot -->
             <div id="leaderboard-snapshot-card" class="leaderboard-snapshot-card">
                 <div class="snapshot-header">
-                    <span class="snapshot-logo">🎭 BLUFF & BETRAYAL</span>
+                    <span class="snapshot-logo">🎭 BLUFF &amp; BETRAYAL</span>
                     <h3>LEADERBOARD SCORES</h3>
                     <p class="snapshot-date">Party Game Hall of Fame</p>
                 </div>
@@ -335,12 +389,10 @@
             </div>
 
             <div class="modal-footer">
-                <button class="primary-btn export-action-btn" onclick="downloadLeaderboardImage()">📥 Download PNG Image</button>
-                <button class="secondary-btn" onclick="closeLeaderboardModal()">Close</button>
+                <button class="primary-btn export-action-btn" type="button" onclick="downloadLeaderboardImage()">📥 Download PNG Image</button>
+                <button class="secondary-btn" type="button" onclick="closeLeaderboardModal()">Close</button>
             </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

@@ -1,2261 +1,5 @@
-const gameData = {
-    "Daily Objects": [
-        {
-            "word": "Umbrella ☂️",
-            "hint": "Forecast"
-        },
-        {
-            "word": "Slippers 🩴",
-            "hint": "Comfort"
-        },
-        {
-            "word": "Water Bottle 🍼",
-            "hint": "Thirst"
-        },
-        {
-            "word": "Key Chain 🔑",
-            "hint": "Bundle"
-        },
-        {
-            "word": "Wallet 👛",
-            "hint": "Pocket"
-        },
-        {
-            "word": "Handkerchief ⬜",
-            "hint": "Fold"
-        },
-        {
-            "word": "Spectacles 👓",
-            "hint": "Focus"
-        },
-        {
-            "word": "Watch ⌚",
-            "hint": "Routine"
-        },
-        {
-            "word": "Comb 🪮",
-            "hint": "Mirror"
-        },
-        {
-            "word": "Mirror 🪞",
-            "hint": "Surface"
-        },
-        {
-            "word": "Backpack 🎒",
-            "hint": "Commute"
-        },
-        {
-            "word": "Scissors ✂️",
-            "hint": "Divide"
-        },
-        {
-            "word": "Charger 🔌",
-            "hint": "Outlet"
-        },
-        {
-            "word": "Towel 🧣",
-            "hint": "Morning"
-        },
-        {
-            "word": "Toothbrush 🪥",
-            "hint": "Routine"
-        },
-        {
-            "word": "Headphones 🎧",
-            "hint": "Commute"
-        },
-        {
-            "word": "Laptop 💻",
-            "hint": "Desk"
-        },
-        {
-            "word": "Notebook 📓",
-            "hint": "Thoughts"
-        },
-        {
-            "word": "Pen 🖊️",
-            "hint": "Signature"
-        },
-        {
-            "word": "Flashlight 🔦",
-            "hint": "Darkness"
-        },
-        {
-            "word": "Lip Balm 💄",
-            "hint": "Weather"
-        },
-        {
-            "word": "Nail Clipper 💅",
-            "hint": "Care"
-        },
-        {
-            "word": "Power Bank 🔋",
-            "hint": "Emergency"
-        },
-        {
-            "word": "Helmet 🪖",
-            "hint": "Traffic"
-        },
-        {
-            "word": "Sanitizer 🧴",
-            "hint": "Clean"
-        },
-        {
-            "word": "Sunglasses 🕶️",
-            "hint": "Glare"
-        },
-        {
-            "word": "Earbuds 🎧",
-            "hint": "Pocket"
-        },
-        {
-            "word": "Perfume 🧴",
-            "hint": "Scent"
-        },
-        {
-            "word": "Tissue 🧻",
-            "hint": "Spill"
-        },
-        {
-            "word": "Calculator 🧮",
-            "hint": "Number"
-        },
-        {
-            "word": "Coffee Mug ☕",
-            "hint": "Break"
-        },
-        {
-            "word": "Hair Band 💇",
-            "hint": "Tied"
-        },
-        {
-            "word": "Pencil ✏️",
-            "hint": "Sketch"
-        },
-        {
-            "word": "Stapler 📎",
-            "hint": "Desk"
-        },
-        {
-            "word": "Water Filter 🚰",
-            "hint": "Tap"
-        },
-        {
-            "word": "Bookmark 🔖",
-            "hint": "Chapter"
-        },
-        {
-            "word": "Passport 📕",
-            "hint": "Border"
-        },
-        {
-            "word": "Thermos 🧪",
-            "hint": "Temperature"
-        },
-        {
-            "word": "Safety Pin 🧷",
-            "hint": "Fix"
-        },
-        {
-            "word": "Wristband 🎗️",
-            "hint": "Event"
-        },
-        {
-            "word": "Shoe Polish 👞",
-            "hint": "Leather"
-        },
-        {
-            "word": "Coin Pouch 🪙",
-            "hint": "Jingle"
-        },
-        {
-            "word": "Pocket Knife 🔪",
-            "hint": "Tool"
-        },
-        {
-            "word": "Tape Measure 📏",
-            "hint": "Fit"
-        },
-        {
-            "word": "Sticky Notes 🗒️",
-            "hint": "Reminder"
-        },
-        {
-            "word": "Dental Floss 🧵",
-            "hint": "Night"
-        },
-        {
-            "word": "Comb Case 🪮",
-            "hint": "Travel"
-        },
-        {
-            "word": "Hand Fan 🪭",
-            "hint": "Warmth"
-        }
-    ],
-    "Household Items": [
-        {
-            "word": "Pressure Cooker 🍲",
-            "hint": "Steam"
-        },
-        {
-            "word": "Mixie 🌪️",
-            "hint": "Grind"
-        },
-        {
-            "word": "Steel Glass 🥛",
-            "hint": "Metal"
-        },
-        {
-            "word": "Tiffin Box 🍱",
-            "hint": "Noon"
-        },
-        {
-            "word": "Broom 🧹",
-            "hint": "Corner"
-        },
-        {
-            "word": "Saree 👘",
-            "hint": "Fabric"
-        },
-        {
-            "word": "Mat 🧶",
-            "hint": "Weave"
-        },
-        {
-            "word": "Diya 🪔",
-            "hint": "Evening"
-        },
-        {
-            "word": "Fan 🌀",
-            "hint": "Current"
-        },
-        {
-            "word": "Fridge ❄️",
-            "hint": "Storage"
-        },
-        {
-            "word": "Curtain 🪟",
-            "hint": "Privacy"
-        },
-        {
-            "word": "Spoon 🥄",
-            "hint": "Stir"
-        },
-        {
-            "word": "Plate 🍽️",
-            "hint": "Serve"
-        },
-        {
-            "word": "Bed 🛌",
-            "hint": "Rest"
-        },
-        {
-            "word": "Soap 🧼",
-            "hint": "Wash"
-        },
-        {
-            "word": "Washing Machine 🧺",
-            "hint": "Cycle"
-        },
-        {
-            "word": "Toaster 🍞",
-            "hint": "Crisp"
-        },
-        {
-            "word": "Microwave 📻",
-            "hint": "Timer"
-        },
-        {
-            "word": "Dustbin 🗑️",
-            "hint": "Discard"
-        },
-        {
-            "word": "Clock ⏰",
-            "hint": "Seconds"
-        },
-        {
-            "word": "Pillow 🛌",
-            "hint": "Soft"
-        },
-        {
-            "word": "Bucket 🪣",
-            "hint": "Capacity"
-        },
-        {
-            "word": "Iron 🧺",
-            "hint": "Press"
-        },
-        {
-            "word": "Door Lock 🔒",
-            "hint": "Security"
-        },
-        {
-            "word": "Calendar 📅",
-            "hint": "Schedule"
-        },
-        {
-            "word": "Air Conditioner ❄️",
-            "hint": "Climate"
-        },
-        {
-            "word": "Gas Stove ♨️",
-            "hint": "Heat"
-        },
-        {
-            "word": "Frying Pan 🍳",
-            "hint": "Sizzle"
-        },
-        {
-            "word": "Doormat 🚪",
-            "hint": "Threshold"
-        },
-        {
-            "word": "Ceiling Fan 🌀",
-            "hint": "Overhead"
-        },
-        {
-            "word": "Vacuum Cleaner 🧹",
-            "hint": "Cord"
-        },
-        {
-            "word": "Wardrobe 🚪",
-            "hint": "Hanger"
-        },
-        {
-            "word": "Vase 🏺",
-            "hint": "Centerpiece"
-        },
-        {
-            "word": "Water Heater 🚿",
-            "hint": "Warm"
-        },
-        {
-            "word": "Dining Table 🪑",
-            "hint": "Gather"
-        },
-        {
-            "word": "Dustpan 🧹",
-            "hint": "Pile"
-        },
-        {
-            "word": "Mop 🧽",
-            "hint": "Tile"
-        },
-        {
-            "word": "Kettle 🫖",
-            "hint": "Whistle"
-        },
-        {
-            "word": "Blanket 🛋️",
-            "hint": "Winter"
-        },
-        {
-            "word": "Hanger 🧥",
-            "hint": "Neat"
-        },
-        {
-            "word": "Shoe Rack 👠",
-            "hint": "Entry"
-        },
-        {
-            "word": "Cutting Board 🪵",
-            "hint": "Prep"
-        },
-        {
-            "word": "Torch 🔦",
-            "hint": "Outage"
-        },
-        {
-            "word": "Clothespin 📎",
-            "hint": "Breeze"
-        },
-        {
-            "word": "Rug 🧶",
-            "hint": "Living"
-        }
-    ],
-    "Fun & Games": [
-        {
-            "word": "Carnival 🎡",
-            "hint": "Crowd"
-        },
-        {
-            "word": "Magic Show 🪄",
-            "hint": "Mystery"
-        },
-        {
-            "word": "Roller Coaster 🎢",
-            "hint": "Drop"
-        },
-        {
-            "word": "Puppet Show 🎭",
-            "hint": "Curtain"
-        },
-        {
-            "word": "Fireworks 🎆",
-            "hint": "Festival"
-        },
-        {
-            "word": "Joke 😂",
-            "hint": "Laughter"
-        },
-        {
-            "word": "Game Night 🎲",
-            "hint": "Turn"
-        },
-        {
-            "word": "Party 🥳",
-            "hint": "Weekend"
-        },
-        {
-            "word": "Cinema 🎬",
-            "hint": "Dark"
-        },
-        {
-            "word": "Zoo 🦁",
-            "hint": "Visit"
-        },
-        {
-            "word": "Beach 🏖️",
-            "hint": "Horizon"
-        },
-        {
-            "word": "Park 🌳",
-            "hint": "Stroll"
-        },
-        {
-            "word": "Swing 🎡",
-            "hint": "Motion"
-        },
-        {
-            "word": "Music 🎶",
-            "hint": "Tempo"
-        },
-        {
-            "word": "Painting 🎨",
-            "hint": "Stroke"
-        },
-        {
-            "word": "Karaoke 🎤",
-            "hint": "Screen"
-        },
-        {
-            "word": "Water Park 🏊",
-            "hint": "Splash"
-        },
-        {
-            "word": "Circus 🎪",
-            "hint": "Ring"
-        },
-        {
-            "word": "Bowling 🎳",
-            "hint": "Strike"
-        },
-        {
-            "word": "Arcade 🕹️",
-            "hint": "Score"
-        },
-        {
-            "word": "Trampoline 🤸",
-            "hint": "Airborne"
-        },
-        {
-            "word": "Escape Room 🔑",
-            "hint": "Lock"
-        },
-        {
-            "word": "Camping ⛺",
-            "hint": "Outdoors"
-        },
-        {
-            "word": "Picnic 🧺",
-            "hint": "Blanket"
-        },
-        {
-            "word": "Ferris Wheel 🎡",
-            "hint": "View"
-        },
-        {
-            "word": "Haunted House 👻",
-            "hint": "Corridor"
-        },
-        {
-            "word": "Laser Tag 🔫",
-            "hint": "Vest"
-        },
-        {
-            "word": "Treasure Hunt 🗺️",
-            "hint": "Search"
-        },
-        {
-            "word": "Bumper Cars 🚗",
-            "hint": "Arena"
-        },
-        {
-            "word": "Bonfire 🔥",
-            "hint": "Night"
-        },
-        {
-            "word": "Piñata 🪅",
-            "hint": "Blindfold"
-        },
-        {
-            "word": "Talent Show 🌟",
-            "hint": "Applause"
-        },
-        {
-            "word": "Go-Karting 🏎️",
-            "hint": "Lap"
-        },
-        {
-            "word": "Costume Party 🎭",
-            "hint": "Theme"
-        }
-    ],
-    "Sports": [
-        {
-            "word": "Cricket 🏏",
-            "hint": "Pitch"
-        },
-        {
-            "word": "Football ⚽",
-            "hint": "Field"
-        },
-        {
-            "word": "Kabaddi 🤼",
-            "hint": "Line"
-        },
-        {
-            "word": "Badminton 🏸",
-            "hint": "Court"
-        },
-        {
-            "word": "Chess ♟️",
-            "hint": "Board"
-        },
-        {
-            "word": "Wrestling 🤼",
-            "hint": "Mat"
-        },
-        {
-            "word": "Tennis 🎾",
-            "hint": "Serve"
-        },
-        {
-            "word": "Boxing 🥊",
-            "hint": "Round"
-        },
-        {
-            "word": "Yoga 🧘",
-            "hint": "Balance"
-        },
-        {
-            "word": "Swimming 🏊",
-            "hint": "Lap"
-        },
-        {
-            "word": "Running 🏃",
-            "hint": "Finish"
-        },
-        {
-            "word": "Cycling 🚴",
-            "hint": "Distance"
-        },
-        {
-            "word": "Volleyball 🏐",
-            "hint": "Net"
-        },
-        {
-            "word": "Basketball 🏀",
-            "hint": "Bounce"
-        },
-        {
-            "word": "Hockey 🏑",
-            "hint": "Turf"
-        },
-        {
-            "word": "Table Tennis 🏓",
-            "hint": "Rally"
-        },
-        {
-            "word": "Archery 🏹",
-            "hint": "Aim"
-        },
-        {
-            "word": "Golf ⛳",
-            "hint": "Swing"
-        },
-        {
-            "word": "Rugby 🏉",
-            "hint": "Tackle"
-        },
-        {
-            "word": "Surfing 🏄",
-            "hint": "Tide"
-        },
-        {
-            "word": "Baseball ⚾",
-            "hint": "Diamond"
-        },
-        {
-            "word": "Skiing 🎿",
-            "hint": "Slope"
-        },
-        {
-            "word": "Skateboarding 🛹",
-            "hint": "Pavement"
-        },
-        {
-            "word": "Rock Climbing 🧗",
-            "hint": "Grip"
-        },
-        {
-            "word": "Rowing 🚣",
-            "hint": "Rhythm"
-        },
-        {
-            "word": "Gymnastics 🤸",
-            "hint": "Routine"
-        },
-        {
-            "word": "Karate 🥋",
-            "hint": "Belt"
-        },
-        {
-            "word": "Snooker 🎱",
-            "hint": "Felt"
-        },
-        {
-            "word": "Fencing 🤺",
-            "hint": "Duel"
-        },
-        {
-            "word": "Polo 🐎",
-            "hint": "Turf"
-        }
-    ],
-    "Food & Drink": [
-        {
-            "word": "Biryani 🥘",
-            "hint": "Fragrant"
-        },
-        {
-            "word": "Samosa 🥟",
-            "hint": "Snack"
-        },
-        {
-            "word": "Masala Chai ☕",
-            "hint": "Brew"
-        },
-        {
-            "word": "Dosa 🥞",
-            "hint": "Tawa"
-        },
-        {
-            "word": "Idli ⚪",
-            "hint": "Morning"
-        },
-        {
-            "word": "Payasam 🥣",
-            "hint": "Feast"
-        },
-        {
-            "word": "Puttu 🎋",
-            "hint": "Steam"
-        },
-        {
-            "word": "Lassi 🥛",
-            "hint": "Thick"
-        },
-        {
-            "word": "Paneer 🧀",
-            "hint": "Dairy"
-        },
-        {
-            "word": "Vada 🍩",
-            "hint": "Crisp"
-        },
-        {
-            "word": "Gulab Jamun 🍬",
-            "hint": "Warm"
-        },
-        {
-            "word": "Paratha 🫓",
-            "hint": "Layered"
-        },
-        {
-            "word": "Mango 🥭",
-            "hint": "Summer"
-        },
-        {
-            "word": "Coconut 🥥",
-            "hint": "Shell"
-        },
-        {
-            "word": "Curd 🥛",
-            "hint": "Pot"
-        },
-        {
-            "word": "Shawarma 🌯",
-            "hint": "Spit"
-        },
-        {
-            "word": "Pizza 🍕",
-            "hint": "Slice"
-        },
-        {
-            "word": "Burger 🍔",
-            "hint": "Layer"
-        },
-        {
-            "word": "Momos 🥟",
-            "hint": "Steamer"
-        },
-        {
-            "word": "Noodles 🍜",
-            "hint": "Strands"
-        },
-        {
-            "word": "Ice Cream 🍦",
-            "hint": "Melt"
-        },
-        {
-            "word": "Falooda 🍧",
-            "hint": "Layered"
-        },
-        {
-            "word": "Pani Puri 🥣",
-            "hint": "Street"
-        },
-        {
-            "word": "Omelette 🍳",
-            "hint": "Fold"
-        },
-        {
-            "word": "Lemonade 🍋",
-            "hint": "Sour"
-        },
-        {
-            "word": "Tacos 🌮",
-            "hint": "Shell"
-        },
-        {
-            "word": "Sushi 🍣",
-            "hint": "Roll"
-        },
-        {
-            "word": "Pasta 🍝",
-            "hint": "Plate"
-        },
-        {
-            "word": "Waffles 🧇",
-            "hint": "Grid"
-        },
-        {
-            "word": "Ramen 🍜",
-            "hint": "Bowl"
-        },
-        {
-            "word": "Cheesecake 🍰",
-            "hint": "Slice"
-        },
-        {
-            "word": "Hot Dog 🌭",
-            "hint": "Vendor"
-        },
-        {
-            "word": "French Fries 🍟",
-            "hint": "Side"
-        },
-        {
-            "word": "Pancakes 🥞",
-            "hint": "Stack"
-        },
-        {
-            "word": "Croissant 🥐",
-            "hint": "Flaky"
-        },
-        {
-            "word": "Milkshake 🥤",
-            "hint": "Thick"
-        },
-        {
-            "word": "Popcorn 🍿",
-            "hint": "Kernels"
-        },
-        {
-            "word": "Donut 🍩",
-            "hint": "Ring"
-        },
-        {
-            "word": "Chowmein 🥢",
-            "hint": "Stir"
-        },
-        {
-            "word": "Kebab 🍢",
-            "hint": "Charcoal"
-        }
-    ],
-    "Animals": [
-        {
-            "word": "Elephant 🐘",
-            "hint": "Herd"
-        },
-        {
-            "word": "Tiger 🐅",
-            "hint": "Prowl"
-        },
-        {
-            "word": "Cow 🐄",
-            "hint": "Pasture"
-        },
-        {
-            "word": "Monkey 🐒",
-            "hint": "Branch"
-        },
-        {
-            "word": "Peacock 🦚",
-            "hint": "Dance"
-        },
-        {
-            "word": "Dog 🐕",
-            "hint": "Leash"
-        },
-        {
-            "word": "Cat 🐈",
-            "hint": "Stalk"
-        },
-        {
-            "word": "Goat 🐐",
-            "hint": "Graze"
-        },
-        {
-            "word": "Lion 🦁",
-            "hint": "Pride"
-        },
-        {
-            "word": "Horse 🐎",
-            "hint": "Saddle"
-        },
-        {
-            "word": "Rabbit 🐰",
-            "hint": "Meadow"
-        },
-        {
-            "word": "Snake 🐍",
-            "hint": "Coil"
-        },
-        {
-            "word": "Eagle 🦅",
-            "hint": "Soar"
-        },
-        {
-            "word": "Deer 🦌",
-            "hint": "Forest"
-        },
-        {
-            "word": "Dolphin 🐬",
-            "hint": "Echo"
-        },
-        {
-            "word": "Bear 🐻",
-            "hint": "Den"
-        },
-        {
-            "word": "Panda 🐼",
-            "hint": "Forest"
-        },
-        {
-            "word": "Wolf 🐺",
-            "hint": "Howl"
-        },
-        {
-            "word": "Giraffe 🦒",
-            "hint": "Tall"
-        },
-        {
-            "word": "Kangaroo 🦘",
-            "hint": "Hop"
-        },
-        {
-            "word": "Penguin 🐧",
-            "hint": "Colony"
-        },
-        {
-            "word": "Crocodile 🐊",
-            "hint": "Bank"
-        },
-        {
-            "word": "Fox 🦊",
-            "hint": "Burrow"
-        },
-        {
-            "word": "Owl 🦉",
-            "hint": "Silent"
-        },
-        {
-            "word": "Camel 🐫",
-            "hint": "Dune"
-        },
-        {
-            "word": "Cheetah 🐆",
-            "hint": "Chase"
-        },
-        {
-            "word": "Flamingo 🦩",
-            "hint": "Shallow"
-        },
-        {
-            "word": "Koala 🐨",
-            "hint": "Sleep"
-        },
-        {
-            "word": "Shark 🦈",
-            "hint": "Deep"
-        },
-        {
-            "word": "Octopus 🐙",
-            "hint": "Camouflage"
-        },
-        {
-            "word": "Gorilla 🦍",
-            "hint": "Troop"
-        },
-        {
-            "word": "Zebra 🦓",
-            "hint": "Savanna"
-        },
-        {
-            "word": "Hippo 🦛",
-            "hint": "Mud"
-        },
-        {
-            "word": "Rhinoceros 🦏",
-            "hint": "Armor"
-        },
-        {
-            "word": "Chameleon 🦎",
-            "hint": "Blend"
-        },
-        {
-            "word": "Sloth 🦥",
-            "hint": "Canopy"
-        },
-        {
-            "word": "Hedgehog 🦔",
-            "hint": "Spines"
-        },
-        {
-            "word": "Otter 🦦",
-            "hint": "Play"
-        },
-        {
-            "word": "Platypus 🦆",
-            "hint": "Unique"
-        },
-        {
-            "word": "Walrus 🦭",
-            "hint": "Ice"
-        }
-    ],
-    "Countries": [
-        {
-            "word": "India 🇮🇳",
-            "hint": "Monsoon"
-        },
-        {
-            "word": "USA 🇺🇸",
-            "hint": "Coast"
-        },
-        {
-            "word": "Japan 🇯🇵",
-            "hint": "Island"
-        },
-        {
-            "word": "UAE 🇦🇪",
-            "hint": "Dune"
-        },
-        {
-            "word": "UK 🇬🇧",
-            "hint": "Crown"
-        },
-        {
-            "word": "France 🇫🇷",
-            "hint": "Boutique"
-        },
-        {
-            "word": "Canada 🇨🇦",
-            "hint": "Tundra"
-        },
-        {
-            "word": "Australia 🇦🇺",
-            "hint": "Reef"
-        },
-        {
-            "word": "Russia 🇷🇺",
-            "hint": "Taiga"
-        },
-        {
-            "word": "Brazil 🇧🇷",
-            "hint": "Tropics"
-        },
-        {
-            "word": "China 🇨🇳",
-            "hint": "Wall"
-        },
-        {
-            "word": "Germany 🇩🇪",
-            "hint": "Autobahn"
-        },
-        {
-            "word": "Italy 🇮🇹",
-            "hint": "Ruins"
-        },
-        {
-            "word": "Egypt 🇪🇬",
-            "hint": "Delta"
-        },
-        {
-            "word": "Singapore 🇸🇬",
-            "hint": "Port"
-        },
-        {
-            "word": "Argentina 🇦🇷",
-            "hint": "Pampa"
-        },
-        {
-            "word": "Spain 🇪🇸",
-            "hint": "Coast"
-        },
-        {
-            "word": "South Korea 🇰🇷",
-            "hint": "Peninsula"
-        },
-        {
-            "word": "Mexico 🇲🇽",
-            "hint": "Plateau"
-        },
-        {
-            "word": "Switzerland 🇨🇭",
-            "hint": "Alpine"
-        },
-        {
-            "word": "Turkey 🇹🇷",
-            "hint": "Strait"
-        },
-        {
-            "word": "South Africa 🇿🇦",
-            "hint": "Savanna"
-        },
-        {
-            "word": "Saudi Arabia 🇸🇦",
-            "hint": "Dunes"
-        },
-        {
-            "word": "New Zealand 🇳🇿",
-            "hint": "Island"
-        },
-        {
-            "word": "Thailand 🇹🇭",
-            "hint": "Monsoon"
-        },
-        {
-            "word": "Greece 🇬🇷",
-            "hint": "Aegean"
-        },
-        {
-            "word": "Netherlands 🇳🇱",
-            "hint": "Canal"
-        },
-        {
-            "word": "Norway 🇳🇴",
-            "hint": "Fjord"
-        },
-        {
-            "word": "Portugal 🇵🇹",
-            "hint": "Coast"
-        },
-        {
-            "word": "Vietnam 🇻🇳",
-            "hint": "Delta"
-        },
-        {
-            "word": "Ireland 🇮🇪",
-            "hint": "Coast"
-        },
-        {
-            "word": "Sweden 🇸🇪",
-            "hint": "Baltic"
-        },
-        {
-            "word": "Kenya 🇰🇪",
-            "hint": "Savanna"
-        },
-        {
-            "word": "Morocco 🇲🇦",
-            "hint": "Bazaar"
-        },
-        {
-            "word": "Iceland 🇮🇸",
-            "hint": "Volcanic"
-        },
-        {
-            "word": "Peru 🇵🇪",
-            "hint": "Highland"
-        },
-        {
-            "word": "Colombia 🇨🇴",
-            "hint": "Valley"
-        },
-        {
-            "word": "Sri Lanka 🇱🇰",
-            "hint": "Island"
-        },
-        {
-            "word": "Malaysia 🇲🇾",
-            "hint": "Rainforest"
-        },
-        {
-            "word": "Finland 🇫🇮",
-            "hint": "Lakes"
-        }
-    ],
-    "Colors": [
-        {
-            "word": "Saffron 🟠",
-            "hint": "Spiritual"
-        },
-        {
-            "word": "Turquoise 💎",
-            "hint": "Lagoon"
-        },
-        {
-            "word": "Crimson 🔴",
-            "hint": "Rich"
-        },
-        {
-            "word": "Emerald 🟢",
-            "hint": "Canopy"
-        },
-        {
-            "word": "Indigo 🔵",
-            "hint": "Twilight"
-        },
-        {
-            "word": "Ivory ⚪",
-            "hint": "Classic"
-        },
-        {
-            "word": "Golden 🟡",
-            "hint": "Glow"
-        },
-        {
-            "word": "Violet 🟣",
-            "hint": "Spectrum"
-        },
-        {
-            "word": "Black ⚫",
-            "hint": "Shadow"
-        },
-        {
-            "word": "White ⚪",
-            "hint": "Blank"
-        },
-        {
-            "word": "Grey 🔘",
-            "hint": "Overcast"
-        },
-        {
-            "word": "Pink 🌸",
-            "hint": "Blush"
-        },
-        {
-            "word": "Orange 🍊",
-            "hint": "Warm"
-        },
-        {
-            "word": "Yellow ☀️",
-            "hint": "Daylight"
-        },
-        {
-            "word": "Brown 🪵",
-            "hint": "Bark"
-        },
-        {
-            "word": "Teal 🪶",
-            "hint": "Depth"
-        },
-        {
-            "word": "Maroon 🍷",
-            "hint": "Deep"
-        },
-        {
-            "word": "Magenta 🌺",
-            "hint": "Vivid"
-        },
-        {
-            "word": "Silver 🥈",
-            "hint": "Polished"
-        },
-        {
-            "word": "Bronze 🥉",
-            "hint": "Metal"
-        },
-        {
-            "word": "Navy Blue ⚓",
-            "hint": "Abyss"
-        },
-        {
-            "word": "Olive Green 🫒",
-            "hint": "Earth"
-        },
-        {
-            "word": "Coral 🪸",
-            "hint": "Marine"
-        },
-        {
-            "word": "Lavender 🪻",
-            "hint": "Gentle"
-        },
-        {
-            "word": "Peach 🍑",
-            "hint": "Soft"
-        },
-        {
-            "word": "Amber 🍯",
-            "hint": "Glow"
-        },
-        {
-            "word": "Mint 🌿",
-            "hint": "Cool"
-        },
-        {
-            "word": "Charcoal 🖤",
-            "hint": "Smoky"
-        },
-        {
-            "word": "Beige 🪵",
-            "hint": "Neutral"
-        },
-        {
-            "word": "Ruby 💎",
-            "hint": "Precious"
-        },
-        {
-            "word": "Cyan 🩵",
-            "hint": "Vibrant"
-        },
-        {
-            "word": "Lime Green 🍈",
-            "hint": "Sharp"
-        },
-        {
-            "word": "Burgundy 🍷",
-            "hint": "Vintage"
-        },
-        {
-            "word": "Copper 🪙",
-            "hint": "Sheen"
-        },
-        {
-            "word": "Khaki 🟤",
-            "hint": "Dusty"
-        }
-    ],
-    "Hobbies": [
-        {
-            "word": "Photography 📷",
-            "hint": "Capture"
-        },
-        {
-            "word": "Gardening 🪴",
-            "hint": "Growth"
-        },
-        {
-            "word": "Reading 📚",
-            "hint": "Pages"
-        },
-        {
-            "word": "Cooking 🍳",
-            "hint": "Flavor"
-        },
-        {
-            "word": "Dancing 💃",
-            "hint": "Movement"
-        },
-        {
-            "word": "Singing 🎤",
-            "hint": "Voice"
-        },
-        {
-            "word": "Painting 🎨",
-            "hint": "Color"
-        },
-        {
-            "word": "Travel ✈️",
-            "hint": "Journey"
-        },
-        {
-            "word": "Fishing 🎣",
-            "hint": "Patience"
-        },
-        {
-            "word": "Gaming 🎮",
-            "hint": "Virtual"
-        },
-        {
-            "word": "Hiking 🥾",
-            "hint": "Elevation"
-        },
-        {
-            "word": "Collecting 🪙",
-            "hint": "Archive"
-        },
-        {
-            "word": "Writing ✍️",
-            "hint": "Draft"
-        },
-        {
-            "word": "Knitting 🧶",
-            "hint": "Pattern"
-        },
-        {
-            "word": "Meditation 🧘",
-            "hint": "Silence"
-        },
-        {
-            "word": "Baking 🧁",
-            "hint": "Dough"
-        },
-        {
-            "word": "Origami 📄",
-            "hint": "Crease"
-        },
-        {
-            "word": "Astronomy 🔭",
-            "hint": "Cosmos"
-        },
-        {
-            "word": "Skateboarding 🛹",
-            "hint": "Momentum"
-        },
-        {
-            "word": "Pottery 🏺",
-            "hint": "Wheel"
-        },
-        {
-            "word": "Woodworking 🪵",
-            "hint": "Grain"
-        },
-        {
-            "word": "Ukulele 🪕",
-            "hint": "Acoustic"
-        },
-        {
-            "word": "Bird Watching 🦜",
-            "hint": "Canopy"
-        },
-        {
-            "word": "Juggling 🤹",
-            "hint": "Rhythm"
-        },
-        {
-            "word": "Puzzles 🧩",
-            "hint": "Pieces"
-        },
-        {
-            "word": "Calligraphy 🖋️",
-            "hint": "Ink"
-        },
-        {
-            "word": "Sculpting 🗿",
-            "hint": "Form"
-        },
-        {
-            "word": "Archery 🏹",
-            "hint": "Trajectory"
-        },
-        {
-            "word": "Magic Tricks 🃏",
-            "hint": "Deception"
-        },
-        {
-            "word": "Podcast 🎙️",
-            "hint": "Talk"
-        },
-        {
-            "word": "Scrapbooking 📒",
-            "hint": "Album"
-        },
-        {
-            "word": "DJing 🎧",
-            "hint": "Beat"
-        },
-        {
-            "word": "Candle Making 🕯️",
-            "hint": "Melt"
-        },
-        {
-            "word": "Chess Playing ♟️",
-            "hint": "Tactic"
-        },
-        {
-            "word": "Leathercraft 👞",
-            "hint": "Hide"
-        }
-    ],
-    "Apps": [
-        {
-            "word": "WhatsApp 🟢",
-            "hint": "Contact"
-        },
-        {
-            "word": "Instagram 📸",
-            "hint": "Feed"
-        },
-        {
-            "word": "YouTube 🔴",
-            "hint": "Buffer"
-        },
-        {
-            "word": "Zomato 🍕",
-            "hint": "Delivery"
-        },
-        {
-            "word": "PhonePe 💜",
-            "hint": "Transfer"
-        },
-        {
-            "word": "Facebook 🔵",
-            "hint": "Network"
-        },
-        {
-            "word": "Snapchat 👻",
-            "hint": "Timer"
-        },
-        {
-            "word": "Telegram ✈️",
-            "hint": "Broadcasting"
-        },
-        {
-            "word": "TikTok 🎵",
-            "hint": "Loop"
-        },
-        {
-            "word": "LinkedIn 💼",
-            "hint": "Resume"
-        },
-        {
-            "word": "Spotify 🎧",
-            "hint": "Stream"
-        },
-        {
-            "word": "Gmail ✉️",
-            "hint": "Inbox"
-        },
-        {
-            "word": "Twitter 🐦",
-            "hint": "Trending"
-        },
-        {
-            "word": "Amazon 📦",
-            "hint": "Cart"
-        },
-        {
-            "word": "Netflix 📺",
-            "hint": "Binge"
-        },
-        {
-            "word": "Uber 🚗",
-            "hint": "Fare"
-        },
-        {
-            "word": "Google Maps 🗺️",
-            "hint": "Route"
-        },
-        {
-            "word": "Reddit 🤖",
-            "hint": "Threads"
-        },
-        {
-            "word": "Pinterest 📌",
-            "hint": "Board"
-        },
-        {
-            "word": "Duolingo 🦉",
-            "hint": "Streak"
-        },
-        {
-            "word": "Discord 👾",
-            "hint": "Community"
-        },
-        {
-            "word": "Swiggy 🛵",
-            "hint": "Courier"
-        },
-        {
-            "word": "Twitch 💜",
-            "hint": "Live"
-        },
-        {
-            "word": "Paytm 💙",
-            "hint": "Scan"
-        },
-        {
-            "word": "Notion 📝",
-            "hint": "Workspace"
-        },
-        {
-            "word": "ChatGPT 🤖",
-            "hint": "Query"
-        },
-        {
-            "word": "Canva 🎨",
-            "hint": "Layout"
-        },
-        {
-            "word": "Zoom 💻",
-            "hint": "Meeting"
-        },
-        {
-            "word": "Tinder 🔥",
-            "hint": "Profile"
-        },
-        {
-            "word": "Steam 🎮",
-            "hint": "Library"
-        },
-        {
-            "word": "Shazam 🎵",
-            "hint": "Identify"
-        },
-        {
-            "word": "Google Drive 📁",
-            "hint": "Sync"
-        },
-        {
-            "word": "Slack 💼",
-            "hint": "Channel"
-        },
-        {
-            "word": "SoundCloud ☁️",
-            "hint": "Upload"
-        },
-        {
-            "word": "Airbnb 🏡",
-            "hint": "Host"
-        }
-    ],
-    "Celebs": [
-        {
-            "word": "Mammootty 🎭",
-            "hint": "Thespian"
-        },
-        {
-            "word": "Mohanlal 🎬",
-            "hint": "Screen"
-        },
-        {
-            "word": "Shah Rukh Khan 🌟",
-            "hint": "Bollywood"
-        },
-        {
-            "word": "Virat Kohli 🏏",
-            "hint": "Jersey"
-        },
-        {
-            "word": "Deepika Padukone ✨",
-            "hint": "Spotlight"
-        },
-        {
-            "word": "Prithviraj 🎥",
-            "hint": "Behind"
-        },
-        {
-            "word": "Amitabh Bachchan 🎙️",
-            "hint": "Baritone"
-        },
-        {
-            "word": "Dulquer Salmaan 🕶️",
-            "hint": "Youth"
-        },
-        {
-            "word": "Salman Khan 💥",
-            "hint": "Blockbuster"
-        },
-        {
-            "word": "Akshay Kumar 🏃",
-            "hint": "Discipline"
-        },
-        {
-            "word": "Priyanka Chopra 🌎",
-            "hint": "Global"
-        },
-        {
-            "word": "Alia Bhatt 🌸",
-            "hint": "Roles"
-        },
-        {
-            "word": "Ranbir Kapoor 🤴",
-            "hint": "Dynasty"
-        },
-        {
-            "word": "MS Dhoni 🧤",
-            "hint": "Cool"
-        },
-        {
-            "word": "Rohit Sharma 🏏",
-            "hint": "Opener"
-        },
-        {
-            "word": "Fahadh Faasil 👁️",
-            "hint": "Gaze"
-        },
-        {
-            "word": "Tovino Thomas 🦸",
-            "hint": "Cape"
-        },
-        {
-            "word": "Kamal Haasan 🎭",
-            "hint": "Method"
-        },
-        {
-            "word": "Rajinikanth 🕶️",
-            "hint": "Style"
-        },
-        {
-            "word": "Suriya ⚔️",
-            "hint": "Vigor"
-        },
-        {
-            "word": "Vijay 🪙",
-            "hint": "Mass"
-        },
-        {
-            "word": "Ajith Kumar 🏍️",
-            "hint": "Speed"
-        },
-        {
-            "word": "Hrithik Roshan 🕺",
-            "hint": "Step"
-        },
-        {
-            "word": "Katrina Kaif 💃",
-            "hint": "Choreography"
-        },
-        {
-            "word": "Prabhas 🏹",
-            "hint": "Epic"
-        },
-        {
-            "word": "Taylor Swift 🎤",
-            "hint": "Tour"
-        },
-        {
-            "word": "Lionel Messi ⚽",
-            "hint": "Trophy"
-        },
-        {
-            "word": "Cristiano Ronaldo 🇵🇹",
-            "hint": "Athlete"
-        },
-        {
-            "word": "Keanu Reeves 🕶️",
-            "hint": "Humble"
-        },
-        {
-            "word": "Tom Cruise 🛩️",
-            "hint": "Adrenaline"
-        },
-        {
-            "word": "Robert Downey Jr 🦾",
-            "hint": "Charisma"
-        },
-        {
-            "word": "Dwayne Johnson 🪨",
-            "hint": "Biceps"
-        },
-        {
-            "word": "Zendaya 🕷️",
-            "hint": "Runway"
-        },
-        {
-            "word": "Cillian Murphy 🎩",
-            "hint": "Intense"
-        },
-        {
-            "word": "Leonardo DiCaprio 🚢",
-            "hint": "Lead"
-        }
-    ],
-    "Gaming": [
-        {
-            "word": "PUBG 🔫",
-            "hint": "Loot"
-        },
-        {
-            "word": "Free Fire 🔥",
-            "hint": "Survival"
-        },
-        {
-            "word": "Minecraft 🧊",
-            "hint": "Craft"
-        },
-        {
-            "word": "GTA 🚗",
-            "hint": "City"
-        },
-        {
-            "word": "Among Us 🚀",
-            "hint": "Crew"
-        },
-        {
-            "word": "FIFA ⚽",
-            "hint": "Match"
-        },
-        {
-            "word": "Candy Crush 🍭",
-            "hint": "Cascade"
-        },
-        {
-            "word": "Valorant 🎯",
-            "hint": "Round"
-        },
-        {
-            "word": "Roblox 🧱",
-            "hint": "Sandbox"
-        },
-        {
-            "word": "Fortnite 💃",
-            "hint": "Storm"
-        },
-        {
-            "word": "Call of Duty 🎖️",
-            "hint": "Deploy"
-        },
-        {
-            "word": "Pokemon GO 🐹",
-            "hint": "Explore"
-        },
-        {
-            "word": "Apex Legends 🏆",
-            "hint": "Squad"
-        },
-        {
-            "word": "League of Legends ⚔️",
-            "hint": "Nexus"
-        },
-        {
-            "word": "Clash of Clans 🏰",
-            "hint": "Raid"
-        },
-        {
-            "word": "Subway Surfers 🏃",
-            "hint": "Tracks"
-        },
-        {
-            "word": "Temple Run 🏃‍♂️",
-            "hint": "Relic"
-        },
-        {
-            "word": "Ludo King 🎲",
-            "hint": "Turn"
-        },
-        {
-            "word": "God of War 🪓",
-            "hint": "Pantheon"
-        },
-        {
-            "word": "Cyberpunk 🌆",
-            "hint": "Future"
-        },
-        {
-            "word": "Counter-Strike 💣",
-            "hint": "Defusal"
-        },
-        {
-            "word": "Overwatch 🛡️",
-            "hint": "Roster"
-        },
-        {
-            "word": "Elden Ring 💍",
-            "hint": "Grace"
-        },
-        {
-            "word": "Fall Guys 👑",
-            "hint": "Hurdle"
-        },
-        {
-            "word": "Brawl Stars 🌟",
-            "hint": "Arena"
-        },
-        {
-            "word": "Zelda 🗡️",
-            "hint": "Quest"
-        },
-        {
-            "word": "Super Mario 🍄",
-            "hint": "Kingdom"
-        },
-        {
-            "word": "Rocket League 🏎️",
-            "hint": "Arena"
-        },
-        {
-            "word": "The Witcher 🐺",
-            "hint": "Beast"
-        },
-        {
-            "word": "Assassins Creed 🦅",
-            "hint": "History"
-        },
-        {
-            "word": "Red Dead Redemption 🤠",
-            "hint": "Frontier"
-        },
-        {
-            "word": "Terraria 🌳",
-            "hint": "Depths"
-        },
-        {
-            "word": "Genshin Impact ✨",
-            "hint": "Wander"
-        },
-        {
-            "word": "Resident Evil 🧟",
-            "hint": "Mansion"
-        },
-        {
-            "word": "Hollow Knight 🪲",
-            "hint": "Depths"
-        }
-    ],
-    "Movies & Shows": [
-        {
-            "word": "Inception 🌀",
-            "hint": "Totem"
-        },
-        {
-            "word": "Avengers 🦸",
-            "hint": "Assemble"
-        },
-        {
-            "word": "Stranger Things 🚲",
-            "hint": "Upside"
-        },
-        {
-            "word": "Harry Potter 🪄",
-            "hint": "Castle"
-        },
-        {
-            "word": "Game of Thrones 🐉",
-            "hint": "Throne"
-        },
-        {
-            "word": "Interstellar 🚀",
-            "hint": "Relativity"
-        },
-        {
-            "word": "Titanic 🚢",
-            "hint": "Voyage"
-        },
-        {
-            "word": "Squid Game 🦑",
-            "hint": "Wager"
-        },
-        {
-            "word": "Breaking Bad 🧪",
-            "hint": "RV"
-        },
-        {
-            "word": "The Dark Knight 🦇",
-            "hint": "Vigilante"
-        },
-        {
-            "word": "The Matrix 🕶️",
-            "hint": "Pill"
-        },
-        {
-            "word": "Lord of the Rings 💍",
-            "hint": "Journey"
-        },
-        {
-            "word": "Money Heist 🎭",
-            "hint": "Mask"
-        },
-        {
-            "word": "Sherlock 🔍",
-            "hint": "Deduction"
-        },
-        {
-            "word": "Gladiator ⚔️",
-            "hint": "Arena"
-        },
-        {
-            "word": "Jurassic Park 🦖",
-            "hint": "Island"
-        },
-        {
-            "word": "Fight Club 🧼",
-            "hint": "Basement"
-        },
-        {
-            "word": "Avatar 🌿",
-            "hint": "Tribe"
-        },
-        {
-            "word": "Peaky Blinders 🧢",
-            "hint": "Flatcap"
-        },
-        {
-            "word": "The Godfather 🎩",
-            "hint": "Family"
-        },
-        {
-            "word": "Wednesday 🕷️",
-            "hint": "Daughter"
-        },
-        {
-            "word": "Oppenheimer 💣",
-            "hint": "Trinity"
-        },
-        {
-            "word": "Black Mirror 📱",
-            "hint": "Screen"
-        },
-        {
-            "word": "The Boys 🦸‍♂️",
-            "hint": "Corporate"
-        },
-        {
-            "word": "Spider-Man 🕸️",
-            "hint": "Rooftop"
-        },
-        {
-            "word": "Star Wars ⚔️",
-            "hint": "Force"
-        },
-        {
-            "word": "Shrek 🧅",
-            "hint": "Fairytale"
-        },
-        {
-            "word": "Toy Story 🤠",
-            "hint": "Childhood"
-        },
-        {
-            "word": "John Wick 🐕",
-            "hint": "Suit"
-        },
-        {
-            "word": "Narcos 💵",
-            "hint": "Smuggle"
-        }
-    ],
-    "Tech & Gadgets": [
-        {
-            "word": "Drone 🛸",
-            "hint": "Telemetry"
-        },
-        {
-            "word": "Smartwatch ⌚",
-            "hint": "Vibration"
-        },
-        {
-            "word": "3D Printer 🖨️",
-            "hint": "Nozzle"
-        },
-        {
-            "word": "VR Headset 🥽",
-            "hint": "Vision"
-        },
-        {
-            "word": "Microphone 🎙️",
-            "hint": "Diaphragm"
-        },
-        {
-            "word": "Solar Panel ☀️",
-            "hint": "Roof"
-        },
-        {
-            "word": "Projector 📽️",
-            "hint": "Lens"
-        },
-        {
-            "word": "SSD Drive 💾",
-            "hint": "Memory"
-        },
-        {
-            "word": "Robot Vacuum 🤖",
-            "hint": "Sensor"
-        },
-        {
-            "word": "Keyboard ⌨️",
-            "hint": "Tactile"
-        },
-        {
-            "word": "Router 📡",
-            "hint": "Signal"
-        },
-        {
-            "word": "Action Camera 📷",
-            "hint": "Mount"
-        },
-        {
-            "word": "Satellite Dish 🛰️",
-            "hint": "Orbit"
-        },
-        {
-            "word": "Graphics Card 🎮",
-            "hint": "Silicon"
-        },
-        {
-            "word": "Smart Speaker 🔊",
-            "hint": "Command"
-        },
-        {
-            "word": "E-Reader 📖",
-            "hint": "Glare-free"
-        },
-        {
-            "word": "Walkie-Talkie 📻",
-            "hint": "Frequency"
-        },
-        {
-            "word": "Webcam 📹",
-            "hint": "Monitor"
-        },
-        {
-            "word": "Wireless Mouse 🖱️",
-            "hint": "Optical"
-        },
-        {
-            "word": "Gimbal Stabilizer 🎥",
-            "hint": "Balance"
-        },
-        {
-            "word": "Smart Lightbulb 💡",
-            "hint": "Socket"
-        },
-        {
-            "word": "Stylus Pen 🖊️",
-            "hint": "Pressure"
-        },
-        {
-            "word": "Laser Pointer 🔴",
-            "hint": "Dot"
-        },
-        {
-            "word": "Smart Doorbell 🔔",
-            "hint": "Porch"
-        },
-        {
-            "word": "Hard Drive 💽",
-            "hint": "Spindle"
-        },
-        {
-            "word": "Electric Toothbrush 🪥",
-            "hint": "Motor"
-        }
-    ],
-    "Landmarks": [
-        {
-            "word": "Taj Mahal 🕌",
-            "hint": "Monument"
-        },
-        {
-            "word": "Eiffel Tower 🗼",
-            "hint": "Lattice"
-        },
-        {
-            "word": "Statue of Liberty 🗽",
-            "hint": "Harbor"
-        },
-        {
-            "word": "Great Wall 🧱",
-            "hint": "Ridge"
-        },
-        {
-            "word": "Colosseum 🏛️",
-            "hint": "Arches"
-        },
-        {
-            "word": "Burj Khalifa 🏙️",
-            "hint": "Spire"
-        },
-        {
-            "word": "Pyramids 🏜️",
-            "hint": "Limestone"
-        },
-        {
-            "word": "Big Ben 🗼",
-            "hint": "Dial"
-        },
-        {
-            "word": "Machu Picchu ⛰️",
-            "hint": "Terrace"
-        },
-        {
-            "word": "Sydney Opera House ⛵",
-            "hint": "Sails"
-        },
-        {
-            "word": "Christ the Redeemer 🗿",
-            "hint": "Peak"
-        },
-        {
-            "word": "Golden Gate Bridge 🌉",
-            "hint": "Span"
-        },
-        {
-            "word": "Mount Fuji 🗻",
-            "hint": "Crater"
-        },
-        {
-            "word": "Stonehenge 🪨",
-            "hint": "Solstice"
-        },
-        {
-            "word": "Leaning Tower of Pisa 🏛️",
-            "hint": "Foundation"
-        },
-        {
-            "word": "Mount Everest 🏔️",
-            "hint": "Ridge"
-        },
-        {
-            "word": "Niagara Falls 🌊",
-            "hint": "Mist"
-        },
-        {
-            "word": "Grand Canyon 🏜️",
-            "hint": "Strata"
-        },
-        {
-            "word": "Petra 🏛️",
-            "hint": "Canyon"
-        },
-        {
-            "word": "Acropolis 🏛️",
-            "hint": "Pillars"
-        },
-        {
-            "word": "Times Square 🏙️",
-            "hint": "Intersection"
-        },
-        {
-            "word": "Louvre Museum 🏛️",
-            "hint": "Pyramid"
-        },
-        {
-            "word": "Angkor Wat 🛕",
-            "hint": "Moat"
-        },
-        {
-            "word": "Hollywood Sign 🎬",
-            "hint": "Letters"
-        }
-    ],
-    "Mythical & Space": [
-        {
-            "word": "Dragon 🐉",
-            "hint": "Lair"
-        },
-        {
-            "word": "Unicorn 🦄",
-            "hint": "Purity"
-        },
-        {
-            "word": "Phoenix 🦅",
-            "hint": "Rebirth"
-        },
-        {
-            "word": "Black Hole 🕳️",
-            "hint": "Singularity"
-        },
-        {
-            "word": "Supernova 💥",
-            "hint": "Stellar"
-        },
-        {
-            "word": "Astronaut 👨‍🚀",
-            "hint": "Orbit"
-        },
-        {
-            "word": "Mars 🔴",
-            "hint": "Rust"
-        },
-        {
-            "word": "Alien 👽",
-            "hint": "Signal"
-        },
-        {
-            "word": "Pegasus 🪽",
-            "hint": "Steed"
-        },
-        {
-            "word": "Kraken 🐙",
-            "hint": "Depths"
-        },
-        {
-            "word": "Nebula 🌌",
-            "hint": "Cloud"
-        },
-        {
-            "word": "Comet ☄️",
-            "hint": "Trajectory"
-        },
-        {
-            "word": "Asteroid 🪨",
-            "hint": "Crater"
-        },
-        {
-            "word": "Eclipse 🌘",
-            "hint": "Alignment"
-        },
-        {
-            "word": "Centaur 🏹",
-            "hint": "Wild"
-        },
-        {
-            "word": "Mermaid 🧜‍♀️",
-            "hint": "Reef"
-        },
-        {
-            "word": "Minotaur 🐂",
-            "hint": "Corridor"
-        },
-        {
-            "word": "Saturn 🪐",
-            "hint": "System"
-        },
-        {
-            "word": "Milky Way 🌌",
-            "hint": "Spiral"
-        },
-        {
-            "word": "Vampire 🧛",
-            "hint": "Nocturnal"
-        },
-        {
-            "word": "Werewolf 🐺",
-            "hint": "Lunar"
-        },
-        {
-            "word": "Yeti ❄️",
-            "hint": "Summit"
-        },
-        {
-            "word": "Solar Flare ☀️",
-            "hint": "Eruption"
-        },
-        {
-            "word": "Constellation ✨",
-            "hint": "Guide"
-        }
-    ]
-};
+// Secret-word data lives in words.js (loaded first by a script tag), so this
+// file stays pure game logic.
 
 const PLAYER_COLORS = [
     '#9333ea', '#c026d3', '#db2777', '#ea580c',
@@ -2383,6 +127,7 @@ const chaosToggle = document.getElementById('chaos-toggle');
 const startBtn = document.getElementById('start-game-btn');
 const namesContainer = document.getElementById('player-names-container');
 const assignmentContainer = document.getElementById('assignment-card-container');
+const assignmentHintToggle = document.getElementById('assignment-hint-toggle');
 const nextPlayerBtn = document.getElementById('next-player-btn');
 const confirmAssignmentBtn = document.getElementById('confirm-assignment-btn');
 const playersList = document.getElementById('active-players-list');
@@ -2391,6 +136,7 @@ const revealText = document.getElementById('reveal-text');
 const revealCard = document.getElementById('reveal-card');
 const revealActions = document.getElementById('reveal-actions');
 const continueBtn = document.getElementById('continue-btn');
+const playAgainBtn = document.getElementById('play-again-btn');
 const quitBtn = document.getElementById('quit-btn');
 const endGameBtn = document.getElementById('end-game-btn');
 const impostorGuessContainer = document.getElementById('impostor-guess-container');
@@ -2411,142 +157,6 @@ const mafiaEndGameBtn = document.getElementById('mafia-end-game-btn');
 const mafiaContinueBtn = document.getElementById('mafia-continue-btn');
 const mafiaQuitBtn = document.getElementById('mafia-quit-btn');
 
-/* ── Sound Effects Synthesizer (Web Audio API) ─────────────────────── */
-let audioCtx = null;
-
-function getAudioContext() {
-    if (!audioCtx) {
-        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-        if (AudioContextClass) {
-            audioCtx = new AudioContextClass();
-        }
-    }
-    if (audioCtx && audioCtx.state === 'suspended') {
-        audioCtx.resume();
-    }
-    return audioCtx;
-}
-
-function playSuspenseSound() {
-    const ctx = getAudioContext();
-    if (!ctx) return;
-    try {
-        const now = ctx.currentTime;
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        const filter = ctx.createBiquadFilter();
-
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(110, now);
-        osc.frequency.exponentialRampToValueAtTime(320, now + 0.55);
-
-        filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(250, now);
-        filter.frequency.exponentialRampToValueAtTime(1400, now + 0.55);
-
-        gain.gain.setValueAtTime(0.01, now);
-        gain.gain.linearRampToValueAtTime(0.18, now + 0.35);
-        gain.gain.linearRampToValueAtTime(0.001, now + 0.58);
-
-        osc.connect(filter);
-        filter.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start(now);
-        osc.stop(now + 0.6);
-    } catch (e) {
-        console.warn("Audio playback error:", e);
-    }
-}
-
-function playImpostorRevealedSound() {
-    const ctx = getAudioContext();
-    if (!ctx) return;
-    try {
-        const now = ctx.currentTime;
-        const notes = [
-            { freq: 392.00, time: 0.0,  dur: 0.12, gain: 0.20 },
-            { freq: 523.25, time: 0.10, dur: 0.12, gain: 0.22 },
-            { freq: 659.25, time: 0.20, dur: 0.15, gain: 0.25 },
-            { freq: 783.99, time: 0.35, dur: 0.65, gain: 0.30 }
-        ];
-
-        notes.forEach(n => {
-            const t = now + n.time;
-            const osc1 = ctx.createOscillator();
-            const gainNode = ctx.createGain();
-            osc1.type = 'sawtooth';
-            osc1.frequency.setValueAtTime(n.freq, t);
-            gainNode.gain.setValueAtTime(0.01, t);
-            gainNode.gain.linearRampToValueAtTime(n.gain, t + 0.02);
-            gainNode.gain.exponentialRampToValueAtTime(0.001, t + n.dur);
-            osc1.connect(gainNode);
-            gainNode.connect(ctx.destination);
-            osc1.start(t);
-            osc1.stop(t + n.dur);
-        });
-    } catch (e) {
-        console.warn("Audio playback error:", e);
-    }
-}
-
-function playCivilianRevealedSound() {
-    const ctx = getAudioContext();
-    if (!ctx) return;
-    try {
-        const now = ctx.currentTime;
-        const notes = [
-            { freq: 440.00, time: 0.0,  dur: 0.18, gain: 0.22 },
-            { freq: 349.23, time: 0.15, dur: 0.18, gain: 0.22 },
-            { freq: 293.66, time: 0.30, dur: 0.22, gain: 0.25 },
-            { freq: 116.54, time: 0.48, dur: 0.70, gain: 0.30 }
-        ];
-
-        notes.forEach(n => {
-            const t = now + n.time;
-            const osc = ctx.createOscillator();
-            const gainNode = ctx.createGain();
-            osc.type = 'sawtooth';
-            osc.frequency.setValueAtTime(n.freq, t);
-            gainNode.gain.setValueAtTime(0.01, t);
-            gainNode.gain.linearRampToValueAtTime(n.gain, t + 0.02);
-            gainNode.gain.exponentialRampToValueAtTime(0.001, t + n.dur);
-            osc.connect(gainNode);
-            gainNode.connect(ctx.destination);
-            osc.start(t);
-            osc.stop(t + n.dur);
-        });
-    } catch (e) {
-        console.warn("Audio playback error:", e);
-    }
-}
-
-function playScreenTransitionSound() {
-    const ctx = getAudioContext();
-    if (!ctx) return;
-    try {
-        const now = ctx.currentTime;
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(260, now);
-        osc.frequency.exponentialRampToValueAtTime(620, now + 0.12);
-
-        gain.gain.setValueAtTime(0.01, now);
-        gain.gain.linearRampToValueAtTime(0.08, now + 0.03);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
-
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start(now);
-        osc.stop(now + 0.15);
-    } catch (e) {
-        console.warn("Audio playback error:", e);
-    }
-}
-
 function triggerCosmicWarpEffect() {
     document.querySelectorAll('.cosmic-warp-ring').forEach(el => el.remove());
     const ring = document.createElement('div');
@@ -2556,56 +166,123 @@ function triggerCosmicWarpEffect() {
 }
 
 /* ── Running Particle Canvas Background ──────────────────────── */
+const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+/**
+ * Builds a soft radial glow sprite once. Blitting pre-rendered sprites is
+ * dramatically cheaper than filling arcs with a shadowBlur every frame.
+ */
+function createGlowSprite(hue) {
+    const size = 48;
+    const sprite = document.createElement('canvas');
+    sprite.width = sprite.height = size;
+    const sctx = sprite.getContext('2d');
+    if (!sctx) return sprite;
+    const g = sctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+    g.addColorStop(0,    `hsla(${hue}, 90%, 80%, 0.95)`);
+    g.addColorStop(0.28, `hsla(${hue}, 90%, 72%, 0.42)`);
+    g.addColorStop(1,    `hsla(${hue}, 90%, 66%, 0)`);
+    sctx.fillStyle = g;
+    sctx.fillRect(0, 0, size, size);
+    return sprite;
+}
+
 function initBackgroundParticles() {
     const canvas = document.getElementById('particle-canvas');
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let width = canvas.width = window.innerWidth;
-    let height = canvas.height = window.innerHeight;
+    const ctx = canvas.getContext('2d', { alpha: true });
+    if (!ctx) return;
 
-    window.addEventListener('resize', () => {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
-    });
-
+    const sprites = [createGlowSprite(268), createGlowSprite(322)];
     const particles = [];
-    const particleCount = Math.min(Math.floor((width * height) / 18000), 55);
+    let width = 0, height = 0, dpr = 1, rafId = 0, running = false;
 
-    for (let i = 0; i < particleCount; i++) {
-        particles.push({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            radius: Math.random() * 2 + 1,
-            vx: (Math.random() - 0.5) * 0.45,
-            vy: (Math.random() - 0.5) * 0.45,
-            alpha: Math.random() * 0.5 + 0.2,
-            hue: Math.random() > 0.5 ? 270 : 320
-        });
+    function seed() {
+        const count = Math.max(12, Math.min(60, Math.round((width * height) / 24000)));
+        particles.length = 0;
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                r: 5 + Math.random() * 8,
+                vx: (Math.random() - 0.5) * 0.35,
+                vy: (Math.random() - 0.5) * 0.35,
+                a: 0.16 + Math.random() * 0.42,
+                s: Math.random() > 0.5 ? 0 : 1
+            });
+        }
     }
 
-    function animate() {
-        ctx.clearRect(0, 0, width, height);
+    function resize() {
+        const rect = canvas.getBoundingClientRect();
+        const nextW = Math.max(1, Math.round(rect.width  || window.innerWidth));
+        const nextH = Math.max(1, Math.round(rect.height || window.innerHeight));
+        if (nextW === width && nextH === height) return;
+        width = nextW;
+        height = nextH;
+        // The glow sprites are soft radial gradients, so they don't need full
+        // retina density — capping at 1.5 keeps the fill cost in check.
+        dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+        canvas.width  = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        seed();
+    }
 
+    function draw() {
+        ctx.clearRect(0, 0, width, height);
         for (let i = 0; i < particles.length; i++) {
             const p = particles[i];
             p.x += p.vx;
             p.y += p.vy;
-
-            if (p.x < 0) p.x = width;
-            if (p.x > width) p.x = 0;
-            if (p.y < 0) p.y = height;
-            if (p.y > height) p.y = 0;
-
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `hsla(${p.hue}, 80%, 70%, ${p.alpha})`;
-            ctx.shadowBlur = 10;
-            ctx.shadowColor = `hsla(${p.hue}, 80%, 70%, 0.8)`;
-            ctx.fill();
+            if (p.x < 0) p.x = width; else if (p.x > width) p.x = 0;
+            if (p.y < 0) p.y = height; else if (p.y > height) p.y = 0;
+            ctx.globalAlpha = p.a;
+            ctx.drawImage(sprites[p.s], p.x - p.r, p.y - p.r, p.r * 2, p.r * 2);
         }
-        requestAnimationFrame(animate);
+        ctx.globalAlpha = 1;
     }
-    animate();
+
+    function loop() {
+        draw();
+        rafId = requestAnimationFrame(loop);
+    }
+
+    function start() {
+        if (running || reducedMotionQuery.matches) return;
+        running = true;
+        rafId = requestAnimationFrame(loop);
+    }
+
+    function stop() {
+        if (!running) return;
+        running = false;
+        cancelAnimationFrame(rafId);
+    }
+
+    resize();
+
+    if (reducedMotionQuery.matches) {
+        draw(); // one static frame for reduced-motion users
+    } else {
+        start();
+        document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+
+        if ('ResizeObserver' in window) {
+            let pending = 0;
+            const observer = new ResizeObserver(() => {
+                cancelAnimationFrame(pending);
+                pending = requestAnimationFrame(resize);
+            });
+            observer.observe(canvas);
+        } else {
+            let pending = 0;
+            window.addEventListener('resize', () => {
+                cancelAnimationFrame(pending);
+                pending = requestAnimationFrame(resize);
+            });
+        }
+    }
 }
 
 function flashScreen(color = 'rgba(255,255,255,0.55)') {
@@ -2616,49 +293,87 @@ function flashScreen(color = 'rgba(255,255,255,0.55)') {
     setTimeout(() => el.remove(), 700);
 }
 
-function createParticles(originEl, color, count = 24) {
+/** Converts a #rrggbb color to an rgba() string. */
+function hexToRgba(hex, alpha) {
+    const h = hex.replace('#', '');
+    const full = h.length === 3 ? h.split('').map(c => c + c).join('') : h;
+    const num = parseInt(full, 16);
+    if (Number.isNaN(num)) return hex;
+    return `rgba(${(num >> 16) & 255}, ${(num >> 8) & 255}, ${num & 255}, ${alpha})`;
+}
+
+function createParticles(originEl, color, count = 18) {
     const rect = originEl.getBoundingClientRect();
     const cx = rect.left + rect.width  / 2;
     const cy = rect.top  + rect.height / 2;
+
+    const fragment = document.createDocumentFragment();
+    const created = [];
+
+    // A radial gradient paints the glow in one pass — far cheaper than a
+    // blurred box-shadow on every particle.
+    const core = hexToRgba(color, 1);
+    const mid  = hexToRgba(color, 0.45);
+    const edge = hexToRgba(color, 0);
+    const paint = `radial-gradient(circle, ${core} 0%, ${mid} 45%, ${edge} 72%)`;
+
     for (let i = 0; i < count; i++) {
         const p = document.createElement('div');
         p.className = 'particle';
         const angle = (Math.PI * 2 * i) / count + Math.random() * 0.4;
-        const dist  = 65 + Math.random() * 160;
-        const size  = 5  + Math.random() * 12;
-        Object.assign(p.style, {
-            left:      cx + 'px',
-            top:       cy + 'px',
-            width:     size + 'px',
-            height:    size + 'px',
-            background: color,
-            boxShadow: `0 0 ${size * 1.5}px ${color}`,
-        });
+        const dist  = 60 + Math.random() * 140;
+        const size  = 10 + Math.random() * 16;
+        p.style.left = cx + 'px';
+        p.style.top = cy + 'px';
+        p.style.width = size + 'px';
+        p.style.height = size + 'px';
+        p.style.background = paint;
         p.style.setProperty('--dx',  Math.cos(angle) * dist + 'px');
         p.style.setProperty('--dy',  Math.sin(angle) * dist + 'px');
-        p.style.setProperty('--dur', (0.7 + Math.random() * 0.5) + 's');
-        document.body.appendChild(p);
-        setTimeout(() => p.remove(), 1300);
+        p.style.setProperty('--dur', (0.65 + Math.random() * 0.45) + 's');
+        fragment.appendChild(p);
+        created.push(p);
     }
+
+    document.body.appendChild(fragment);
+    setTimeout(() => created.forEach(p => p.remove()), 1200);
+}
+
+/** Dot strip showing how far through the pass-and-play assignment we are. */
+function renderAssignmentProgress(containerId, index, total) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.textContent = '';
+    const fragment = document.createDocumentFragment();
+    for (let i = 0; i < total; i++) {
+        const dot = document.createElement('span');
+        if (i < index) dot.className = 'done';
+        else if (i === index) dot.className = 'current';
+        fragment.appendChild(dot);
+    }
+    container.appendChild(fragment);
 }
 
 function init() {
     initBackgroundParticles();
 
-    document.addEventListener('click', () => {
-        getAudioContext();
-    }, { passive: true });
-
-    for (let category in gameData) {
-        const tag = document.createElement('div');
+    // Category tags are real buttons → keyboard + screen-reader friendly
+    const tagFragment = document.createDocumentFragment();
+    Object.keys(gameData).forEach(category => {
+        const tag = document.createElement('button');
+        tag.type = 'button';
         tag.className = 'tag-label';
         tag.textContent = category;
-        tag.onclick = () => {
-            tag.classList.toggle('selected');
+        tag.setAttribute('aria-pressed', 'false');
+        tag.addEventListener('click', () => {
+            const selected = tag.classList.toggle('selected');
+            tag.setAttribute('aria-pressed', String(selected));
+            updatePoolCounter();
             saveSettings();
-        };
-        categoryTagsContainer.appendChild(tag);
-    }
+        });
+        tagFragment.appendChild(tag);
+    });
+    categoryTagsContainer.appendChild(tagFragment);
 
     updatePlayerInputs();
     updateMafiaPlayerInputs();
@@ -2668,33 +383,193 @@ function init() {
         saveSettings();
     });
     impostorCountInput.addEventListener('change', saveSettings);
-    hintToggle.addEventListener('change', saveSettings);
+    hintToggle.addEventListener('change', () => {
+        setHintsEnabled(hintToggle.checked);
+        refreshCurrentAssignmentCard(false);
+    });
     chaosToggle.addEventListener('change', saveSettings);
 
-    mafiaPlayerCountInput.addEventListener('change', updateMafiaPlayerInputs);
+    // The assignment screen carries its own hint switch so a player can
+    // turn hints on mid-round without going back to setup.
+    if (assignmentHintToggle) {
+        let cardWasOpenBeforeSwitch = false;
+        // The checkbox itself is visually hidden, so the open-state has to be
+        // captured on the wrapper that actually receives the pointer event.
+        const toolsBar = assignmentHintToggle.closest('.assignment-tools');
+        if (toolsBar) {
+            toolsBar.addEventListener('pointerdown', () => {
+                const card = assignmentContainer.querySelector('.single-role-card');
+                cardWasOpenBeforeSwitch = !!card && card.classList.contains('revealed');
+            });
+        }
+        assignmentHintToggle.addEventListener('change', () => {
+            setHintsEnabled(assignmentHintToggle.checked);
+            refreshCurrentAssignmentCard(cardWasOpenBeforeSwitch);
+        });
+    }
+
+    // Keep the roster grid in sync while the number is being typed.
+    playerCountInput.addEventListener('input', () => {
+        if (playerCountInput.value === '' || !Number.isFinite(parseInt(playerCountInput.value, 10))) return;
+        updatePlayerInputs();
+        saveSettings();
+    });
+
+    mafiaPlayerCountInput.addEventListener('change', () => {
+        updateMafiaPlayerInputs();
+        saveSettings();
+    });
+
+    mafiaPlayerCountInput.addEventListener('input', () => {
+        if (mafiaPlayerCountInput.value === '' || !Number.isFinite(parseInt(mafiaPlayerCountInput.value, 10))) return;
+        updateMafiaPlayerInputs();
+        saveSettings();
+    });
+
+    // Number steppers (− / + around the count inputs)
+    document.addEventListener('click', event => {
+        const btn = event.target instanceof Element ? event.target.closest('.stepper-btn') : null;
+        if (!btn) return;
+        const input = document.getElementById(btn.dataset.stepper);
+        if (!input) return;
+        const min = parseInt(input.min, 10) || 0;
+        const max = parseInt(input.max, 10) || 100;
+        const current = parseInt(input.value, 10) || min;
+        const next = Math.min(max, Math.max(min, current + (parseInt(btn.dataset.dir, 10) || 1)));
+        if (next === current) return;
+        input.value = next;
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+    });
+
+    // Setup-screen reset button
+    const resetSetupBtn = document.getElementById('reset-leaderboard-btn');
+    if (resetSetupBtn) resetSetupBtn.addEventListener('click', resetLeaderboard);
+
+    // Vote buttons are delegated — one listener per list instead of per row
+    playersList.addEventListener('click', event => {
+        const btn = event.target instanceof Element ? event.target.closest('[data-vote-id]') : null;
+        if (!btn) return;
+        votePlayer(Number(btn.dataset.voteId));
+    });
+    mafiaActivePlayersList.addEventListener('click', event => {
+        const btn = event.target instanceof Element ? event.target.closest('[data-vote-id]') : null;
+        if (!btn) return;
+        voteMafiaPlayer(Number(btn.dataset.voteId));
+    });
+
+    // Subtle ripple feedback on the main actions
+    document.addEventListener('pointerdown', event => {
+        const btn = event.target instanceof Element ? event.target.closest('.primary-btn, .secondary-btn, .vote-btn') : null;
+        if (!btn) return;
+        const rect = btn.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const ripple = document.createElement('span');
+        ripple.className = 'btn-ripple';
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = (event.clientX - rect.left - size / 2) + 'px';
+        ripple.style.top = (event.clientY - rect.top - size / 2) + 'px';
+        btn.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 650);
+    });
 
     loadSettings();
+    updatePoolCounter();
+    updateHomeStats();
     renderLeaderboard();
     handleRoute();
-    window.addEventListener('hashchange', handleRoute);
+    window.addEventListener('hashchange', () => {
+        if (expectedHash && window.location.hash === expectedHash) {
+            expectedHash = null;
+            return;
+        }
+        expectedHash = null;
+        handleRoute();
+    });
+}
+
+/** Categories the player has currently ticked. */
+function getSelectedCategories() {
+    return Array.from(categoryTagsContainer.querySelectorAll('.tag-label.selected'))
+        .map(tag => tag.textContent);
+}
+
+/** Live count of secret words in the selected pool. */
+function updatePoolCounter() {
+    const total = getSelectedCategories()
+        .reduce((sum, cat) => sum + ((gameData[cat] && gameData[cat].length) || 0), 0);
+    const countEl = document.getElementById('word-pool-count');
+    const wrap = document.getElementById('pool-counter');
+    if (countEl) countEl.textContent = String(total);
+    if (wrap) wrap.classList.toggle('is-empty', total === 0);
+}
+
+/** Headline stats on the home screen. */
+function updateHomeStats() {
+    const categories = Object.keys(gameData).length;
+    const words = Object.keys(gameData)
+        .reduce((sum, cat) => sum + gameData[cat].length, 0);
+    const catEl = document.getElementById('stat-categories');
+    const wordEl = document.getElementById('stat-words');
+    if (catEl) catEl.textContent = String(categories);
+    if (wordEl) wordEl.textContent = String(words);
 }
 
 /* LocalStorage Leaderboard Helpers */
+let leaderboardCache = null;
+let leaderboardRenderScheduled = false;
+
 function getLeaderboard() {
-    const saved = localStorage.getItem(LEADERBOARD_KEY) || localStorage.getItem('imposter_game_leaderboard');
-    return saved ? JSON.parse(saved) : {};
+    if (leaderboardCache) return leaderboardCache;
+    let parsed = null;
+    try {
+        const saved = localStorage.getItem(LEADERBOARD_KEY) || localStorage.getItem('imposter_game_leaderboard');
+        parsed = saved ? JSON.parse(saved) : {};
+    } catch (e) {
+        parsed = {};
+    }
+    leaderboardCache = (parsed && typeof parsed === 'object') ? parsed : {};
+    return leaderboardCache;
 }
 
 function saveLeaderboard(scores) {
-    localStorage.setItem(LEADERBOARD_KEY, JSON.stringify(scores));
+    leaderboardCache = scores;
+    try {
+        localStorage.setItem(LEADERBOARD_KEY, JSON.stringify(scores));
+    } catch (e) {
+        /* storage full or unavailable — the in-memory cache still works */
+    }
 }
 
-function updateScore(playerName, points) {
+/** Renders are coalesced into one frame so rapid score changes stay cheap. */
+function scheduleLeaderboardRender() {
+    if (leaderboardRenderScheduled) return;
+    leaderboardRenderScheduled = true;
+    requestAnimationFrame(() => {
+        leaderboardRenderScheduled = false;
+        renderLeaderboard();
+    });
+}
+
+function updateScore(playerName, points, options) {
     if (!playerName) return;
+    const render = !options || options.render !== false;
     const scores = getLeaderboard();
     scores[playerName] = (scores[playerName] || 0) + points;
     saveLeaderboard(scores);
-    renderLeaderboard();
+    if (render) scheduleLeaderboardRender();
+}
+
+/** Registers new names without touching storage on every call. */
+function ensurePlayersRegistered(names) {
+    const scores = getLeaderboard();
+    let changed = false;
+    names.forEach(name => {
+        if (name && scores[name] === undefined) {
+            scores[name] = 0;
+            changed = true;
+        }
+    });
+    if (changed) saveLeaderboard(scores);
 }
 
 function renderLeaderboard() {
@@ -2708,51 +583,91 @@ function renderLeaderboard() {
 
     containers.forEach(container => {
         if (!container) return;
+        container.textContent = '';
+
         if (sortedNames.length === 0) {
-            container.innerHTML = '<p class="empty-msg">No player scores saved yet.</p>';
+            const empty = document.createElement('p');
+            empty.className = 'empty-msg';
+            empty.textContent = 'No player scores saved yet.';
+            container.appendChild(empty);
             return;
         }
 
-        container.innerHTML = '';
+        const fragment = document.createDocumentFragment();
         sortedNames.slice(0, 5).forEach((name, index) => {
             const row = document.createElement('div');
             row.className = 'leaderboard-item';
-            const rank = index === 0 ? '👑' : `#${index + 1}`;
-            row.innerHTML = `
-                <span><strong>${rank} ${name}</strong></span>
-                <span class="score-badge ${scores[name] < 0 ? 'negative' : ''}">${scores[name]} pts</span>
-            `;
-            container.appendChild(row);
+
+            const label = document.createElement('span');
+            const strong = document.createElement('strong');
+            strong.textContent = `${index === 0 ? '👑' : '#' + (index + 1)} ${name}`;
+            label.appendChild(strong);
+
+            const badge = document.createElement('span');
+            badge.className = 'score-badge' + (scores[name] < 0 ? ' negative' : '');
+            badge.textContent = `${scores[name]} pts`;
+
+            row.append(label, badge);
+            fragment.appendChild(row);
         });
+        container.appendChild(fragment);
     });
 
     // Populate modal screenshot grid for 12-14+ players
     const modalGrid = document.getElementById('modal-leaderboard-grid');
-    if (modalGrid) {
-        if (sortedNames.length === 0) {
-            modalGrid.innerHTML = '<p class="empty-msg">No player scores saved yet.</p>';
-        } else {
-            modalGrid.innerHTML = '';
-            sortedNames.forEach((name, index) => {
-                const rankIcon = index === 0 ? '👑' : index === 1 ? '🥈' : index === 2 ? '🥉' : `#${index + 1}`;
-                const card = document.createElement('div');
-                card.className = 'snapshot-player-card';
-                card.innerHTML = `
-                    <span><span class="snapshot-rank">${rankIcon}</span> ${name}</span>
-                    <span class="score-badge ${scores[name] < 0 ? 'negative' : ''}">${scores[name]} pts</span>
-                `;
-                modalGrid.appendChild(card);
-            });
-        }
+    if (!modalGrid) return;
+    modalGrid.textContent = '';
+
+    if (sortedNames.length === 0) {
+        const empty = document.createElement('p');
+        empty.className = 'empty-msg';
+        empty.textContent = 'No player scores saved yet.';
+        modalGrid.appendChild(empty);
+        return;
     }
+
+    const gridFragment = document.createDocumentFragment();
+    sortedNames.forEach((name, index) => {
+        const rankIcon = index === 0 ? '👑' : index === 1 ? '🥈' : index === 2 ? '🥉' : `#${index + 1}`;
+        const card = document.createElement('div');
+        card.className = 'snapshot-player-card';
+
+        const nameWrap = document.createElement('span');
+        const rank = document.createElement('span');
+        rank.className = 'snapshot-rank';
+        rank.textContent = rankIcon;
+        nameWrap.append(rank, document.createTextNode(' ' + name));
+
+        const badge = document.createElement('span');
+        badge.className = 'score-badge' + (scores[name] < 0 ? ' negative' : '');
+        badge.textContent = `${scores[name]} pts`;
+
+        card.append(nameWrap, badge);
+        gridFragment.appendChild(card);
+    });
+    modalGrid.appendChild(gridFragment);
 }
 
 function resetLeaderboard() {
-    if (confirm("Clear all leaderboard points?")) {
-        localStorage.removeItem(LEADERBOARD_KEY);
-        localStorage.removeItem('imposter_game_leaderboard');
-        renderLeaderboard();
-    }
+    showAppDialog({
+        icon: '🧹',
+        title: 'Reset all points?',
+        message: 'Every saved score for every player will be cleared. This cannot be undone.',
+        actions: [
+            { label: 'Cancel', variant: 'secondary' },
+            {
+                label: 'Reset Points',
+                variant: 'danger',
+                onClick: () => {
+                    localStorage.removeItem(LEADERBOARD_KEY);
+                    localStorage.removeItem('imposter_game_leaderboard');
+                    leaderboardCache = {};
+                    renderLeaderboard();
+                    showToast('All points have been cleared.', 'success');
+                }
+            }
+        ]
+    });
 }
 
 /* Screenshot Leaderboard Modal & Image Generator */
@@ -2839,36 +754,55 @@ function downloadLeaderboardImage() {
 }
 
 function saveSettings() {
-    const selectedTags = Array.from(document.querySelectorAll('#category-tags .tag-label.selected'))
-                               .map(tag => tag.textContent);
     const settings = {
-        categories: selectedTags,
+        categories: getSelectedCategories(),
         playerCount: playerCountInput.value,
         impostorCount: impostorCountInput.value,
         hintsEnabled: hintToggle.checked,
-        chaosMode: chaosToggle.checked
+        chaosMode: chaosToggle.checked,
+        mafiaPlayerCount: mafiaPlayerCountInput.value,
+        mafiaCount: mafiaCountInput.value,
+        doctorEnabled: doctorToggle.checked,
+        detectiveEnabled: detectiveToggle.checked
     };
-    localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+    try {
+        localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+    } catch (e) {
+        /* private-mode storage failures must not break the game */
+    }
 }
 
 function loadSettings() {
     const saved = localStorage.getItem(SETTINGS_KEY) || localStorage.getItem('imposter_game_settings');
     if (!saved) return;
 
-    const settings = JSON.parse(saved);
+    let settings = null;
+    try {
+        settings = JSON.parse(saved);
+    } catch (e) {
+        settings = null;
+    }
+    if (!settings) return;
 
-    document.querySelectorAll('#category-tags .tag-label').forEach(tag => {
-        if (settings.categories && settings.categories.includes(tag.textContent)) {
-            tag.classList.add('selected');
-        }
+    const selected = settings.categories || [];
+    categoryTagsContainer.querySelectorAll('.tag-label').forEach(tag => {
+        const isSelected = selected.includes(tag.textContent);
+        tag.classList.toggle('selected', isSelected);
+        tag.setAttribute('aria-pressed', String(isSelected));
     });
 
     playerCountInput.value = settings.playerCount || 3;
     impostorCountInput.value = settings.impostorCount || settings.imposterCount || 1;
-    hintToggle.checked = settings.hintsEnabled || false;
+    // Hints default to on; an explicit saved choice always wins.
+    hintToggle.checked = settings.hintsEnabled !== undefined ? !!settings.hintsEnabled : true;
     chaosToggle.checked = settings.chaosMode || false;
+    if (settings.mafiaPlayerCount) mafiaPlayerCountInput.value = settings.mafiaPlayerCount;
+    if (settings.mafiaCount) mafiaCountInput.value = settings.mafiaCount;
+    if (settings.doctorEnabled !== undefined) doctorToggle.checked = settings.doctorEnabled;
+    if (settings.detectiveEnabled !== undefined) detectiveToggle.checked = settings.detectiveEnabled;
 
     updatePlayerInputs();
+    updateMafiaPlayerInputs();
 }
 
 function handleRoute() {
@@ -2878,60 +812,202 @@ function handleRoute() {
 }
 
 let currentActiveScreenKey = null;
+let screenEnterTimer = 0;
+let expectedHash = null;
+
+/* Screen key → hash, so the URL can be synced without a second route pass. */
+const ROUTE_HASHES = Object.keys(routes).reduce((map, hash) => {
+    map[routes[hash]] = hash;
+    return map;
+}, {});
 
 function showScreen(screenKey) {
     const targetScreen = screens[screenKey];
     if (!targetScreen) return;
 
-    if (currentActiveScreenKey && currentActiveScreenKey !== screenKey) {
-        playScreenTransitionSound();
-        triggerCosmicWarpEffect();
-    }
-    currentActiveScreenKey = screenKey;
-
-    Object.values(screens).forEach(s => {
-        if (s) {
-            s.classList.add('hidden');
-            s.classList.remove('screen-enter');
+    if (currentActiveScreenKey !== screenKey) {
+        if (currentActiveScreenKey) {
+            triggerCosmicWarpEffect();
         }
-    });
+        currentActiveScreenKey = screenKey;
 
-    targetScreen.classList.remove('hidden');
-    targetScreen.classList.add('screen-enter');
+        Object.values(screens).forEach(s => {
+            if (s) {
+                s.classList.add('hidden');
+                s.classList.remove('screen-enter');
+            }
+        });
 
-    setTimeout(() => {
-        targetScreen.classList.remove('screen-enter');
-    }, 550);
+        targetScreen.classList.remove('hidden');
+        targetScreen.classList.add('screen-enter');
 
-    const currentHash = Object.keys(routes).find(key => routes[key] === screenKey);
-    if (currentHash && window.location.hash !== currentHash) {
-        window.location.hash = currentHash;
+        clearTimeout(screenEnterTimer);
+        screenEnterTimer = setTimeout(() => targetScreen.classList.remove('screen-enter'), 520);
     }
+
+    // Keep the URL in sync without re-entering the router
+    const hash = ROUTE_HASHES[screenKey];
+    if (hash && window.location.hash !== hash) {
+        expectedHash = hash;
+        window.location.hash = hash;
+    }
+
+    // The accent palette follows the active game mode
+    document.body.dataset.mode = screenKey.indexOf('mafia') === 0 ? 'mafia' : 'impostor';
 }
 
 function navigateTo(hash) {
+    if (window.location.hash === hash) {
+        handleRoute();
+        return;
+    }
     window.location.hash = hash;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   IN-APP MESSAGING
+   Native alert()/confirm() are suppressed inside embedded
+   webviews, so a blocked dialog would strand the player with no
+   feedback (and a reset would silently do nothing). Everything
+   the game needs to say is rendered in-page instead.
+   ═══════════════════════════════════════════════════════════ */
+const appDialog = document.getElementById('app-dialog');
+const appDialogIcon = document.getElementById('app-dialog-icon');
+const appDialogTitle = document.getElementById('app-dialog-title');
+const appDialogMessage = document.getElementById('app-dialog-message');
+const appDialogActions = document.getElementById('app-dialog-actions');
+const toastStack = document.getElementById('toast-stack');
+
+let appDialogOnClose = null;
+let appDialogLastFocused = null;
+
+/** Small, non-blocking message pinned to the bottom of the screen. */
+function showToast(message, type = 'info', duration = 3400) {
+    if (!toastStack) return;
+
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    toast.setAttribute('role', type === 'error' ? 'alert' : 'status');
+
+    const icon = document.createElement('span');
+    icon.className = 'toast-icon';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.textContent = type === 'success' ? '✅' : type === 'error' ? '⚠️' : 'ℹ️';
+
+    const text = document.createElement('span');
+    text.className = 'toast-message';
+    text.textContent = message;
+
+    toast.append(icon, text);
+    toastStack.appendChild(toast);
+
+    requestAnimationFrame(() => toast.classList.add('toast-visible'));
+
+    let timer = setTimeout(dismiss, duration);
+    function dismiss() {
+        clearTimeout(timer);
+        toast.classList.remove('toast-visible');
+        toast.classList.add('toast-leaving');
+        setTimeout(() => toast.remove(), 280);
+    }
+    toast.addEventListener('click', dismiss);
+}
+
+/**
+ * Modal dialog used for confirmations and round results.
+ * @param {{icon?:string,title:string,message?:string,
+ *          actions?:Array<{label:string,variant?:string,onClick?:Function}>,
+ *          onClose?:Function}} options
+ */
+function showAppDialog(options) {
+    if (!appDialog) return;
+    const {
+        icon = 'ℹ️',
+        title = '',
+        message = '',
+        actions = [],
+        onClose = null
+    } = options || {};
+
+    appDialogLastFocused = document.activeElement;
+    appDialogOnClose = onClose;
+
+    appDialogIcon.textContent = icon;
+    appDialogTitle.textContent = title;
+    appDialogMessage.textContent = message;
+    appDialogMessage.classList.toggle('hidden', !message);
+
+    appDialogActions.textContent = '';
+    actions.forEach(action => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `dialog-btn dialog-btn-${action.variant || 'secondary'}`;
+        btn.textContent = action.label;
+        btn.addEventListener('click', () => {
+            closeAppDialog();
+            if (typeof action.onClick === 'function') action.onClick();
+        });
+        appDialogActions.appendChild(btn);
+    });
+
+    appDialog.classList.remove('hidden');
+
+    requestAnimationFrame(() => {
+        const target = appDialogActions.querySelector('.dialog-btn-primary') ||
+                       appDialogActions.querySelector('button');
+        if (target) target.focus();
+    });
+}
+
+function closeAppDialog() {
+    if (!appDialog || appDialog.classList.contains('hidden')) return;
+    appDialog.classList.add('hidden');
+
+    const callback = appDialogOnClose;
+    appDialogOnClose = null;
+
+    if (appDialogLastFocused && typeof appDialogLastFocused.focus === 'function') {
+        appDialogLastFocused.focus();
+    }
+    appDialogLastFocused = null;
+
+    if (typeof callback === 'function') callback();
+}
+
+if (appDialog) {
+    appDialog.addEventListener('click', event => {
+        if (event.target === appDialog) closeAppDialog();
+    });
+}
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && appDialog && !appDialog.classList.contains('hidden')) {
+        closeAppDialog();
+    }
+});
 
 /* ═══════════════════════════════════════════════════════════
    IMPOSTOR GAME MODE LOGIC
    ═══════════════════════════════════════════════════════════ */
 function startGame() {
-    const selectedTags = Array.from(document.querySelectorAll('#category-tags .tag-label.selected'))
-                               .map(tag => tag.textContent);
+    const selectedTags = getSelectedCategories();
     const count = parseInt(playerCountInput.value);
     const impostorCount = parseInt(impostorCountInput.value);
 
     if (selectedTags.length === 0) {
-        alert("Please select at least one category!");
+        showToast('Please select at least one category!', 'error');
         return;
     }
-    if (count < 3) {
-        alert("Minimum 3 players required!");
+    if (!Number.isFinite(count) || count < 3) {
+        showToast('Minimum 3 players required!', 'error');
+        return;
+    }
+    if (count > 20) {
+        showToast('Maximum 20 players supported!', 'error');
         return;
     }
     if (impostorCount < 1 || impostorCount >= count) {
-        alert("Impostor count must be between 1 and " + (count - 1));
+        showToast('Impostor count must be between 1 and ' + (count - 1), 'error');
         return;
     }
 
@@ -2943,7 +1019,7 @@ function startGame() {
     const combinedPool = selectedTags.flatMap(cat => gameData[cat]);
     gameState.secretWordObj = combinedPool[Math.floor(Math.random() * combinedPool.length)];
 
-    const nameInputs = document.querySelectorAll('.player-name-input');
+    const nameInputs = document.querySelectorAll('#player-names-container .player-name-input');
     const playerNames = Array.from({ length: count }, (_, i) =>
         nameInputs[i]?.value.trim() || `Player ${i + 1}`
     );
@@ -2960,7 +1036,6 @@ function startGame() {
     for (let i = 0; i < count; i++) {
         const customName = playerNames[i];
         const isImpostor = impostorIndices.has(i);
-        const randomWord = combinedPool[Math.floor(Math.random() * combinedPool.length)];
 
         gameState.players.push({
             id: i + 1,
@@ -2968,14 +1043,15 @@ function startGame() {
             role: isImpostor ? 'impostor' : 'civilian',
             color: PLAYER_COLORS[i % PLAYER_COLORS.length],
             revealed: false,
-            chaosWord: randomWord
+            chaosWord: gameState.chaosMode
+                ? combinedPool[Math.floor(Math.random() * combinedPool.length)]
+                : null
         });
-
-        const currentScores = getLeaderboard();
-        if (currentScores[customName] === undefined) {
-            updateScore(customName, 0);
-        }
     }
+
+    // One batched write instead of a storage hit + re-render per player
+    ensurePlayersRegistered(playerNames);
+    scheduleLeaderboardRender();
 
     gameState.activePlayers = [...gameState.players];
     selectRandomStarterPlayer();
@@ -2999,15 +1075,40 @@ function rerollStarterPlayer() {
     flashScreen('rgba(245,158,11,0.25)');
 }
 
+/** Rebuilds the currently-open assignment card (used by the hint switch). */
+let currentAssignmentCardRefresh = null;
+
 function setupAssignmentScreen() {
+    if (assignmentHintToggle) assignmentHintToggle.checked = gameState.hintsEnabled;
     renderCurrentAssignmentCard();
     nextPlayerBtn.classList.remove('hidden');
     confirmAssignmentBtn.classList.add('hidden');
 }
 
+/** Keeps the assignment-screen hint switch, the setup switch and the
+ *  running game state in sync. */
+function setHintsEnabled(enabled) {
+    gameState.hintsEnabled = enabled;
+    if (assignmentHintToggle) assignmentHintToggle.checked = enabled;
+    if (hintToggle) hintToggle.checked = enabled;
+    saveSettings();
+}
+
+/** Re-renders the card if it is currently held open, so the hint
+ *  appears (or disappears) immediately when the switch is flipped.
+ *  @param {boolean} forceReveal re-open the card even if the browser
+ *         dropped focus when the switch was tapped. */
+function refreshCurrentAssignmentCard(forceReveal) {
+    if (typeof currentAssignmentCardRefresh === 'function') {
+        currentAssignmentCardRefresh(!!forceReveal);
+    }
+}
+
 function renderCurrentAssignmentCard() {
-    assignmentContainer.innerHTML = '';
+    currentAssignmentCardRefresh = null;
+    assignmentContainer.textContent = '';
     const player = gameState.players[gameState.currentAssignmentIndex];
+    renderAssignmentProgress('assignment-progress', gameState.currentAssignmentIndex, gameState.players.length);
 
     const card = document.createElement('div');
     card.className = 'single-role-card';
@@ -3075,12 +1176,18 @@ function renderCurrentAssignmentCard() {
                 const hintEl = document.createElement('div');
                 hintEl.className = 'card-hint-reveal';
                 hintEl.textContent = `💡 Hint: ${gameState.secretWordObj.hint}`;
-                centerArea.appendChild(hintEl);
+                const hintNote = document.createElement('div');
+                hintNote.className = 'card-hint-note';
+                hintNote.textContent = 'Only you can see this — keep it secret!';
+                centerArea.append(hintEl, hintNote);
             } else {
                 const noHintEl = document.createElement('div');
                 noHintEl.className = 'card-hint-reveal';
-                noHintEl.textContent = `❓ Secret Word Hidden`;
-                centerArea.appendChild(noHintEl);
+                noHintEl.textContent = '❓ Secret Word Hidden';
+                const noHintNote = document.createElement('div');
+                noHintNote.className = 'card-hint-note';
+                noHintNote.textContent = 'Turn on “💡 Impostor Hints” above for a clue';
+                centerArea.append(noHintEl, noHintNote);
             }
         } else {
             const wordEl = document.createElement('div');
@@ -3097,7 +1204,7 @@ function renderCurrentAssignmentCard() {
         releaseHint.textContent = 'RELEASE TO HIDE';
         centerArea.appendChild(releaseHint);
 
-        createParticles(card, player.color, 24);
+        createParticles(card, player.color, 18);
     };
 
     const hide = () => {
@@ -3122,6 +1229,32 @@ function renderCurrentAssignmentCard() {
     });
     card.addEventListener('touchend', hide);
 
+    // Keyboard parity: Space/Enter behaves like press-and-hold.
+    card.tabIndex = 0;
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-label', `Reveal ${player.name}'s secret card`);
+    card.addEventListener('keydown', (e) => {
+        if (e.key === ' ' || e.key === 'Enter') {
+            e.preventDefault();
+            reveal();
+        }
+    });
+    card.addEventListener('keyup', (e) => {
+        if (e.key === ' ' || e.key === 'Enter') hide();
+    });
+    card.addEventListener('blur', hide);
+
+    // Lets the hint switch refresh an already-open card.
+    currentAssignmentCardRefresh = (forceReveal) => {
+        if (!card.isConnected) return;
+        if (!card.classList.contains('revealed')) {
+            if (forceReveal) reveal();
+            return;
+        }
+        hide();
+        reveal();
+    };
+
     assignmentContainer.appendChild(card);
 }
 
@@ -3142,6 +1275,38 @@ function setupGameScreen() {
     showScreen('game');
 }
 
+/** Builds the "N Civilians VS N Impostors" scoreboard strip. */
+function buildHudRow(leftCount, leftLabel, leftClass, rightCount, rightLabel, rightClass) {
+    const frag = document.createDocumentFragment();
+
+    const left = document.createElement('div');
+    left.className = 'hud-chip ' + leftClass;
+    const leftNum = document.createElement('span');
+    leftNum.className = 'hud-num';
+    leftNum.textContent = String(leftCount);
+    const leftText = document.createElement('span');
+    leftText.className = 'hud-label';
+    leftText.textContent = leftLabel;
+    left.append(leftNum, leftText);
+
+    const vs = document.createElement('div');
+    vs.className = 'hud-vs';
+    vs.textContent = 'VS';
+
+    const right = document.createElement('div');
+    right.className = 'hud-chip ' + rightClass;
+    const rightNum = document.createElement('span');
+    rightNum.className = 'hud-num';
+    rightNum.textContent = String(rightCount);
+    const rightText = document.createElement('span');
+    rightText.className = 'hud-label';
+    rightText.textContent = rightLabel;
+    right.append(rightNum, rightText);
+
+    frag.append(left, vs, right);
+    return frag;
+}
+
 function updateGameHUD() {
     const hud = document.getElementById('game-hud');
     if (!hud) return;
@@ -3149,51 +1314,73 @@ function updateGameHUD() {
     const impostorsCount = gameState.activePlayers.filter(p => p.role === 'impostor').length;
     const civiliansCount = gameState.activePlayers.length - impostorsCount;
 
-    hud.innerHTML = `
-        <div class="hud-chip civilian-chip">
-            <span class="hud-num">${civiliansCount}</span>
-            <span class="hud-label">Civilians</span>
-        </div>
-        <div class="hud-vs">VS</div>
-        <div class="hud-chip impostor-chip">
-            <span class="hud-num">${impostorsCount}</span>
-            <span class="hud-label">Impostors</span>
-        </div>
-    `;
+    hud.textContent = '';
+    hud.appendChild(buildHudRow(civiliansCount, 'Civilians', 'civilian-chip', impostorsCount, 'Impostors', 'impostor-chip'));
+}
+
+/** Builds a player row. Names go through textContent, never innerHTML. */
+function buildPlayerRow(player, isActive, voteClass) {
+    const item = document.createElement('div');
+    item.className = 'player-item' + (isActive ? '' : ' eliminated-player');
+    item.style.borderLeftColor = player.color;
+
+    const profile = document.createElement('div');
+    profile.className = 'player-profile';
+
+    const avatar = document.createElement('div');
+    avatar.className = 'player-avatar';
+    avatar.style.background = player.color + '22';
+    avatar.style.borderColor = player.color;
+    avatar.style.color = player.color;
+    avatar.textContent = player.name.charAt(0).toUpperCase();
+
+    const info = document.createElement('div');
+    info.className = 'player-info';
+
+    const nameEl = document.createElement('span');
+    nameEl.className = 'player-name';
+    nameEl.textContent = player.name;
+
+    const tagEl = document.createElement('span');
+    tagEl.className = 'player-suspect-tag';
+    tagEl.textContent = isActive ? 'ACTIVE SUSPECT' : 'ELIMINATED 💀';
+
+    info.append(nameEl, tagEl);
+    profile.append(avatar, info);
+    item.appendChild(profile);
+
+    if (isActive) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = voteClass;
+        btn.dataset.voteId = String(player.id);
+        const icon = document.createElement('span');
+        icon.setAttribute('aria-hidden', 'true');
+        icon.textContent = '🚨';
+        btn.append(icon, document.createTextNode(' Vote Out'));
+        item.appendChild(btn);
+    } else {
+        const badge = document.createElement('span');
+        badge.className = 'eliminated-badge';
+        badge.textContent = 'OUT';
+        item.appendChild(badge);
+    }
+
+    return item;
 }
 
 function renderPlayers() {
     updateGameHUD();
-    playersList.innerHTML = '';
+    playersList.textContent = '';
+
+    const activeIds = new Set(gameState.activePlayers.map(p => p.id));
+    const fragment = document.createDocumentFragment();
 
     gameState.players.forEach(player => {
-        const isActive = gameState.activePlayers.some(p => p.id === player.id);
-        const item = document.createElement('div');
-        item.className = `player-item ${isActive ? '' : 'eliminated-player'}`;
-        item.style.borderLeftColor = player.color;
-
-        const initial = player.name.charAt(0).toUpperCase();
-
-        item.innerHTML = `
-            <div class="player-profile">
-                <div class="player-avatar" style="background: ${player.color}22; border-color: ${player.color}; color: ${player.color};">
-                    ${initial}
-                </div>
-                <div class="player-info">
-                    <span class="player-name">${player.name}</span>
-                    <span class="player-suspect-tag">${isActive ? 'ACTIVE SUSPECT' : 'ELIMINATED 💀'}</span>
-                </div>
-            </div>
-            ${isActive ? `
-                <button class="vote-btn" onclick="votePlayer(${player.id})">
-                    <span>🚨</span> Vote Out
-                </button>
-            ` : `
-                <span class="eliminated-badge">OUT</span>
-            `}
-        `;
-        playersList.appendChild(item);
+        fragment.appendChild(buildPlayerRow(player, activeIds.has(player.id), 'vote-btn'));
     });
+
+    playersList.appendChild(fragment);
 }
 
 window.votePlayer = function(id) {
@@ -3215,6 +1402,7 @@ window.votePlayer = function(id) {
 
     revealActions.classList.add('hidden');
     triggerRevealBtn.classList.remove('hidden');
+    playAgainBtn.classList.add('hidden');
 
     impostorGuessCheckbox.checked = false;
     impostorGuessContainer.classList.add('hidden');
@@ -3224,8 +1412,6 @@ window.votePlayer = function(id) {
 
 function triggerReveal() {
     triggerRevealBtn.classList.add('hidden');
-
-    playSuspenseSound();
 
     flashScreen('rgba(255,255,255,0.48)');
     revealCard.classList.add('suspense-pulse');
@@ -3241,12 +1427,6 @@ function triggerReveal() {
         revealText.style.color = isImpostor ? 'var(--danger)' : 'var(--success)';
         revealText.classList.add('bounce-in');
 
-        if (isImpostor) {
-            playImpostorRevealedSound();
-        } else {
-            playCivilianRevealedSound();
-        }
-
         revealActions.classList.remove('hidden');
 
         if (isImpostor) {
@@ -3254,14 +1434,18 @@ function triggerReveal() {
             const currentImpostors = gameState.activePlayers.filter(p => p.role === 'impostor');
             if (currentImpostors.length <= 1) {
                 document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was the last IMPOSTOR! 🎉`;
+                // The round is over — offer a rematch instead of continuing.
                 continueBtn.classList.add('hidden');
+                playAgainBtn.classList.remove('hidden');
             } else {
                 document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was an IMPOSTOR! 🕵️`;
                 continueBtn.classList.remove('hidden');
+                playAgainBtn.classList.add('hidden');
             }
         } else {
             document.getElementById('reveal-status').textContent = `${gameState.votedPlayer.name} was a Civilian... 😔`;
             continueBtn.classList.remove('hidden');
+            playAgainBtn.classList.add('hidden');
         }
 
         setTimeout(() => {
@@ -3299,6 +1483,8 @@ function processScoring() {
     });
 
     gameState.activePlayers = remainingActive;
+    // Clear the vote so a second call cannot score the same round twice.
+    gameState.votedPlayer = null;
 }
 
 function continueGame() {
@@ -3308,12 +1494,7 @@ function continueGame() {
     const civilians = gameState.activePlayers.length - impostors;
 
     if (impostors >= civilians || impostors === 0) {
-        if (impostors === 0) {
-            alert("Victory! All Impostors have been eliminated! 🎉");
-        } else {
-            alert("Game Over! The Impostors have taken over.");
-        }
-        resetGame();
+        finishImpostorGame(impostors === 0);
         return;
     }
 
@@ -3323,7 +1504,8 @@ function continueGame() {
     navigateTo('#game');
 }
 
-function resetGame() {
+/** Clears the round state without changing the current screen. */
+function resetGameState() {
     if (gameState.votedPlayer) {
         processScoring();
     }
@@ -3335,13 +1517,85 @@ function resetGame() {
         activePlayers: [],
         phase: "setup",
         votedPlayer: null,
-        hintsEnabled: false,
-        chaosMode: false,
+        hintsEnabled: hintToggle.checked,
+        chaosMode: chaosToggle.checked,
         currentAssignmentIndex: 0,
         starterPlayer: null
     };
+    currentAssignmentCardRefresh = null;
+    assignmentContainer.textContent = '';
     renderLeaderboard();
+}
+
+function resetGame() {
+    resetGameState();
     navigateTo('#home');
+}
+
+/**
+ * Ends the round from the reveal screen and drops back to setup so the
+ * same group can play again. The round's score is paid exactly once
+ * (processScoring clears the vote, so a later reset cannot pay it twice).
+ */
+function playAgainFromReveal() {
+    const voted = gameState.votedPlayer;
+    const guessedCorrectly = impostorGuessCheckbox.checked;
+
+    // Pay the round out before anything is cleared. processScoring() clears
+    // the vote, so resetGameState() below cannot pay it a second time.
+    if (voted) {
+        processScoring();
+    }
+    resetGameState();
+
+    // Put the reveal screen back to its neutral state for the next round.
+    revealText.textContent = '???';
+    revealText.style.color = '';
+    revealText.classList.remove('bounce-in');
+    revealCard.classList.remove('revealed', 'suspense-pulse');
+    revealCard.style.borderColor = '';
+    revealCard.style.backgroundColor = '';
+    revealCard.style.boxShadow = '';
+    revealCard.style.animation = '';
+    revealActions.classList.add('hidden');
+    triggerRevealBtn.classList.remove('hidden');
+    continueBtn.classList.add('hidden');
+    playAgainBtn.classList.add('hidden');
+    impostorGuessCheckbox.checked = false;
+    impostorGuessContainer.classList.add('hidden');
+    document.getElementById('reveal-status').textContent = 'The Verdict...';
+
+    navigateTo('#setup');
+
+    if (voted && voted.role === 'impostor') {
+        showToast(
+            guessedCorrectly
+                ? `${voted.name} guessed the word — no points lost. Set up a rematch!`
+                : `${voted.name} lost 5 points. Set up a rematch!`,
+            guessedCorrectly ? 'success' : 'info'
+        );
+    } else {
+        showToast('Great round! Set up a rematch below.', 'success');
+    }
+}
+
+/**
+ * Ends the round and explains the outcome in-page. The player chooses
+ * where to go next instead of being dropped on the home screen.
+ */
+function finishImpostorGame(victory) {
+    resetGameState();
+    showAppDialog({
+        icon: victory ? '🎉' : '🕵️',
+        title: victory ? 'Villains Caught!' : 'The Impostors Win!',
+        message: victory
+            ? 'Every impostor has been eliminated. The secret word is safe — the crowd goes wild!'
+            : 'The impostors outnumbered the crew and took over the party. Better luck next round!',
+        actions: [
+            { label: '🔁 Play Again', variant: 'primary', onClick: () => navigateTo('#setup') },
+            { label: '🏠 Home', variant: 'secondary', onClick: () => navigateTo('#home') }
+        ]
+    });
 }
 
 startBtn.addEventListener('click', startGame);
@@ -3351,6 +1605,7 @@ confirmAssignmentBtn.addEventListener('click', () => {
 });
 triggerRevealBtn.addEventListener('click', triggerReveal);
 continueBtn.addEventListener('click', continueGame);
+playAgainBtn.addEventListener('click', playAgainFromReveal);
 quitBtn.addEventListener('click', resetGame);
 endGameBtn.addEventListener('click', () => {
     const activeImpostors = gameState.activePlayers.filter(p => p.role === 'impostor');
@@ -3358,26 +1613,64 @@ endGameBtn.addEventListener('click', () => {
         updateScore(p.name, 5);
     });
     gameState.votedPlayer = null;
-    alert("Game ended manually! Impostors awarded +5 pts.");
-    resetGame();
+    resetGameState();
+    showAppDialog({
+        icon: '🏴',
+        title: 'Game Ended',
+        message: 'The round was ended manually. The surviving impostors were awarded +5 points.',
+        actions: [
+            { label: '🔁 Play Again', variant: 'primary', onClick: () => navigateTo('#setup') },
+            { label: '🏠 Home', variant: 'secondary', onClick: () => navigateTo('#home') }
+        ]
+    });
 });
 
-function updatePlayerInputs() {
-    const count = parseInt(playerCountInput.value) || 3;
-    const existingNames = Array.from(document.querySelectorAll('#player-names-container .player-name-input'))
-                               .map(input => input.value);
+/** Rebuilds a grid of name inputs, keeping existing values and keyboard focus. */
+function buildNameInputs(container, count) {
+    const existing = Array.from(container.querySelectorAll('.player-name-input'))
+                           .map(input => input.value);
+    const focusedIndex = (() => {
+        const active = document.activeElement;
+        if (!active || !active.classList || !active.classList.contains('player-name-input')) return -1;
+        return Array.prototype.indexOf.call(container.querySelectorAll('.player-name-input'), active);
+    })();
 
-    namesContainer.innerHTML = '';
+    container.textContent = '';
+    const fragment = document.createDocumentFragment();
+    let focusedEl = null;
+
     for (let i = 1; i <= count; i++) {
         const group = document.createElement('div');
         group.className = 'name-input-group';
-        const savedName = existingNames[i - 1] || "";
-        group.innerHTML = `
-            <label>Player ${i}</label>
-            <input type="text" class="player-name-input" placeholder="Player ${i}" value="${savedName}">
-        `;
-        namesContainer.appendChild(group);
+
+        const label = document.createElement('label');
+        label.textContent = `Player ${i}`;
+
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'player-name-input';
+        input.placeholder = `Player ${i}`;
+        input.value = existing[i - 1] || '';
+        input.autocomplete = 'off';
+
+        group.append(label, input);
+        fragment.appendChild(group);
+        if (i - 1 === focusedIndex) focusedEl = input;
     }
+
+    container.appendChild(fragment);
+    if (focusedEl) {
+        focusedEl.focus();
+        focusedEl.setSelectionRange(focusedEl.value.length, focusedEl.value.length);
+    }
+}
+
+function updatePlayerInputs() {
+    const min = parseInt(playerCountInput.min, 10) || 3;
+    const max = parseInt(playerCountInput.max, 10) || 20;
+    const raw = parseInt(playerCountInput.value, 10);
+    const count = Number.isFinite(raw) ? Math.min(max, Math.max(min, raw)) : min;
+    buildNameInputs(namesContainer, count);
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -3390,32 +1683,26 @@ function startMafiaFlow() {
 }
 
 function updateMafiaPlayerInputs() {
-    const count = parseInt(mafiaPlayerCountInput.value) || 6;
-    const existingNames = Array.from(document.querySelectorAll('#mafia-player-names-container .player-name-input'))
-                               .map(input => input.value);
-
-    mafiaNamesContainer.innerHTML = '';
-    for (let i = 1; i <= count; i++) {
-        const group = document.createElement('div');
-        group.className = 'name-input-group';
-        const savedName = existingNames[i - 1] || "";
-        group.innerHTML = `
-            <label>Player ${i}</label>
-            <input type="text" class="player-name-input" placeholder="Player ${i}" value="${savedName}">
-        `;
-        mafiaNamesContainer.appendChild(group);
-    }
+    const min = parseInt(mafiaPlayerCountInput.min, 10) || 4;
+    const max = parseInt(mafiaPlayerCountInput.max, 10) || 20;
+    const raw = parseInt(mafiaPlayerCountInput.value, 10);
+    const count = Number.isFinite(raw) ? Math.min(max, Math.max(min, raw)) : min;
+    buildNameInputs(mafiaNamesContainer, count);
 }
 
 function startMafiaGame() {
     const count = parseInt(mafiaPlayerCountInput.value) || 6;
     const mafiaCount = parseInt(mafiaCountInput.value) || 1;
+    if (count < 4 || count > 20) {
+        showToast('Mafia needs between 4 and 20 players!', 'error');
+        return;
+    }
     const hasDoctor = doctorToggle.checked;
     const hasDetective = detectiveToggle.checked;
 
     const specialRolesCount = mafiaCount + (hasDoctor ? 1 : 0) + (hasDetective ? 1 : 0);
     if (specialRolesCount >= count) {
-        alert("Too many special roles for " + count + " players! Lower Mafia/special counts.");
+        showToast(`Too many special roles for ${count} players! Lower Mafia/special counts.`, 'error');
         return;
     }
 
@@ -3430,8 +1717,10 @@ function startMafiaGame() {
     const detectiveIndex = hasDetective ? shuffledIndices[idx++] : null;
 
     mafiaState.players = [];
+    const mafiaNames = [];
     for (let i = 0; i < count; i++) {
         const customName = nameInputs[i]?.value.trim() || `Player ${i + 1}`;
+        mafiaNames.push(customName);
         let role = 'villager';
         if (mafiaIndices.has(i)) role = 'mafia';
         else if (i === doctorIndex) role = 'doctor';
@@ -3444,12 +1733,11 @@ function startMafiaGame() {
             alive: true,
             color: PLAYER_COLORS[i % PLAYER_COLORS.length]
         });
-
-        const currentScores = getLeaderboard();
-        if (currentScores[customName] === undefined) {
-            updateScore(customName, 0);
-        }
     }
+
+    // One batched write instead of a storage hit + re-render per player
+    ensurePlayersRegistered(mafiaNames);
+    scheduleLeaderboardRender();
 
     mafiaState.activePlayers = [...mafiaState.players];
     mafiaState.dayNumber = 1;
@@ -3468,8 +1756,9 @@ function setupMafiaAssignmentScreen() {
 }
 
 function renderCurrentMafiaAssignmentCard() {
-    mafiaAssignmentContainer.innerHTML = '';
+    mafiaAssignmentContainer.textContent = '';
     const player = mafiaState.players[mafiaState.currentAssignmentIndex];
+    renderAssignmentProgress('mafia-assignment-progress', mafiaState.currentAssignmentIndex, mafiaState.players.length);
 
     const card = document.createElement('div');
     card.className = 'single-role-card';
@@ -3563,7 +1852,7 @@ function renderCurrentMafiaAssignmentCard() {
         releaseHint.textContent = 'RELEASE TO HIDE';
         centerArea.appendChild(releaseHint);
 
-        createParticles(card, player.color, 24);
+        createParticles(card, player.color, 18);
     };
 
     const hide = () => {
@@ -3587,6 +1876,21 @@ function renderCurrentMafiaAssignmentCard() {
         reveal();
     });
     card.addEventListener('touchend', hide);
+
+    // Keyboard parity: Space/Enter behaves like press-and-hold.
+    card.tabIndex = 0;
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-label', `Reveal ${player.name}'s secret role`);
+    card.addEventListener('keydown', (e) => {
+        if (e.key === ' ' || e.key === 'Enter') {
+            e.preventDefault();
+            reveal();
+        }
+    });
+    card.addEventListener('keyup', (e) => {
+        if (e.key === ' ' || e.key === 'Enter') hide();
+    });
+    card.addEventListener('blur', hide);
 
     mafiaAssignmentContainer.appendChild(card);
 }
@@ -3722,11 +2026,14 @@ function renderCurrentNightStep() {
             controlsEl.innerHTML = '';
             const resultBox = document.createElement('div');
             resultBox.className = 'detective-result-box';
-            resultBox.innerHTML = `
-                <p class="detective-result-text ${isMafia ? 'mafia-found' : 'innocent-found'}">
-                    ${suspect.name} is ${isMafia ? 'MAFIA 😈' : 'INNOCENT 😇'}
-                </p>
-            `;
+            const resultText = document.createElement('p');
+            resultText.className = 'detective-result-text ' + (isMafia ? 'mafia-found' : 'innocent-found');
+            // Names come from user input — build the text node instead of interpolating HTML.
+            resultText.appendChild(document.createTextNode(suspect.name + ' is '));
+            const verdict = document.createElement('strong');
+            verdict.textContent = isMafia ? 'MAFIA 😈' : 'INNOCENT 😇';
+            resultText.appendChild(verdict);
+            resultBox.appendChild(resultText);
             controlsEl.appendChild(resultBox);
 
             const wakeBtn = document.createElement('button');
@@ -3785,12 +2092,7 @@ function startMafiaDayPhase() {
     const innocentCount = mafiaState.activePlayers.length - impostorsCount;
 
     if (impostorsCount === 0 || impostorsCount >= innocentCount) {
-        if (impostorsCount === 0) {
-            alert("VICTORY! All Mafia members have been eliminated! 🎉");
-        } else {
-            alert("GAME OVER! The Mafia has taken over the town! 😈");
-        }
-        resetMafiaGame();
+        finishMafiaGame(impostorsCount === 0);
         return;
     }
 
@@ -3819,50 +2121,20 @@ function updateMafiaHUD() {
     const mafiaCount = mafiaState.activePlayers.filter(p => p.role === 'mafia').length;
     const innocentCount = mafiaState.activePlayers.length - mafiaCount;
 
-    hud.innerHTML = `
-        <div class="hud-chip civilian-chip">
-            <span class="hud-num">${innocentCount}</span>
-            <span class="hud-label">Innocents</span>
-        </div>
-        <div class="hud-vs">VS</div>
-        <div class="hud-chip imposter-chip">
-            <span class="hud-num">${mafiaCount}</span>
-            <span class="hud-label">Mafia</span>
-        </div>
-    `;
+    hud.textContent = '';
+    hud.appendChild(buildHudRow(innocentCount, 'Innocents', 'civilian-chip', mafiaCount, 'Mafia', 'impostor-chip'));
 }
 
 function renderMafiaDayPlayers() {
     updateMafiaHUD();
-    mafiaActivePlayersList.innerHTML = '';
+    mafiaActivePlayersList.textContent = '';
 
+    const fragment = document.createDocumentFragment();
     mafiaState.players.forEach(player => {
-        const item = document.createElement('div');
-        item.className = `player-item ${player.alive ? '' : 'eliminated-player'}`;
-        item.style.borderLeftColor = player.color;
-
-        const initial = player.name.charAt(0).toUpperCase();
-
-        item.innerHTML = `
-            <div class="player-profile">
-                <div class="player-avatar" style="background: ${player.color}22; border-color: ${player.color}; color: ${player.color};">
-                    ${initial}
-                </div>
-                <div class="player-info">
-                    <span class="player-name">${player.name}</span>
-                    <span class="player-suspect-tag">${player.alive ? 'ALIVE SUSPECT' : 'ELIMINATED 💀'}</span>
-                </div>
-            </div>
-            ${player.alive ? `
-                <button class="vote-btn mafia-theme-btn" onclick="voteMafiaPlayer(${player.id})">
-                    <span>🚨</span> Vote Out
-                </button>
-            ` : `
-                <span class="eliminated-badge">OUT</span>
-            `}
-        `;
-        mafiaActivePlayersList.appendChild(item);
+        fragment.appendChild(buildPlayerRow(player, player.alive, 'vote-btn mafia-theme-btn'));
     });
+
+    mafiaActivePlayersList.appendChild(fragment);
 }
 
 window.voteMafiaPlayer = function(id) {
@@ -3885,10 +2157,7 @@ window.voteMafiaPlayer = function(id) {
     revealTextEl.textContent = roleStr;
 
     if (player.role === 'mafia') {
-        playImpostorRevealedSound();
         updateScore(player.name, -5);
-    } else {
-        playCivilianRevealedSound();
     }
 
     navigateTo('#mafia-reveal');
@@ -3899,12 +2168,7 @@ function continueMafiaGame() {
     const innocentCount = mafiaState.activePlayers.length - mafiaCount;
 
     if (mafiaCount === 0 || mafiaCount >= innocentCount) {
-        if (mafiaCount === 0) {
-            alert("VICTORY! All Mafia members have been eliminated! 🎉");
-        } else {
-            alert("GAME OVER! The Mafia has taken over the town! 😈");
-        }
-        resetMafiaGame();
+        finishMafiaGame(mafiaCount === 0);
         return;
     }
 
@@ -3912,7 +2176,8 @@ function continueMafiaGame() {
     startMafiaNightPhase();
 }
 
-function resetMafiaGame() {
+/** Clears the mafia round without changing the current screen. */
+function resetMafiaState() {
     mafiaState = {
         players: [],
         activePlayers: [],
@@ -3928,8 +2193,29 @@ function resetMafiaGame() {
         votedPlayer: null,
         lastNightOutcomeText: ""
     };
+    mafiaAssignmentContainer.textContent = '';
     renderLeaderboard();
+}
+
+function resetMafiaGame() {
+    resetMafiaState();
     navigateTo('#home');
+}
+
+/** Ends the mafia round and explains the outcome in-page. */
+function finishMafiaGame(victory) {
+    resetMafiaState();
+    showAppDialog({
+        icon: victory ? '🎉' : '😈',
+        title: victory ? 'The Town Wins!' : 'The Mafia Wins!',
+        message: victory
+            ? 'Every Mafia member has been eliminated. The town is safe — the villagers are celebrating!'
+            : 'The Mafia now controls the town. The night belongs to them 😈',
+        actions: [
+            { label: '🔁 Play Again', variant: 'primary', onClick: () => navigateTo('#mafia-setup') },
+            { label: '🏠 Home', variant: 'secondary', onClick: () => navigateTo('#home') }
+        ]
+    });
 }
 
 startMafiaBtn.addEventListener('click', startMafiaGame);
@@ -3937,6 +2223,20 @@ mafiaNextPlayerBtn.addEventListener('click', nextMafiaPlayer);
 mafiaStartNightBtn.addEventListener('click', startMafiaNightPhase);
 mafiaContinueBtn.addEventListener('click', continueMafiaGame);
 mafiaQuitBtn.addEventListener('click', resetMafiaGame);
-mafiaEndGameBtn.addEventListener('click', resetMafiaGame);
+mafiaEndGameBtn.addEventListener('click', () => {
+    mafiaState.activePlayers
+        .filter(p => p.role === 'mafia')
+        .forEach(p => updateScore(p.name, 5));
+    resetMafiaState();
+    showAppDialog({
+        icon: '🏴',
+        title: 'Game Ended',
+        message: 'The round was ended manually. The surviving Mafia were awarded +5 points.',
+        actions: [
+            { label: '🔁 Play Again', variant: 'primary', onClick: () => navigateTo('#mafia-setup') },
+            { label: '🏠 Home', variant: 'secondary', onClick: () => navigateTo('#home') }
+        ]
+    });
+});
 
 init();
